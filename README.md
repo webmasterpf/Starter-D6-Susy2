@@ -4,7 +4,7 @@ ABOUT THEME
 -----------
 
 Thème RWD pour les sites de l'Association développés sous Drupal 6.
-Thème développé avec Sass - Compass - Susy
+Thème développé avec Sass - Compass - Susy 2
 
 REGLAGES A FAIRE
 ----------------
@@ -88,7 +88,7 @@ Compass Recipes : mixin css3
  Breakpoints pour SUSY
 ----------------------------------
 <pre>
- @include at-breakpoint ($mobile){}
- @include at-breakpoint ($desktop){}
- @include at-breakpoint ($tablet){}
+ @include susy-breakpoint ($mobile){}
+ @include susy-breakpoint ($desktop){}
+ @include susy-breakpoint ($tablet){}
 </pre>
