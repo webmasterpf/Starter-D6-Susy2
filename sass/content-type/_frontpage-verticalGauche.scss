@@ -13,15 +13,15 @@
 
 //Code imbriqué à 100%
 body .conteneur {
-    @include container($total-columns, $tablet, $desktop);
+    @include container($total-columns);
     background:transparent image-url("bg_content_etoile.gif") no-repeat left bottom;
 
     .HPDiapoVerticalGaucheVerticalGauche{
-        //@include span-columns($mobile);//image ok sur mob mais pas sur desk
-        @include set-container-width();
+        //@include span($mobile);//image ok sur mob mais pas sur desk
+        width: container();
         overflow : hidden;}
     .HPDroite{
-        //@include set-container-width();
+        //width: container();
     }
     .HPDroite1{}
     .HPDroite2{}
@@ -29,9 +29,9 @@ body .conteneur {
 
     @include susy-breakpoint($tablet) {/*     //Dimensions pour les tablettes*/
         //Taille du conteneur du groupe
-        @include set-container-width;
-        .HPDiapoVerticalGauche{@include span-columns(4);}
-        .HPDroite{@include span-columns(4 omega);}
+        width: container($tabletcol);
+        .HPDiapoVerticalGauche{@include span(4);}
+        .HPDroite{@include span(last 4);}
         .HPDroite1{}
         .HPDroite2{}
         .HPDroite3{}
@@ -39,26 +39,26 @@ body .conteneur {
     }
     @include susy-breakpoint($desktop) {/*    //Dimensions pour les pc*/
         //Taille du conteneur du groupe    
-        @include set-container-width();
+        width: container($desktopcol);
 
         .HPDiapoVerticalGauche{
-            //@include span-columns(6);
-            @include span-columns(6, $desktop);
+            //@include span(6);
+            @include span(6 of $desktopcol);
             overflow : hidden;
         }
         .HPDroite{
-            @include span-columns(6 omega, $desktop);
-           // @include span-columns(6 omega);
+            @include span(6 omega of $desktopcol);
+           // @include span(6 omega);
             
             
         }
         .HPDroite1{
-            // @include set-container-width();
+            // width: container();
 
         }
         .HPDroite2{
-            // @include set-container-width();
-            //@include span-columns($desktop/2 omega);
+            // width: container();
+            //@include span($desktopcol/2 omega);
 
         }
         .HPDroite3{
@@ -129,13 +129,13 @@ body .conteneur {
 //Code imbriqué à 100%
 aside.DiapoHP{
    
-     @include set-container-width;
+     width: container();
         #transparency{
-            //@include set-container-width;
+            //width: container();
             display: none;
         }
         #contenu-diapo{
-            //@include set-container-width;
+            //width: container();
             display: none;
         }
     img{@include adaptable-img;}
@@ -146,14 +146,14 @@ aside.DiapoHP{
     }
     @include susy-breakpoint($desktop) { 
        
-      @include set-container-width;
+      width: container();
         #transparency{
             //display: block;
-           @include set-container-width(4);
+           width: container(4);
         }
         #contenu-diapo{
            // display: block;
-            @include set-container-width(4);
+            width: container(4);
         }
 
     }

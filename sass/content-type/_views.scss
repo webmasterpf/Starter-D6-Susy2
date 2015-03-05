@@ -12,7 +12,7 @@
      clear: both;
        img{@include adaptable-img;}
        @include susy-breakpoint ($mobile){
-         //@include set-container-width();
+         //width: container();
        }
        @include susy-breakpoint ($desktop){
         

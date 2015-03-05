@@ -10,16 +10,16 @@ Ne s'applique que si présence d'un node-TYPE.tpl.php
 /*//////////////// 1 COLONNE \\\\\\\\\\\\\\\\*/
 body .conteneur{
     .col1_12{
-        width: container();
+        max-width: container();
     }
 }
 
 /*//////////////// 3 COLONNES \\\\\\\\\\\\\\\\*/
 body .conteneur{
     .col1_layout_3_8_3{
-       @include span($mobile);
+       @include span($mobilecol);
        
-        overflow: hidden;
+        @include clearfix;
         @include susy-breakpoint ($tablet){
             @include span(2 of $tabletcol);
             background: #00CC99;
@@ -30,10 +30,10 @@ body .conteneur{
         }
     }
     .col2_layout_3_8_3{
-       @include span($mobile);
+       @include span($mobilecol);
         
         background: khaki;
-        overflow: hidden;
+        @include clearfix;
         @include susy-breakpoint ($tablet){
            @include span(4 of $tabletcol);
             background: tomato;
@@ -45,10 +45,10 @@ body .conteneur{
 
     }
     .col3_layout_3_8_3{
-        @include span($mobile);
+        @include span($mobilecol);
        
         background: #00c9fe;
-        overflow: hidden;
+        @include clearfix;
         @include susy-breakpoint ($tablet){
             @include span(2 omega);
             background: purple;
@@ -63,7 +63,7 @@ body .conteneur{
 //Pour un 3 colonnes egales : page pole
 body .conteneur{
     .layout_3col_all4{
-       @include span($mobile);
+       @include span($mobilecol);
         
         background: khaki;
         @include susy-breakpoint ($tablet){
@@ -76,7 +76,7 @@ body .conteneur{
         }
     }
     .layout_3col_all4last{
-       @include span($mobile);
+       @include span($mobilecol);
         
         background: khaki;
         @include susy-breakpoint ($tablet){
@@ -102,7 +102,7 @@ body .conteneur{
         }
     }
     .col2_layout_4_8{
-        @include span($mobile);
+        @include span($mobilecol);
         
         background: khaki;
         @include susy-breakpoint ($tablet){
@@ -144,7 +144,7 @@ body .conteneur{
 /*//////////////// 4 COLONNES \\\\\\\\\\\\\\\\*/
 body .conteneur{
     .layout_4col_all3{
-       @include span($mobile);
+       @include span($mobilecol);
         
         background: khaki;
         @include susy-breakpoint ($tablet){
@@ -157,7 +157,7 @@ body .conteneur{
         }
     }
     .layout_4col_all3last{
-       @include span($mobile);
+       @include span($mobilecol);
         
         background: khaki;
         @include susy-breakpoint ($tablet){

@@ -46,10 +46,10 @@ Dans la logique Mobile first, la div "content" aura 5 colonnes, si c'est un écr
 3 vides (prefix)
 <pre>
 #content {
-  @include span-columns(5);
-  @include at-breakpoint($desktop) {
-    @include span-columns(13, $desktop);
-    @include prefix(3, $desktop);
+  @include span(5 of 12);
+  @include susy-breakpoint($desktop) {
+    @include span(13 of $desktop);
+    @include prefix(3 of $desktop);
   }
 }
 </pre>

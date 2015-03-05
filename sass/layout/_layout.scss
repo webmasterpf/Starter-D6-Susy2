@@ -27,7 +27,7 @@ body {
   
 // il faut utiliser pour un même bloc et pour chaque breakpoint 
 //soit span pour partitionner un bloc
-//soit width: container(); pour utiliser la taille du conteneur parent
+//soit max-width: container(); pour utiliser la taille du conteneur parent
 // sinon problèmes dans la grille !
  
 /*-- LAYOUT PRINCIPAL --*/
@@ -38,36 +38,41 @@ body .conteneur{
   @include clearfix; 
     background: transparent;
     padding-top: 2em;  
+    
         #header{
-            //width: container();
+            //max-width: container();
             clear: both;
         }
         .content-global{
-            width: container();
-            overflow: hidden;            
+            max-width: container();
+            @include clearfix;            
         }
         .content-inner{
-            width: container();
-            overflow: hidden;
+            max-width: container();
+            @include clearfix;
+            .content-header{
+                
+            }
         }
         .content-top{
-            width: container();
+            max-width: container();
             clear: both;        
             .ariane{clear: both;}
         }
         .middle-content{
-            width: container();
-           // @include span($mobile);
-           overflow: hidden;
+            max-width: container();
+           // @include span($mobilecol);
+           @include clearfix;
         }
         .node-inner{
-            width: container();
-            overflow: hidden;
+            max-width: container();
+            @include clearfix;
+            @include show-grid;
         }
-        .content-bottom{width: container();}
+        .content-bottom{max-width: container();}
         .content-bottom-home{
-            //width: container();
-            overflow: hidden;
+            //max-width: container();
+            @include clearfix;
             clear: both;       
         }
         
@@ -80,80 +85,80 @@ body .conteneur{
         }
 
     @include susy-breakpoint($tablet) {/*   //Dimensions pour les tablettes*/
-       width: container();
+       max-width: container($tabletcol);
         #header{
             //pas besoin de mixin car bloc prend toute la largeur
             
         }
         .content-global{
-            width: container();            
+            max-width: container();            
         }
         .content-inner{
-            width: container();               
+            max-width: container();  
+            .content-header{}
         } 
-        .content-top{width: container();}
+        .content-top{max-width: container();}
         .middle-content{
-            width: container();
+            max-width: container();
            // @include span($tablet);
         }
         .node-inner{
             //@include span($tablet );
-            width: container();
+            max-width: container();
             
         }
-        .content-bottom{width: container();}
+        .content-bottom{max-width: container();}
         .content-bottom-home{
-            //width: container();
+            //max-width: container();
         }
        
         
         #left-content{}
         #right-content{}
         #footer{
-            // width: container();
+            // max-width: container();
             @include background-size(auto);
         }
 
     }
     /*    //Dimensions pour les pc*/
     @include susy-breakpoint($desktop) {
-       width: container(); 
+       max-width: container($desktopcol); 
          #header{
             //pas besoin de mixin car bloc prend toute la largeur
            
         }
         .content-global{
-            width: container();        
+            max-width: container($desktopcol);        
             
         }
         .content-inner{
-            width: container();                           
+           max-width: container($desktopcol);
+           .content-header{}
         }
-        .content-top{width: container();}
+        .content-top{max-width: container($desktopcol);}
         .middle-content{
-            width: container();
-            //@include span($desktop);
+            max-width: container($desktopcol);
+            
         }
         .node-inner{  
-            //@include span($desktop);
-            width: container();
-           
+            max-width: container($desktopcol)
         }                       
-        .content-bottom{width: container();}
+        .content-bottom{max-width: container($desktopcol);}
         .content-bottom-home{
-            //width: container();
+            //max-width: container();
         }
         
        
         #left-content{}
         #right-content{}
         #footer{
-            //width: container();
+            //max-width: container();
             @include background-size(auto);
         }
 
     }
-}
+}//Fin definition du conteneur principal et ses enfants
 
 //Pour le dev, code visuel sur les blocs selon le breakpoint
 // à commenter ou supprimer pour la production

@@ -17,7 +17,7 @@
      // This is the default clearfix from Compass. You can opt to use other clearfix methods
   @include clearfix; 
    //@include susy-grid-background;
-   overflow: hidden;
+   
 }
 
 .ag1, .ag3 {
@@ -59,10 +59,10 @@ h2 {
   // removes the left sidebar 
 
   // Tells Susy that this portion should be used only in the large media query 
-  @include susy-breakpoint($desktop) {
+  @include susy-breakpoint($desktop, $susy) {
     display: block;
     // shows the left sidebar at the $large layout
-    @include span(3 of 12);
+    @include span(3 of $desktopcol);
   }
   
 }
@@ -73,16 +73,14 @@ h2 {
 
   // medium layout
   @include susy-breakpoint($tablet) {
-    @include span(6, 8);
+    @include span(6 of 8);
   }
 
   // large layout
   @include susy-breakpoint($desktop) {
-    @include span(6,$desktop);
+    @include span(6 of $desktopcol);
   // Optionally, you can choose to include the context.
   }
-    
-  
 }
 .ag3 {
      // small layout
@@ -91,12 +89,12 @@ h2 {
   // medium layout
   @include susy-breakpoint($tablet) {
     display: block;
-    @include span(2 omega, 8);
+    @include span(last 2 of 8);
   }
 
   // large layout
   @include susy-breakpoint($desktop) {
-    @include span(3 omega,12);
+    @include span(last 3 of 12);
   // The omega flag is set here to tell Susy that ag3 is the final column. 
     // notice we don't need a display:block here because changes cascade from
     //small to large in Susy. Since display block is declared in the medium layout, 
@@ -108,29 +106,29 @@ h2 {
 
 .ag4 {
   // Specifying the context with 6
-  @include span(3, 6);
+  @include span(3 of 6);
 }
 
 .ag5 {
   // Additionally, adding omega to signify the last column
-  @include span(3 omega, 6);
+  @include span(last 3 of 6);
 }
 
 .ag6 {
-  @include span(2, 6);
+  @include span(2 of 6);
 }
 
 .ag7 {
-  @include span(4 omega, 6);
-  overflow: hidden;
+  @include span(last 4 of 6);
+  @include clearfix;;
 }
 
 .ag8 {
-  @include span(2, 4);
+  @include span(2 of 4);
 }
 
 .ag9 {
-  @include span(2 omega, 4);
+  @include span(last 2 of 4);
 }
 
 .ag10 {
@@ -140,5 +138,5 @@ h2 {
   clear: both;
 
   // You can still use span if you want to though. There's no fault in using that. 
-  @include span(4, 4);
+  @include span(4 of 4);
 }

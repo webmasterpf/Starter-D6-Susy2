@@ -3,7 +3,7 @@
 $total-columns: 4;             // nombre de colonnes de la grille de base
 $column-width: 4.15em;            // largeur de chaque colonnes (px,em,%)
 $gutter-width: 1em;            // taille de la gouttière entre colonnes (px,em,%)
-$grid-padding: $gutter-width/2;  // taille de padding des colonnes
+//inutile >> $grid-padding: $gutter-width/2;  // taille de padding des colonnes
 
 $container-style: magic; // default to magic. Switch to fluid or fixed if desired
 //$container-width: 100%; //seulement si utilisé avec fluid grid
@@ -13,6 +13,9 @@ $susy: (
   gutters: $gutter-width / $column-width,
   column-width: $column-width,
   
+  //Style de grille
+  math: if($container-style == magic, fluid, $container-style),
+  
   /* Tells Susy to use border-box */
   global-box-sizing: border-box 
   );
@@ -21,10 +24,10 @@ $susy: (
 @include border-box-sizing;
 
 //Réglage du nombre de pixel pour changer de breakpoint() mixin 
-// qui simplifie les media-queries
-$mobile   :  max-width 700px;
-$tablet   :  max-width 989px;
-$desktop  :  min-width 990px;
+// qui simplifie les media-queries.Donner la largeur mini de l'ecran
+$mobile   :  500px;
+$tablet   :  700px;
+$desktop  :  950px;// sortie=>> min-width: 950px
 
 //Valeurs de colonnes issues de susyone pour les mixins comme @include span()
 $mobilecol   : 4;

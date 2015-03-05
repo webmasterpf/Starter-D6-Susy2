@@ -14,26 +14,26 @@
 #mainContent {
     background:transparent image-url ("bg_content_etoile.gif") no-repeat left bottom;
        
-    .HPDiapo{@include span-columns($mobile);//image ok sur mob mais pas sur desk
-             //@include set-container-width(); bloc diapo disparait sur desktop
+    .HPDiapo{@include span($mobile);//image ok sur mob mais pas sur desk
+             //width: container(); bloc diapo disparait sur desktop
              overflow : hidden;}
     .HPBasGauche{}
     .HPBasDroit{}
 }
     @include susy-breakpoint($desktop) {/*    //Dimensions pour les pc*/
     //Taille du conteneur du groupe    
-        @include set-container-width();
-        .HPDiapo{@include set-container-width; overflow : hidden;}
-        .HPBasGauche{@include span-columns($desktop/2,$desktop);}
-        .HPBasDroit{@include span-columns($desktop/2 omega,$desktop);}
+        width: container();
+        .HPDiapo{width: container; overflow : hidden;}
+        .HPBasGauche{@include span($desktopcol/2 of $desktopcol);}
+        .HPBasDroit{@include span($desktopcol/2 omega of $desktopcol);}
     }
   
     @include susy-breakpoint($tablet) {/*     //Dimensions pour les tablettes*/
         //Taille du conteneur du groupe
-     @include set-container-width;
-        .HPDiapo{@include span-columns($tablet); overflow : hidden;}
-        .HPBasGauche{@include span-columns($tablet/2,$tablet);}
-        .HPBasDroit{@include span-columns($tablet/2 omega,$tablet);}
+     width: container;
+        .HPDiapo{@include span($tabletcol); overflow : hidden;}
+        .HPBasGauche{@include span($tabletcol/2 of $tabletcol);}
+        .HPBasDroit{@include span($tabletcol/2 omega of $tabletcol);}
     
 }
 //Pour le dev, code visuel sur les blocs selon le breakpoint
@@ -93,24 +93,24 @@
 aside.DiapoHP{
         
         img{@include adaptable-img;}
-        #transparency{@include set-container-width;}
-        #contenu-diapo{@include set-container-width;}
+        #transparency{width: container;}
+        #contenu-diapo{width: container;}
     }
 }
 
 @include susy-breakpoint($desktop) {/*    //Dimensions pour les pc*/
 aside.DiapoHP{
-    @include set-container-width($desktop);
+    width: container($desktopcol);
         img{@include adaptable-img;}
-    #transparency{ @include set-container-width;}
-    #contenu-diapo{@include set-container-width;}
+    #transparency{ width: container;}
+    #contenu-diapo{width: container;}
 }
     }
 @include susy-breakpoint($tablet) {/*    //Dimensions pour les tablettes*/
 aside.DiapoHP{
         img{@include adaptable-img;}
 
-        #transparency{ @include span-columns($tablet);}
+        #transparency{ @include span($tabletcol);}
         #contenu-diapo{}
     }
 }

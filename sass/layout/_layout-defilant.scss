@@ -15,7 +15,7 @@
 //.content-top #annonce
 aside.content_top .annonce-container .annonce
 {
- width: container();
+ max-width: container();
  
   color: $color-defilant;
   font-weight: bold;
@@ -31,10 +31,10 @@ aside.content_top .annonce-container .annonce
     }
   }
   @include susy-breakpoint ($tablet){
-     width: container();
+     max-width: container();
   }
   @include susy-breakpoint ($desktop){
-      width: container();
+      max-width: container();
   }
   
 }

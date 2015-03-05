@@ -6,18 +6,19 @@
  //Imbrication à 100% (full nested)
  #header {
      .headHaut {
-         //@include span($mobile);
-         overflow: hidden; 
+         //@include span($mobilecol);
+         @include clearfix;
+        
 
-         .logoHead {@include span($mobile);
+         .logoHead {@include span($mobilecol);
                     img{margin: 0 auto;display: block;}
          }
-         .menuImg {@include span($mobile);}
+         .menuImg {@include span($mobilecol);}
      }
      .headBas {
-         overflow: hidden; 
+         @include clearfix; 
          .site-slogan{
-             //@include span($mobile);
+             //@include span($mobilecol);
             
          }
          .headSearch{}
@@ -26,14 +27,14 @@
 
      @include susy-breakpoint($desktop) {/*    //Dimensions pour les pc*/
          .headHaut {
-             .logoHead { @include span(4,$desktop);}
-             .menuImg {  @include span(8 omega,$desktop);
+             .logoHead { @include span(4 of $desktopcol);}
+             .menuImg {  @include span(8 omega of $desktopcol);
                          padding-top: 1em;
              }
          }
          .headBas {
-             .site-slogan{@include span(5,$desktop);}
-             .headSearch{@include span(5 omega,$desktop);}
+             .site-slogan{@include span(5 of $desktopcol);}
+             .headSearch{@include span(5 omega of $desktopcol);}
              .menuHead{}
          } 
      }
@@ -43,8 +44,8 @@
              .menuImg {  }
          }
          .headBas {
-             .site-slogan{@include span(3,$tablet);}
-             .headSearch{@include span(4 omega,$tablet);}
+             .site-slogan{@include span(3 of $tabletcol);}
+             .headSearch{@include span(4 omega of $tabletcol);}
              .menuHead{}
          }                
      }
