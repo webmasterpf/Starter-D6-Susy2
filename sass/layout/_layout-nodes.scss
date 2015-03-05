@@ -1,0 +1,172 @@
+/*
+Défini les layouts possibles pour les node.tpl custom
+Ne s'applique que si présence d'un node-TYPE.tpl.php
+*/
+
+/*//////////////////////\\\\\\\\\\\\\\\\\\\\\\
+********** LAYOUT NODE.TPL OVERRIDE **********
+\\\\\\\\\\\\\\\\\\\\\\\//////////////////////*/
+
+/*//////////////// 1 COLONNE \\\\\\\\\\\\\\\\*/
+body .conteneur{
+    .col1_12{
+        width: container();
+    }
+}
+
+/*//////////////// 3 COLONNES \\\\\\\\\\\\\\\\*/
+body .conteneur{
+    .col1_layout_3_8_3{
+       @include span($mobile);
+       
+        overflow: hidden;
+        @include susy-breakpoint ($tablet){
+            @include span(2 of $tabletcol);
+            background: #00CC99;
+        }
+        @include susy-breakpoint ($desktop){
+           @include span(3 of $desktopcol);
+            background: darkorange;
+        }
+    }
+    .col2_layout_3_8_3{
+       @include span($mobile);
+        
+        background: khaki;
+        overflow: hidden;
+        @include susy-breakpoint ($tablet){
+           @include span(4 of $tabletcol);
+            background: tomato;
+        }
+        @include susy-breakpoint ($desktop){
+          @include span(6 of $desktopcol);
+          background: hotpink;
+        }
+
+    }
+    .col3_layout_3_8_3{
+        @include span($mobile);
+       
+        background: #00c9fe;
+        overflow: hidden;
+        @include susy-breakpoint ($tablet){
+            @include span(2 omega);
+            background: purple;
+        }
+        @include susy-breakpoint ($desktop){
+           @include span(3 omega of $desktopcol);
+           background: teal;
+        }
+
+    }
+}
+//Pour un 3 colonnes egales : page pole
+body .conteneur{
+    .layout_3col_all4{
+       @include span($mobile);
+        
+        background: khaki;
+        @include susy-breakpoint ($tablet){
+            @include span(3 of $tabletcol);
+            background: tomato;
+        }
+        @include susy-breakpoint ($desktop){
+           @include span(4 of $desktopcol);
+            background: indianred;
+        }
+    }
+    .layout_3col_all4last{
+       @include span($mobile);
+        
+        background: khaki;
+        @include susy-breakpoint ($tablet){
+            @include span(2 omega of $tabletcol);
+            background: tomato;
+        }
+        @include susy-breakpoint ($desktop){
+           @include span(4 omega of $desktopcol);
+            background: indianred;
+        }
+    }
+}
+/*//////////////// 2 COLONNES ASYMETRIQUES \\\\\\\\\\\\\\\\*/
+body .conteneur{
+    .col1_layout_4_8{
+        @include susy-breakpoint ($tablet){
+            @include span(3 of $tabletcol);
+            background: #00CC99;
+        }
+        @include susy-breakpoint ($desktop){
+            @include span(4 of $desktopcol);
+            background: darkorange;
+        }
+    }
+    .col2_layout_4_8{
+        @include span($mobile);
+        
+        background: khaki;
+        @include susy-breakpoint ($tablet){
+            @include span(5 omega of $tabletcol);
+            background: tomato;
+        }
+        @include susy-breakpoint ($desktop){
+           @include span(8 omega of $desktopcol);
+            background: indianred;
+        }
+
+    }
+  
+  .col1_layout_3_9{}
+  .col2_layout_3_9{}
+  
+  .col1_layout_2_10{}
+  .col2_layout_2_10{}
+  
+  .col1_layout_5_7{}
+  .col2_layout_5_7{}
+  
+  .col1_layout_6_6{}
+  .col2_layout_6_6{}
+  
+  .col1_layout_7_5{}
+  .col2_layout_7_5{}
+  
+  .col1_layout_8_4{}
+  .col2_layout_8_4{}
+  
+  .col1_layout_9_3{}
+  .col2_layout_9_3{}
+  
+  .col1_layout_10_2{}
+  .col2_layout_10_2{}
+}
+
+/*//////////////// 4 COLONNES \\\\\\\\\\\\\\\\*/
+body .conteneur{
+    .layout_4col_all3{
+       @include span($mobile);
+        
+        background: khaki;
+        @include susy-breakpoint ($tablet){
+            @include span(2 of $tabletcol);
+            background: tomato;
+        }
+        @include susy-breakpoint ($desktop){
+           @include span(3 of $desktopcol);
+            background: indianred;
+        }
+    }
+    .layout_4col_all3last{
+       @include span($mobile);
+        
+        background: khaki;
+        @include susy-breakpoint ($tablet){
+            @include span(2 omega of $tabletcol);
+            background: tomato;
+        }
+        @include susy-breakpoint ($desktop){
+           @include span(3 omega of $desktopcol);
+            background: indianred;
+        }
+    }
+}

@@ -1,0 +1,245 @@
+// Importer les fichiers scss partiels (avec _) afin de compiler le
+// fichier css final utile pour le thème
+// Activer compass via 
+// webmaster@vm-server1:~$ compass watch /var/www/drupal6/sites/all/themes/THEMENAMEFOLDER/
+
+
+
+html {
+ margin: 0;
+ padding: 0;
+}
+
+
+body {	
+    font-family: $TrebuchetFont;
+
+}
+
+ /*------------------------------------------------------*
+  *--------    CSS BLOCS     						 ----*
+  *------------------------------------------------------*/
+
+ 
+ //@include susy-breakpoint ($mobile){}
+  //@include susy-breakpoint ($desktop){}
+  //@include susy-breakpoint ($tablet){}
+  
+// il faut utiliser pour un même bloc et pour chaque breakpoint 
+//soit span pour partitionner un bloc
+//soit width: container(); pour utiliser la taille du conteneur parent
+// sinon problèmes dans la grille !
+ 
+/*-- LAYOUT PRINCIPAL --*/
+body .conteneur{
+    //Approche mobile-first,réglage pour mobile
+    @include container();
+    // This is the default clearfix from Compass. You can opt to use other clearfix methods
+  @include clearfix; 
+    background: transparent;
+    padding-top: 2em;  
+        #header{
+            //width: container();
+            clear: both;
+        }
+        .content-global{
+            width: container();
+            overflow: hidden;            
+        }
+        .content-inner{
+            width: container();
+            overflow: hidden;
+        }
+        .content-top{
+            width: container();
+            clear: both;        
+            .ariane{clear: both;}
+        }
+        .middle-content{
+            width: container();
+           // @include span($mobile);
+           overflow: hidden;
+        }
+        .node-inner{
+            width: container();
+            overflow: hidden;
+        }
+        .content-bottom{width: container();}
+        .content-bottom-home{
+            //width: container();
+            overflow: hidden;
+            clear: both;       
+        }
+        
+            #left-content{}
+            #right-content{}
+            #footer{
+            //pas besoin de mixin car bloc prend toute la largeur
+            clear: both;
+            @include background-size;
+        }
+
+    @include susy-breakpoint($tablet) {/*   //Dimensions pour les tablettes*/
+       width: container();
+        #header{
+            //pas besoin de mixin car bloc prend toute la largeur
+            
+        }
+        .content-global{
+            width: container();            
+        }
+        .content-inner{
+            width: container();               
+        } 
+        .content-top{width: container();}
+        .middle-content{
+            width: container();
+           // @include span($tablet);
+        }
+        .node-inner{
+            //@include span($tablet );
+            width: container();
+            
+        }
+        .content-bottom{width: container();}
+        .content-bottom-home{
+            //width: container();
+        }
+       
+        
+        #left-content{}
+        #right-content{}
+        #footer{
+            // width: container();
+            @include background-size(auto);
+        }
+
+    }
+    /*    //Dimensions pour les pc*/
+    @include susy-breakpoint($desktop) {
+       width: container(); 
+         #header{
+            //pas besoin de mixin car bloc prend toute la largeur
+           
+        }
+        .content-global{
+            width: container();        
+            
+        }
+        .content-inner{
+            width: container();                           
+        }
+        .content-top{width: container();}
+        .middle-content{
+            width: container();
+            //@include span($desktop);
+        }
+        .node-inner{  
+            //@include span($desktop);
+            width: container();
+           
+        }                       
+        .content-bottom{width: container();}
+        .content-bottom-home{
+            //width: container();
+        }
+        
+       
+        #left-content{}
+        #right-content{}
+        #footer{
+            //width: container();
+            @include background-size(auto);
+        }
+
+    }
+}
+
+//Pour le dev, code visuel sur les blocs selon le breakpoint
+// à commenter ou supprimer pour la production
+
+body .conteneur{
+    //Approche mobile-first,réglage pour mobile
+    //@include susy-grid-background;
+    #header{}
+    .content-global{}
+    
+    #left-content{}
+    .content-inner{
+        //@include susy-grid-background;
+        background-color: #F29400;
+    .content-top{background-color: chocolate;}
+    .content-bottom{}
+    .content-bottom-home{}
+    }
+    .middle-content{background-color:deeppink;}
+    #right-content{}
+    #footer{background-color: firebrick;
+        }
+}   
+
+@include susy-breakpoint($tablet) {/*   //Dimensions pour les tablettes*/
+    body .conteneur{
+        //@include susy-grid-background;
+        
+        #header{
+            //@include susy-grid-background;
+            background-color: sienna;
+        }
+        .content-global{}
+        .content-top{background-color: mistyrose;}
+        .content-inner{}
+        .middle-content{
+            background-color: #C8D215;
+        //@include susy-grid-background;
+        }
+        #left-content{}
+        #right-content{}
+        #footer{background-color: peachpuff;
+        }
+    }
+    @include susy-breakpoint($desktop) {/*    //Dimensions pour les pc*/
+    body .conteneur{
+        //@include susy-grid-background;
+        
+        #header{
+            //@include susy-grid-background;
+            background: seashell;}
+        .content-global{
+            ////@include susy-grid-background;
+             
+        }
+        .content-inner{
+        background-color: palevioletred;     
+        }
+        .middle-content{
+            background-color:yellow;
+            //@include susy-grid-background;
+        }
+        .content-top{background-color: yellow;}
+        .content-bottom{}
+        .content-bottom-home{}
+        #left-content{background: tomato;}
+        #right-content{background: violet;}
+        #footer{background-color: palegreen;
+        }
+    }
+}
+}
+
+
+
+//classe sur le bloc
+aside.content_top{
+ text-align: center;
+}
+.content-top-node{
+    background-color: #999;
+    margin: 0 auto;
+    padding: em(5px);  
+        }
+//Images RWD pour nodes
+.node-inner
+{
+    img,iframe,object,embed{@include adaptable-img;}
+    }
