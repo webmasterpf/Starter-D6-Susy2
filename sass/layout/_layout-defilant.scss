@@ -12,10 +12,10 @@
 
 .annonce-container{}
 /*-- DEFILANT ACCUEIL --*/
-//.content-top #annonce
+
 aside.content_top .annonce-container .annonce
 {
- max-width: container();
+// max-width: container();
  
   color: $color-defilant;
   font-weight: bold;
@@ -30,11 +30,16 @@ aside.content_top .annonce-container .annonce
       text-decoration: underline;
     }
   }
+  p, h2, h2 a{
+      margin: 0;
+      padding: 0;
+  }
+  
   @include susy-breakpoint ($tablet){
-     max-width: container();
+     max-width: container($tabletcol);
   }
   @include susy-breakpoint ($desktop){
-      max-width: container();
+      max-width: container($desktopcol);
   }
   
 }

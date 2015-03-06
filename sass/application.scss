@@ -38,7 +38,7 @@ breakpoint-2.5.0
 @import "global/mixins_custom";
 @import "global/typos";
 @import "global/style";
-//@import "global/sub-nav";
+@import "global/sub-nav";
 
 
 // Import des partiels du layout du thème Drupal
@@ -62,7 +62,7 @@ breakpoint-2.5.0
 //@import "content-type/frontpage-agtest";
 //@import "content-type/frontpage-pano";
 //@import "content-type/frontpage-verticalDroit";
-//@import "content-type/frontpage-verticalGauche";
+@import "content-type/frontpage-verticalGauche";
 //@import "content-type/frontpage-institutionnel";
 
 //@import "content-type/node-TYPE";

@@ -13,13 +13,14 @@
 
 //Code imbriqué à 100%
 body .conteneur {
-    @include container($total-columns);
+    //Pas de @include container($total-columns); car deja mis dans layout !!!
     background:transparent image-url("bg_content_etoile.gif") no-repeat left bottom;
 
     .HPDiapoVerticalGaucheVerticalGauche{
         //@include span($mobile);//image ok sur mob mais pas sur desk
         width: container();
-        overflow : hidden;}
+        @include clearfix;
+    }
     .HPDroite{
         //width: container();
     }
@@ -42,13 +43,13 @@ body .conteneur {
         width: container($desktopcol);
 
         .HPDiapoVerticalGauche{
-            //@include span(6);
+            
             @include span(6 of $desktopcol);
-            overflow : hidden;
+            @include clearfix;
         }
         .HPDroite{
-            @include span(6 omega of $desktopcol);
-           // @include span(6 omega);
+            @include span(last 6 of $desktopcol);
+           
             
             
         }
@@ -129,7 +130,7 @@ body .conteneur {
 //Code imbriqué à 100%
 aside.DiapoHP{
    
-     width: container();
+     max-width: container();
         #transparency{
             //width: container();
             display: none;
@@ -146,14 +147,13 @@ aside.DiapoHP{
     }
     @include susy-breakpoint($desktop) { 
        
-      width: container();
+      max-width: container($desktopcol/2);
+      @include span(6 of 6);
         #transparency{
-            //display: block;
-           width: container(4);
+            
         }
         #contenu-diapo{
-           // display: block;
-            width: container(4);
+           
         }
 
     }
@@ -176,7 +176,7 @@ z-index:15;
 #contenu-diapo {
   
   position: relative;
-  bottom:em(105px);
+  bottom:em(150px);
   left: em(10px);
   color: white;
   z-index: 20;
