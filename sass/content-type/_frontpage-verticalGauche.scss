@@ -12,11 +12,12 @@
   //@include susy-breakpoint ($tablet){}
 
 //Code imbriqué à 100%
-body .conteneur {
+body .conteneur 
+{
     //Pas de @include container($total-columns); car deja mis dans layout !!!
     background:transparent image-url("bg_content_etoile.gif") no-repeat left bottom;
 
-    .HPDiapoVerticalGaucheVerticalGauche{
+    .HPDiapoVerticalGauche{
         //@include span($mobile);//image ok sur mob mais pas sur desk
         width: container();
         @include clearfix;

@@ -28,6 +28,11 @@ body .conteneur{
            @include span(3 of $desktopcol);
             background: darkorange;
         }
+        //Pour orientation paysage
+         @include susy-breakpoint ($tabletlandscape){
+           @include span(3 of $tabletcol-landcsape);
+            background: violet;
+        }
     }
     .col2_layout_3_8_3{
        @include span($mobilecol);
@@ -42,6 +47,11 @@ body .conteneur{
           @include span(6 of $desktopcol);
           background: hotpink;
         }
+        //Pour orientation paysage
+         @include susy-breakpoint ($tabletlandscape){
+           @include span(4 of $tabletcol-landcsape);
+            background: royalblue;
+        }
 
     }
     .col3_layout_3_8_3{
@@ -50,12 +60,17 @@ body .conteneur{
         background: #00c9fe;
         @include clearfix;
         @include susy-breakpoint ($tablet){
-            @include span(2 omega);
+            @include span(last 2 of $tabletcol);
             background: purple;
         }
         @include susy-breakpoint ($desktop){
-           @include span(3 omega of $desktopcol);
+           @include span(last 3 of $desktopcol);
            background: teal;
+        }
+        //Pour orientation paysage
+         @include susy-breakpoint ($tabletlandscape){
+           @include span(last 3 of $tabletcol-landcsape);
+            background: violet;
         }
 
     }

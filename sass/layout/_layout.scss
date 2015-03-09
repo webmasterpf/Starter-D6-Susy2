@@ -34,6 +34,9 @@ body {
 body .conteneur{
     //Approche mobile-first,réglage pour mobile
     @include container();
+    @debug susy-get(columns);
+    @include show-grid(overlay);
+    
     // This is the default clearfix from Compass. You can opt to use other clearfix methods
   @include clearfix; 
     background: transparent;
@@ -67,7 +70,7 @@ body .conteneur{
         .node-inner{
             max-width: container();
             @include clearfix;
-            @include show-grid;
+            
         }
         .content-bottom{max-width: container();}
         .content-bottom-home{
@@ -86,6 +89,7 @@ body .conteneur{
 
     @include susy-breakpoint($tablet) {/*   //Dimensions pour les tablettes*/
        max-width: container($tabletcol);
+       @debug susy-get(columns);
         #header{
             //pas besoin de mixin car bloc prend toute la largeur
             
@@ -124,6 +128,8 @@ body .conteneur{
     /*    //Dimensions pour les pc*/
     @include susy-breakpoint($desktop) {
        max-width: container($desktopcol); 
+       @include show-grid($desktopcol);
+       @debug susy-get(columns);
          #header{
             //pas besoin de mixin car bloc prend toute la largeur
            
@@ -158,6 +164,44 @@ body .conteneur{
         }
 
     }
+    /*    //Dimensions pour orientation paysage mobile / tablette */
+    @include susy-breakpoint($mobilelandscape) {
+       max-width: container($mobilecol-landscape); 
+       @debug susy-get(columns);
+         #header{
+            //pas besoin de mixin car bloc prend toute la largeur
+           
+        }
+        .content-global{
+            max-width: container($mobilecol-landscape);        
+            
+        }
+        .content-inner{
+           max-width: container($mobilecol-landscape);
+           .content-header{}
+        }
+        .content-top{max-width: container($mobilecol-landscape);}
+        .middle-content{
+            max-width: container($mobilecol-landscape);
+            
+        }
+        .node-inner{  
+            max-width: container($mobilecol-landscape)
+        }                       
+        .content-bottom{max-width: container($mobilecol-landscape);}
+        .content-bottom-home{
+            //max-width: container($mobilecol-landscape);
+        }
+        
+       
+        #left-content{}
+        #right-content{}
+        #footer{
+            //max-width: container($mobilecol-landscape);
+            @include background-size(auto);
+        }
+
+    }
 }//Fin definition du conteneur principal et ses enfants
 
 //Pour le dev, code visuel sur les blocs selon le breakpoint
@@ -165,7 +209,8 @@ body .conteneur{
 
 body .conteneur{
     //Approche mobile-first,réglage pour mobile
-    //@include susy-grid-background;
+    
+    
     #header{}
     .content-global{}
     
@@ -185,10 +230,10 @@ body .conteneur{
 
 @include susy-breakpoint($tablet) {/*   //Dimensions pour les tablettes*/
     body .conteneur{
-        //@include susy-grid-background;
+        
         
         #header{
-            //@include susy-grid-background;
+          
             background-color: sienna;
         }
         .content-global{}
@@ -205,13 +250,13 @@ body .conteneur{
     }
     @include susy-breakpoint($desktop) {/*    //Dimensions pour les pc*/
     body .conteneur{
-        //@include susy-grid-background;
-        
+       
+         @debug susy-get(columns);
         #header{
-            //@include susy-grid-background;
+           
             background: seashell;}
         .content-global{
-            ////@include susy-grid-background;
+            
              
         }
         .content-inner{
@@ -219,9 +264,36 @@ body .conteneur{
         }
         .middle-content{
             background-color:yellow;
-            //@include susy-grid-background;
+            
         }
-        .content-top{background-color: yellow;}
+        .content-top{background-color: yellowgreen;}
+        .content-bottom{}
+        .content-bottom-home{}
+        #left-content{background: tomato;}
+        #right-content{background: violet;}
+        #footer{background-color: palegreen;
+        }
+    }
+}
+@include susy-breakpoint($tabletlandscape) {/*    //Dimensions pour les pc*/
+    body .conteneur{
+        
+         @debug susy-get(columns);
+        #header{
+           
+            background: palevioletred;}
+        .content-global{
+            
+             
+        }
+        .content-inner{
+        background-color: yellow;     
+        }
+        .middle-content{
+            background-color: sandybrown;
+            
+        }
+        .content-top{background-color: yellowgreen;}
         .content-bottom{}
         .content-bottom-home{}
         #left-content{background: tomato;}

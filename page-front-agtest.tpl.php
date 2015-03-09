@@ -17,7 +17,7 @@
     <script src="<?php print $base_path . path_to_theme() ?>/js/typos.js" type="text/javascript" charset="utf-8"></script>
 
  <?php
-$theme_path = drupal_get_path('theme', 'starterd6_pf_susy'); 
+$theme_path = drupal_get_path('theme', 'starterd6_pf_susy2'); 
 include ($theme_path.'/js/google_font.php');
 ?>
   </head>

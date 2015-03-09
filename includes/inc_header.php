@@ -18,7 +18,7 @@
 
     
  <?php
-$theme_path = drupal_get_path('theme', 'starterd6_pf_susy'); 
+$theme_path = drupal_get_path('theme', 'starterd6_pf_susy2'); 
 include ($theme_path.'/js/google_font.php');
 ?>
         
