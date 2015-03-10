@@ -33,7 +33,7 @@ body {
 /*-- LAYOUT PRINCIPAL --*/
 body .conteneur{
     //Approche mobile-first,réglage pour mobile
-    @include container();
+    @include container($susy);// largeur stricte
     @debug susy-get(columns);
     @include show-grid(overlay);
     
@@ -43,266 +43,52 @@ body .conteneur{
     padding-top: 2em;  
     
         #header{
-            //max-width: container();
-            clear: both;
+             @include clearfix;  
         }
         .content-global{
-            max-width: container();
-            @include clearfix;            
+           // max-width: container();
+           // @include clearfix;            
         }
         .content-inner{
-            max-width: container();
-            @include clearfix;
+            //max-width: container();
+            //@include clearfix;
             .content-header{
                 
             }
         }
         .content-top{
-            max-width: container();
-            clear: both;        
-            .ariane{clear: both;}
+            //max-width: container();
+            //@include clearfix;    
+            .ariane{//clear: both;}
         }
         .middle-content{
-            max-width: container();
-           // @include span($mobilecol);
-           @include clearfix;
+            //max-width: container();
+            //@include clearfix;
         }
         .node-inner{
-            max-width: container();
-            @include clearfix;
+            //max-width: container();
+            //@include clearfix;
             
         }
-        .content-bottom{max-width: container();}
+        .content-bottom{
+            //max-width: container();
+            //@include clearfix;
+        }
         .content-bottom-home{
             //max-width: container();
-            @include clearfix;
-            clear: both;       
+            //@include clearfix;    
         }
         
             #left-content{}
             #right-content{}
             #footer{
             //pas besoin de mixin car bloc prend toute la largeur
-            clear: both;
             @include background-size;
         }
 
-    @include susy-breakpoint($tablet) {/*   //Dimensions pour les tablettes*/
-       max-width: container($tabletcol);
-       @debug susy-get(columns);
-        #header{
-            //pas besoin de mixin car bloc prend toute la largeur
-            
-        }
-        .content-global{
-            max-width: container();            
-        }
-        .content-inner{
-            max-width: container();  
-            .content-header{}
-        } 
-        .content-top{max-width: container();}
-        .middle-content{
-            max-width: container();
-           // @include span($tablet);
-        }
-        .node-inner{
-            //@include span($tablet );
-            max-width: container();
-            
-        }
-        .content-bottom{max-width: container();}
-        .content-bottom-home{
-            //max-width: container();
-        }
-       
-        
-        #left-content{}
-        #right-content{}
-        #footer{
-            // max-width: container();
-            @include background-size(auto);
-        }
 
-    }
-    /*    //Dimensions pour les pc*/
-    @include susy-breakpoint($desktop) {
-       max-width: container($desktopcol); 
-       @include show-grid($desktopcol);
-       @debug susy-get(columns);
-         #header{
-            //pas besoin de mixin car bloc prend toute la largeur
-           
-        }
-        .content-global{
-            max-width: container($desktopcol);        
-            
-        }
-        .content-inner{
-           max-width: container($desktopcol);
-           .content-header{}
-        }
-        .content-top{max-width: container($desktopcol);}
-        .middle-content{
-            max-width: container($desktopcol);
-            
-        }
-        .node-inner{  
-            max-width: container($desktopcol)
-        }                       
-        .content-bottom{max-width: container($desktopcol);}
-        .content-bottom-home{
-            //max-width: container();
-        }
-        
-       
-        #left-content{}
-        #right-content{}
-        #footer{
-            //max-width: container();
-            @include background-size(auto);
-        }
 
-    }
-    /*    //Dimensions pour orientation paysage mobile / tablette */
-    @include susy-breakpoint($mobilelandscape) {
-       max-width: container($mobilecol-landscape); 
-       @debug susy-get(columns);
-         #header{
-            //pas besoin de mixin car bloc prend toute la largeur
-           
-        }
-        .content-global{
-            max-width: container($mobilecol-landscape);        
-            
-        }
-        .content-inner{
-           max-width: container($mobilecol-landscape);
-           .content-header{}
-        }
-        .content-top{max-width: container($mobilecol-landscape);}
-        .middle-content{
-            max-width: container($mobilecol-landscape);
-            
-        }
-        .node-inner{  
-            max-width: container($mobilecol-landscape)
-        }                       
-        .content-bottom{max-width: container($mobilecol-landscape);}
-        .content-bottom-home{
-            //max-width: container($mobilecol-landscape);
-        }
-        
-       
-        #left-content{}
-        #right-content{}
-        #footer{
-            //max-width: container($mobilecol-landscape);
-            @include background-size(auto);
-        }
-
-    }
 }//Fin definition du conteneur principal et ses enfants
-
-//Pour le dev, code visuel sur les blocs selon le breakpoint
-// à commenter ou supprimer pour la production
-
-body .conteneur{
-    //Approche mobile-first,réglage pour mobile
-    
-    
-    #header{}
-    .content-global{}
-    
-    #left-content{}
-    .content-inner{
-        //@include susy-grid-background;
-        background-color: #F29400;
-    .content-top{background-color: chocolate;}
-    .content-bottom{}
-    .content-bottom-home{}
-    }
-    .middle-content{background-color:deeppink;}
-    #right-content{}
-    #footer{background-color: firebrick;
-        }
-}   
-
-@include susy-breakpoint($tablet) {/*   //Dimensions pour les tablettes*/
-    body .conteneur{
-        
-        
-        #header{
-          
-            background-color: sienna;
-        }
-        .content-global{}
-        .content-top{background-color: mistyrose;}
-        .content-inner{}
-        .middle-content{
-            background-color: #C8D215;
-        //@include susy-grid-background;
-        }
-        #left-content{}
-        #right-content{}
-        #footer{background-color: peachpuff;
-        }
-    }
-    @include susy-breakpoint($desktop) {/*    //Dimensions pour les pc*/
-    body .conteneur{
-       
-         @debug susy-get(columns);
-        #header{
-           
-            background: seashell;}
-        .content-global{
-            
-             
-        }
-        .content-inner{
-        background-color: palevioletred;     
-        }
-        .middle-content{
-            background-color:yellow;
-            
-        }
-        .content-top{background-color: yellowgreen;}
-        .content-bottom{}
-        .content-bottom-home{}
-        #left-content{background: tomato;}
-        #right-content{background: violet;}
-        #footer{background-color: palegreen;
-        }
-    }
-}
-@include susy-breakpoint($tabletlandscape) {/*    //Dimensions pour les pc*/
-    body .conteneur{
-        
-         @debug susy-get(columns);
-        #header{
-           
-            background: palevioletred;}
-        .content-global{
-            
-             
-        }
-        .content-inner{
-        background-color: yellow;     
-        }
-        .middle-content{
-            background-color: sandybrown;
-            
-        }
-        .content-top{background-color: yellowgreen;}
-        .content-bottom{}
-        .content-bottom-home{}
-        #left-content{background: tomato;}
-        #right-content{background: violet;}
-        #footer{background-color: palegreen;
-        }
-    }
-}
-}
 
 
 
@@ -320,3 +106,4 @@ aside.content_top{
 {
     img,iframe,object,embed{@include adaptable-img;}
     }
+}//Pour fermet le scss layout suite inclusion des Breakpoint

@@ -18,8 +18,6 @@ body .conteneur
     background:transparent image-url("bg_content_etoile.gif") no-repeat left bottom;
 
     .HPDiapoVerticalGauche{
-        //@include span($mobile);//image ok sur mob mais pas sur desk
-        width: container();
         @include clearfix;
     }
     .HPDroite{
@@ -31,7 +29,7 @@ body .conteneur
 
     @include susy-breakpoint($tablet) {/*     //Dimensions pour les tablettes*/
         //Taille du conteneur du groupe
-        width: container($tabletcol);
+        @include container($tabletcol);
         .HPDiapoVerticalGauche{@include span(4);}
         .HPDroite{@include span(last 4);}
         .HPDroite1{}
@@ -41,7 +39,7 @@ body .conteneur
     }
     @include susy-breakpoint($desktop) {/*    //Dimensions pour les pc*/
         //Taille du conteneur du groupe    
-        width: container($desktopcol);
+      @include container($desktopcol);
 
         .HPDiapoVerticalGauche{
             
@@ -133,12 +131,11 @@ aside.DiapoHP{
    
      max-width: container();
         #transparency{
-            //width: container();
-            display: none;
+           display: none;
+           
         }
         #contenu-diapo{
-            //width: container();
-            display: none;
+           display: none;
         }
     img{@include adaptable-img;}
        @include susy-breakpoint($tablet) {
@@ -148,15 +145,10 @@ aside.DiapoHP{
     }
     @include susy-breakpoint($desktop) { 
        
-      max-width: container($desktopcol/2);
-      @include span(6 of 6);
-        #transparency{
-            
-        }
-        #contenu-diapo{
-           
-        }
-
+       max-width: container($desktopcol/2);
+        #transparency{display: block;}
+        #contenu-diapo{display: block;}
+        img{}
     }
  
 }

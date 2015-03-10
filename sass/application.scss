@@ -49,22 +49,27 @@ breakpoint-2.5.0
 @import "layout/layout-footer";
 @import "layout/layout-defilant";
 
+// Les BREAKPOINTS
+        
+@import "layout/layout-bp-tablet";
+@import "layout/layout-bp-desktop";
+//@import "layout/layout-bp-mobile-landscape";
+
 @import "ui/maintenance";
 @import "ui/search";
 @import "ui/style-backoffice";
-
-
-
-// Import des partiels pour les node.tpl
 
 //Import Homepage - choisir quel layout utiliser
 
 //@import "content-type/frontpage-agtest";
 //@import "content-type/frontpage-pano";
 //@import "content-type/frontpage-verticalDroit";
-//@import "content-type/frontpage-verticalGauche";
+@import "content-type/frontpage-verticalGauche";
 //@import "content-type/frontpage-institutionnel";
 
+
+
+// Import des partiels pour les node.tpl
 //@import "content-type/node-TYPE";
 @import "content-type/views";
 
@@ -75,3 +80,4 @@ breakpoint-2.5.0
 
 //developpement
 @import "content-type/page-agtest";
+//@import "layout/layout-debug-colour";

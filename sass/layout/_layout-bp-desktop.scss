@@ -1,0 +1,48 @@
+/*
+2015/03 - Layout DESKTOP
+Layout pour les desktop.Breakpoint définit par variable dans _variables.scss
+*/
+body .conteneur{
+@include susy-breakpoint($desktop)
+{
+   
+    @include container($desktopcol);
+  
+    @debug susy-get(columns);
+    #header{
+        //pas besoin de mixin car bloc prend toute la largeur
+
+    }
+    .content-global{
+        //max-width: container($desktopcol);
+        @include clearfix; 
+
+    }
+    .content-inner{
+       
+        .content-header{}
+    }
+    .content-top{max-width: container($desktopcol);}
+    .middle-content{
+       
+
+    }
+    .node-inner{  
+     
+    }                       
+    .content-bottom{}
+    .content-bottom-home{
+        
+    }
+
+
+    #left-content{}
+    #right-content{}
+    #footer{
+        
+        @include background-size(auto);
+    }
+
+}
+
+}
