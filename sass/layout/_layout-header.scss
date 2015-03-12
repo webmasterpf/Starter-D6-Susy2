@@ -6,35 +6,34 @@
  //Imbrication à 100% (full nested)
  #header {
      .headHaut {
-         //@include span($mobilecol);
-         @include clearfix;
-        
-
-         .logoHead {@include span($mobilecol);
+         @include clearfix; 
+         .logoHead {
                     img{margin: 0 auto;display: block;}
          }
-         .menuImg {@include span($mobilecol);}
+         .menuImg {}
      }
      .headBas {
          @include clearfix; 
-         .site-slogan{
-             //@include span($mobilecol);
-            
-         }
+         .site-slogan{}
          .headSearch{}
-         .menuHead{clear: both;}
+         .menuHead{}
      }                
-
+       
+     
      @include susy-breakpoint($desktop) {/*    //Dimensions pour les pc*/
          .headHaut {
-             .logoHead { @include span(4 of $desktopcol);}
-             .menuImg {  @include span(8 omega of $desktopcol);
-                         padding-top: 1em;
+             .logoHead { 
+                @include span(3 of $desktopcol);
+             }
+             .menuImg {
+                @include span(9 of $desktopcol last);
+                 padding-top: 1em;
              }
          }
          .headBas {
-             .site-slogan{@include span(5 of $desktopcol);}
-             .headSearch{@include span(5 omega of $desktopcol);}
+            
+             .site-slogan{@include span(7 of $desktopcol);}
+             .headSearch{@include span(5 of $desktopcol last);}
              .menuHead{}
          } 
      }
@@ -45,10 +44,11 @@
          }
          .headBas {
              .site-slogan{@include span(3 of $tabletcol);}
-             .headSearch{@include span(4 omega of $tabletcol);}
+             .headSearch{@include span(4 of $tabletcol last);}
              .menuHead{}
          }                
      }
+   
  }
 
 
@@ -102,12 +102,15 @@
 
 
 .headSearch {
-  text-align: right;
-  margin: em(2px) 0 0 0;
-  background: transparent image-url('bg_recherche.gif') no-repeat scroll em(160px) em(7px);
-  input[type=image]{
-      vertical-align: middle;
-  }
+    
+    padding: 0 0.5em;
+    text-align: right;
+    margin: em(2px) 0 0 0;
+    //background: transparent image-url('bg_recherche.gif') no-repeat scroll 6em em(7px);
+    .form-item > label{color: #DDD;font-family: $AristaFont;font-size: medium;}
+    input[type=image]{
+        vertical-align: middle;
+    }
 }
 
 
@@ -122,14 +125,22 @@
     color: white;
     text-transform: uppercase;
   }
-  padding: em(160px) 0 0 em(10px);
+  padding: em(160px) 0 0 0;
   margin: 0;
 }
 
 .site-slogan {
   color: white;
-  padding: em(3px) 0 0 em(4px);
- 
+  font-size: small;
+  text-align: center;
+  
+  @include susy-breakpoint($mobile){
+      
+  }
+  @include susy-breakpoint($desktop){
+      text-align: left;
+      padding: em(3px) 0 0 1em;
+  }
   a {
     text-decoration: none;
     color: white;

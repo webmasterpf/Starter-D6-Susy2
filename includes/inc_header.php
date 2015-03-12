@@ -63,15 +63,15 @@ include ($theme_path.'/js/google_font.php');
             </div><!-- /recherche -->
 
 
-            <nav class="menuHead">
-                <?php if (!empty($menuDyn)): ?>
-                    <?php print $menuDyn; ?>
-                <?php endif; ?>
-
-            </nav><!-- /menuHead -->
+            
 
 
         </div><!-- /headBas -->
 
+        <nav class="menuHead">
+            <?php if (!empty($menuDyn)): ?>
+                <?php print $menuDyn; ?>
+            <?php endif; ?>
 
+        </nav><!-- /menuHead -->
     </header> <!-- /header -->
