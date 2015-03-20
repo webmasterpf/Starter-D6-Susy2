@@ -12,7 +12,7 @@
   //@include susy-breakpoint ($tablet){}
 
 //Code imbriqué à 100%
-body .conteneur 
+body .conteneur .content-global
 {
     //Pas de @include container($total-columns); car deja mis dans layout !!!
     background:transparent image-url("bg_content_etoile.gif") no-repeat left bottom;
@@ -47,7 +47,7 @@ body .conteneur
             
         }
         .HPDroite{
-            @include span(6 of $desktopcol last);
+            @include span(last 6);
            
             
             

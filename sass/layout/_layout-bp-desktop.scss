@@ -9,11 +9,11 @@ body .conteneur{
         @debug susy-get(columns);
         #header{
             //voir _layout-header.scss
-            //pas besoin de mixin car bloc prend toute la largeur
+           
 
         }
         .content-global{
-            //max-width: container($desktopcol);
+           
             @include clearfix; 
 
         }
@@ -22,7 +22,7 @@ body .conteneur{
             .content-header{}
         }
         .content-top{
-            max-width: container($desktopcol);
+            
         }
         .middle-content{
 
@@ -40,7 +40,7 @@ body .conteneur{
         #left-content{}
         #right-content{}
         #footer{
-            @include clearfix; 
+            //@include clearfix; 
             @include background-size(auto);
         }
 
