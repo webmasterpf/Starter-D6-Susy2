@@ -46,37 +46,32 @@ body .conteneur{
              //voir _layout-header.scss
         }
         .content-global{
-           // max-width: container();
-           //@include clearfix;            
+           //pour breakpoint voir _layout-bp-desktop.scss           
         }
         .content-inner{
-            //max-width: container();
-            //@include clearfix;
+           //pour breakpoint voir _layout-bp-desktop.scss           
             .content-header{
                 
             }
         }
         .content-top{
-            //max-width: container();
-            //@include clearfix;    
-            .ariane{//clear: both;}
+            //pour breakpoint voir _layout-bp-desktop.scss
+            .ariane{}
         }
         .middle-content{
-            //max-width: container();
-            //@include clearfix;
+            //pour breakpoint voir _layout-bp-desktop.scss
+            
         }
         .node-inner{
-            //max-width: container();
-            //@include clearfix;
+            //pour breakpoint voir _layout-bp-desktop.scss
+            
             
         }
         .content-bottom{
-            //max-width: container();
-            //@include clearfix;
+            //pour breakpoint voir _layout-bp-desktop.scss
         }
         .content-bottom-home{
-            //max-width: container();
-            //@include clearfix;    
+            //pour breakpoint voir _layout-bp-desktop.scss
         }
         
             #left-content{}
@@ -84,11 +79,12 @@ body .conteneur{
             #footer{
             //pas besoin de mixin car bloc prend toute la largeur
             @include background-size;
+            //pour breakpoint voir _layout-bp-desktop.scss
         }
 
 
 
-}//Fin definition du conteneur principal et ses enfants
+}//Fin definition du conteneur principal et ses enfants pour mobile
 
 
 
@@ -106,4 +102,3 @@ aside.content_top{
 {
     img,iframe,object,embed{@include adaptable-img;}
     }
-}//Pour fermet le scss layout suite inclusion des Breakpoint
