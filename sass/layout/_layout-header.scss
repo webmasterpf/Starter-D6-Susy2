@@ -4,49 +4,64 @@
 
 // Layout du header et de ses parties haute et basse (logique mobile first)
  //Imbrication à 100% (full nested)
- #header {
+ body .conteneur #header {
+       @include clearfix; 
      .headHaut {
-         @include clearfix; 
+       @include clearfix; 
          .logoHead {
                     img{margin: 0 auto;display: block;}
          }
          .menuImg {}
      }
      .headBas {
-         @include clearfix; 
+        @include clearfix; 
          .site-slogan{}
          .headSearch{}
-         .menuHead{}
+        .menuHead{}  
      }                
-       
+      
      
      @include susy-breakpoint($desktop) {/*    //Dimensions pour les pc*/
+         //overflow: visible;
          .headHaut {
              .logoHead { 
-                @include span(3 of $desktopcol);
+                @include span(3 of 12 first);
              }
              .menuImg {
-                @include span(9 of $desktopcol last);
-                 padding-top: 1em;
+                 
+                 @include span(12 last);
+                 
              }
          }
          .headBas {
             
-             .site-slogan{@include span(7 of $desktopcol);}
-             .headSearch{@include span(5 of $desktopcol last);}
-             .menuHead{}
+             .site-slogan{@include span( 7 of $desktopcol );}
+             .headSearch{@include span( 5 of $desktopcol last);}
+             .menuHead{
+             
+             aside.menuDyn{
+                
+             }
          } 
+         
+         }
      }
      @include susy-breakpoint($tablet) {/*     //Dimensions pour les tablettes*/
          .headHaut {
-             .logoHead { }
-             .menuImg {  }
+             .logoHead {}
+             .menuImg {}
          }
          .headBas {
-             .site-slogan{@include span(3 of $tabletcol);}
-             .headSearch{@include span(4 of $tabletcol last);}
-             .menuHead{}
-         }                
+             .site-slogan{}
+             .headSearch{@include span( 4 of $tabletcol last);}
+             
+         }
+          .menuHead{
+           
+             aside.menuDyn{
+               
+             }
+         }
      }
    
  }

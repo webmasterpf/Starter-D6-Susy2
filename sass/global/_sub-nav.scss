@@ -12,15 +12,18 @@ aside.navStatic{
         .selectnav { display: none; }
         .horizontal-nav { display:block; }
         ul.horizontal-nav {        
-            @include horizontal-list;
+            @include horizontal-list-container;//Compass Mixin
+            padding-top: 1em;
             li {
+                @include horizontal-list-item;//Compass Mixin
+                //@include span(1 of 8);
                 padding: 0;
-                @include gallery(1 of 8);
                 text-align:center;
                 font-size: 1.55em;
+
                 img{
-                    @include adaptable-img;
-                    margin: 0 0 0 6.8em;
+                    //@include adaptable-img;
+                    //margin: 0 0 0 6.8em;
                 }
                 a {
                     // vertical alignment

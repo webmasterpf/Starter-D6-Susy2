@@ -13,7 +13,8 @@ include ($theme_path.'/js/code_stats.php');
 </footer> <!-- /footer -->
       <?php endif; ?>
        
-    </section> <!-- /general OR /page -->
+    </section> 
+    <!-- ______________________ /CONTENEUR _______________________ -->
            <?php
 global $theme_path;
 include ($theme_path.'/includes/inc_responsivenav.php');

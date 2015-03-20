@@ -44,10 +44,10 @@ body .conteneur
         .HPDiapoVerticalGauche{
             
             @include span(6 of $desktopcol);
-            @include clearfix;
+            
         }
         .HPDroite{
-            @include span(last 6 of $desktopcol);
+            @include span(6 of $desktopcol last);
            
             
             

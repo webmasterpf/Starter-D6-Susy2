@@ -15,22 +15,23 @@ $susy: (
   column-width: $column-width,
   gutters: $gutter-width / $column-width,
  
-  
+  output: isolate,
   //Style de grille
   //math: if($container-style == magic, fluid, $container-style),
   math : static,
   /* Tells Susy to use border-box */
   global-box-sizing: border-box,
-  
-   //Debug
+       //Debug
   debug: (
     image: show,
-    color: blue,
+    color: green,
     output: overlay,
     toggle: top right,
   ),
   
   );
+  
+
  
 /* Makes border-box properties */
 //@include border-box-sizing;

@@ -12,7 +12,8 @@ include ($theme_path.'/includes/inc_header.php');
          <?php print $content_top; ?>
      </div> <!--/#content-top -->
  <?php endif; ?>
- <!-- ______________________ LAYOUT HOMEPAGE VERTICAL G_______________________ -->       
+ <!-- ______________________ LAYOUT HOMEPAGE VERTICAL G_______________________ -->   
+ 
    <!-- ______________________ ZONE DIAPO _______________________ -->
 			
             <?php if ($DiapoHP): ?>

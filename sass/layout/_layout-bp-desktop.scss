@@ -3,46 +3,47 @@
 Layout pour les desktop.Breakpoint définit par variable dans _variables.scss
 */
 body .conteneur{
-@include susy-breakpoint($desktop)
-{
-   
-    @include container($desktopcol);
-  
-    @debug susy-get(columns);
-    #header{
-        //pas besoin de mixin car bloc prend toute la largeur
+    @include susy-breakpoint($desktop)
+    {
+        @include container($desktopcol);
+        @debug susy-get(columns);
+        #header{
+            //voir _layout-header.scss
+            //pas besoin de mixin car bloc prend toute la largeur
 
-    }
-    .content-global{
-        //max-width: container($desktopcol);
-        @include clearfix; 
+        }
+        .content-global{
+            //max-width: container($desktopcol);
+            @include clearfix; 
 
-    }
-    .content-inner{
-       
-        .content-header{}
-    }
-    .content-top{max-width: container($desktopcol);}
-    .middle-content{
-       
+        }
+        .content-inner{
 
-    }
-    .node-inner{  
-     
-    }                       
-    .content-bottom{}
-    .content-bottom-home{
-        
-    }
+            .content-header{}
+        }
+        .content-top{
+            max-width: container($desktopcol);
+        }
+        .middle-content{
 
 
-    #left-content{}
-    #right-content{}
-    #footer{
-        
-        @include background-size(auto);
-    }
+        }
+        .node-inner{  
 
-}
+        }                       
+        .content-bottom{}
+        .content-bottom-home{
+
+        }
+
+
+        #left-content{}
+        #right-content{}
+        #footer{
+            @include clearfix; 
+            @include background-size(auto);
+        }
+
+    }
 
 }

@@ -25,7 +25,7 @@ include ($theme_path.'/js/google_font.php');
   </head>
 
  <body class="<?php print $body_classes; ?>">
-
+<!-- ______________________ CONTENEUR _______________________ -->
      <section class="conteneur">
 
     <!-- ______________________ HEADER _______________________ -->
@@ -61,17 +61,15 @@ include ($theme_path.'/js/google_font.php');
                     <?php print $search_box ?>
                 <?php endif; ?>
             </div><!-- /recherche -->
-
-
             
-
-
-        </div><!-- /headBas -->
-
-        <nav class="menuHead">
+             <nav class="menuHead">
             <?php if (!empty($menuDyn)): ?>
                 <?php print $menuDyn; ?>
             <?php endif; ?>
 
         </nav><!-- /menuHead -->
+
+        </div><!-- /headBas -->
+
+       
     </header> <!-- /header -->

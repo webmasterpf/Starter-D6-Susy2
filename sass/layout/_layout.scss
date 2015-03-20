@@ -38,16 +38,16 @@ body .conteneur{
     @include show-grid(overlay);
     
     // This is the default clearfix from Compass. You can opt to use other clearfix methods
-  @include clearfix; 
+  
     background: transparent;
     padding-top: 2em;  
     
         #header{
-             @include clearfix;  
+             //voir _layout-header.scss
         }
         .content-global{
            // max-width: container();
-           // @include clearfix;            
+           //@include clearfix;            
         }
         .content-inner{
             //max-width: container();
