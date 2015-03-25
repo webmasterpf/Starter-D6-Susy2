@@ -25,11 +25,11 @@
          //overflow: visible;
          .headHaut {
              .logoHead { 
-                @include span(3 of 12 first);
+                @include span(4 of $desktopcol);
              }
              .menuImg {
                  
-                 @include span(12 last);
+                 @include span(last 12 of $desktopcol);
                  
              }
          }

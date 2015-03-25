@@ -21,8 +21,18 @@ include ($theme_path.'/includes/inc_header.php');
         <div class="content-inner" class="inner column center">
 		
 			<?php if ($breadcrumb || $title ||$content_top ): ?>
+            
+             <!-- ______________________ CONTENT TOP NODE_______________________ -->
+               <?php if ($content_top_node): ?>
+            <div id="content-top-node">
+	              <?php print $content_top_node; ?>
+            </div> <!-- /#content-top-node -->
+            <?php endif; ?>
+            
             <div id="content-top">
 			 <?php print $breadcrumb; ?>
+                
+                
 			 <?php if ($title): ?>
                 <h1 class="title"><?php print $title; ?></h1>
               <?php endif; ?>
