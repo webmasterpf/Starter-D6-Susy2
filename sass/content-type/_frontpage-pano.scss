@@ -11,45 +11,57 @@
   //@include susy-breakpoint ($tablet){}
 
 //Code imbriqué à 100%
-body .conteneur .content-global {
+body .conteneur {
     background:transparent image-url ("bg_content_etoile.gif") no-repeat left bottom;
-       
+
     .HPDiapo{}
     .HPBasGauche{}
     .HPBasDroit{}
 }
-    @include susy-breakpoint($desktop) {/*    //Dimensions pour les pc*/
-    
-        .HPDiapo{}
-        .HPBasGauche{@include span($desktopcol/2 of $desktopcol);}
-        .HPBasDroit{@include span($desktopcol/2 of $desktopcol last);}
+@include breakpoint($desktop) {/*    //Dimensions pour les pc*/
+
+    .HPDiapo{
+        &:after{
+                content: " ";
+                display: block;
+                clear: both;}
     }
-  
-    @include susy-breakpoint($tablet) {/*     //Dimensions pour les tablettes*/
+    .HPBasGauche{
+        //@include clearfix; 
+        @include span(first 6 of $desktopcol);}
+    .HPBasDroit{
+        //@include clearfix; 
+        @include span(last $desktopcol/2 of $desktopcol);
         
-        .HPDiapo{}
-        .HPBasGauche{@include span($tabletcol/2 of $tabletcol);}
-        .HPBasDroit{@include span($tabletcol/2 of $tabletcol last);}
-    
+    }
+}
+
+@include breakpoint($tablet) {/*     //Dimensions pour les tablettes*/
+
+    .HPDiapo{}
+    .HPBasGauche{@include span(first $tabletcol/2 of $tabletcol);}
+    .HPBasDroit{@include span(last $tabletcol/2 of $tabletcol);}
+
 }
 //Pour le dev, code visuel sur les blocs selon le breakpoint
 // à commenter ou supprimer pour la production
-body .conteneur .content-global {
+body .conteneur {
         
     .HPDiapo{}
     .HPBasGauche{background: #C8D215;}
     .HPBasDroit{background: salmon;}
    
-    @include susy-breakpoint($desktop) {/*    //Dimensions pour les pc*/
+    @include breakpoint($desktop) {/*    //Dimensions pour les pc*/
+        
     .HPDiapo{}
     .HPBasGauche{background:gold;}
     .HPBasDroit{background:bisque;}
     }
    
-    @include susy-breakpoint($tablet) {/*     //Dimensions pour les tablettes*/
+    @include breakpoint($tablet) {/*     //Dimensions pour les tablettes*/
         .HPDiapo{}
         .HPBasGauche{background: #C8D215;}
-        .HPBasDroit{background: salmon;}
+        .HPBasDroit{background: red;}
     }
 }
 /********************/
@@ -87,39 +99,40 @@ body .conteneur .content-global {
 //Layout du diaporama dynamique (Views slideshow)
 //Code imbriqué à 100%
 aside.DiapoPanoHP{
-   
-     max-width: container();
-        #transparency{
-           display: none;
-           
-        }
-        #contenu-diapo{
-           display: none;
-        }
+
+
+    #transparency{
+        display: none;
+
+    }
+    #contenu-diapo{
+        display: none;
+    }
     img{@include adaptable-img;}
-       @include susy-breakpoint($tablet) {
+    @include susy-breakpoint($tablet) {
         #transparency{display: block;}
         #contenu-diapo{display: block;}
 
     }
     @include susy-breakpoint($desktop) { 
-       
-       max-width: container($desktopcol);
+        @include clearfix;
+        max-width: container($desktopcol);
         #transparency{display: block;}
         #contenu-diapo{display: block;}
         img{}
     }
- 
+
 }
 // Style du diaporama dynamique
 
 #transparency{
-background:none repeat scroll 0 0 $orange;/*Couleur du fond*/
+background:none repeat scroll 0 0 $violet;/*Couleur du fond*/
 height:em(65px);
-bottom:em(40px); 
+bottom:4.7em; 
 left:em(12px);
 position:relative;
 z-index:15;
+width: 98%;
 @include opacity(0.6);
 }
 #contenu-diapo {
@@ -127,6 +140,7 @@ z-index:15;
   left: em(10px);
   color: white;
   z-index: 20;
+  bottom:5em;
   
   
   h2 {

@@ -8,7 +8,6 @@ $container-style: magic; // default to magic. Switch to fluid or fixed if desire
 //$container-width: 100%; //seulement si utilisé avec fluid grid
 $susy: (
   output: isolate, // float | isolate
-  
   column-width: $column-width, // false | value
   columns: $total-columns,
   gutters: $gutter-width / $column-width,

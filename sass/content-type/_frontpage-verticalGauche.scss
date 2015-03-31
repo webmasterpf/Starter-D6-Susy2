@@ -43,11 +43,11 @@ body .conteneur .content-global
 
         .HPDiapoVerticalGauche{
             
-            @include span(first 6 of $desktopcol);
+            @include span(6 of $desktopcol first);
             
         }
         .HPDroite{
-            @include span(last 6 of $desktopcol);
+            @include span(6 of $desktopcol last);
            
             
             
@@ -145,7 +145,7 @@ aside.DiapoHP{
     }
     @include susy-breakpoint($desktop) { 
        
-       max-width: container($desktopcol/2);
+       
         #transparency{display: block;}
         #contenu-diapo{display: block;}
         img{}

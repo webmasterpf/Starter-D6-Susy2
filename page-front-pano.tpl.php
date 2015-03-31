@@ -18,8 +18,6 @@ include ($theme_path.'/includes/inc_header.php');
                  <div class="HPDiapo"><?php print $DiapoPanoHP; ?></div>
               <?php endif; ?>
         
-<br clear="all"/>
-
 
  <!--______________________ PARTIE BAS GAUCHE _______________________ -->
                  <?php if ($HPBasGauche): ?>
@@ -32,7 +30,6 @@ include ($theme_path.'/includes/inc_header.php');
      <div class="HPBasDroit"><?php print $HPBasDroit; ?></div>
         <?php endif; ?>
 
-	<br clear="all"/>
  <!--______________________ FIN LAYOUT PAGE _______________________ -->
 	
 	

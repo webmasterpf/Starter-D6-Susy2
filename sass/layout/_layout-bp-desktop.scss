@@ -41,6 +41,10 @@ body .conteneur{
         #right-content{}
         #footer{
             @include background-size(auto);
+            &:before{
+                content: " ";
+                display: block;
+                clear: both;}
         }
 
     }
