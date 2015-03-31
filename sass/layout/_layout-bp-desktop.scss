@@ -14,7 +14,7 @@ body .conteneur{
         }
         .content-global{
            
-            @include clearfix; 
+         
 
         }
         .content-inner{
@@ -40,7 +40,6 @@ body .conteneur{
         #left-content{}
         #right-content{}
         #footer{
-            //@include clearfix; 
             @include background-size(auto);
         }
 

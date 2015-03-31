@@ -5,7 +5,7 @@
 // Layout du header et de ses parties haute et basse (logique mobile first)
  //Imbrication à 100% (full nested)
  body .conteneur #header {
-       @include clearfix; 
+       //@include clearfix; 
      .headHaut {
        @include clearfix; 
          .logoHead {
@@ -29,7 +29,7 @@
              }
              .menuImg {
                  
-                 @include span(last 12 of $desktopcol);
+                 //@include span(last 12 of $desktopcol);
                  
              }
          }
@@ -38,9 +38,11 @@
              .site-slogan{@include span( 7 of $desktopcol );}
              .headSearch{@include span( 5 of $desktopcol last);}
              .menuHead{
-             
+            // @include full;
+              //   @include break;
              aside.menuDyn{
-                
+                 
+                ul#superfish-1{}
              }
          } 
          

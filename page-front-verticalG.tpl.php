@@ -4,6 +4,7 @@ include ($theme_path.'/includes/inc_header.php');
 ?>
 <div class="content-global">
 
+
  <!-- ______________________ CONTENU HAUT _______________________ -->
  
    <?php if ($content_top): ?>
@@ -11,7 +12,8 @@ include ($theme_path.'/includes/inc_header.php');
          <?php print $content_top; ?>
      </div> <!--/#content-top -->
  <?php endif; ?>
- <!-- ______________________ LAYOUT HOMEPAGE VERTICAL G_______________________ -->       
+ <!-- ______________________ LAYOUT HOMEPAGE VERTICAL G_______________________ -->   
+ 
    <!-- ______________________ ZONE DIAPO _______________________ -->
 			
             <?php if ($DiapoHP): ?>
@@ -35,7 +37,7 @@ include ($theme_path.'/includes/inc_header.php');
         <?php endif; ?>
 	  
 </div><!--    /Partie Droite -->
-	<br clear="all"/>
+	
     <!-- ______________________ FIN LAYOUT PAGE _______________________ -->
         
 
@@ -50,7 +52,7 @@ include ($theme_path.'/includes/inc_header.php');
     </div><!-- /#content-bottom -->
    
 	
-	
+
 </div> <!-- /content-global -->
     <?php
 global $theme_path;

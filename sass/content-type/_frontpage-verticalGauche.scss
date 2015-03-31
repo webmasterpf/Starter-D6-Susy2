@@ -43,11 +43,11 @@ body .conteneur .content-global
 
         .HPDiapoVerticalGauche{
             
-            @include span(6 of $desktopcol);
+            @include span(first 6 of $desktopcol);
             
         }
         .HPDroite{
-            @include span(last 6);
+            @include span(last 6 of $desktopcol);
            
             
             

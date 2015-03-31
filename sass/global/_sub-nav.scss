@@ -15,22 +15,21 @@ aside.navStatic{
             @include horizontal-list-container;//Compass Mixin
             padding-top: 1em;
             li {
-                @include horizontal-list-item;//Compass Mixin
-                //@include span(1 of 8);
+               @include horizontal-list-item;//Compass Mixin
+               
                 padding: 0;
                 text-align:center;
-                font-size: 1.55em;
-
-                img{
-                   // @include adaptable-img;
-                   max-width: 60%;
-                }
+                font-size: 1.5em;
+                list-style: none;
+                
                 &:last-child {
-                    width: 39%;
+                @include last;
+                   width: 30%;//Permet de limiter la taille de la derniere li
                 }
+              
                 a {
                     // vertical alignment
-                    margin: 0 em(2px);
+                    margin: 0.25em;
                     border: 0;
                     font-family: $AristaFont;
                     color: $gris-anthracite;
@@ -40,8 +39,35 @@ aside.navStatic{
                     &:hover {
                         color: $orange-fonce;
                     }
+                    img{
+                   @include adaptable-img;
+                   
+                   margin: 0;
+                }
+                
                 }
             }
         }
+    }
+}
+
+//Subnav dans une table, comme système original, mais pas RWD
+aside.navPicto{
+    table{
+        display: table-row;
+    }
+    a {
+                    float: left;
+                    margin: 0 0 0 0.5em;
+                    border: 0;
+                    font-size: 1.55em;
+                    font-family: $AristaFont;
+                    color: $gris-anthracite;
+                    text-decoration: none;
+                    display: block;
+                    @include adjust-font-size-to(16px);
+                    &:hover {
+                        color: $orange-fonce;
+                    }
     }
 }
