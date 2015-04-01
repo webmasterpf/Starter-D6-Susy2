@@ -18,26 +18,26 @@
         
     }
     a {
-        color: #FFF;
+        color: #AAAAAA;
         text-decoration: none;
         &:hover {
             color: #545665;
         }
     }
-    @include susy-breakpoint ($mobile){
+    @include breakpoint ($mobile){
         aside{
         background-color: teal;     
     }      
          @include background-size();
     }
-    @include susy-breakpoint ($desktop){
+    @include breakpoint ($desktop){
          @include background-size(auto);
           aside{
       background: yellowgreen;
     }  
          
     }
-    @include susy-breakpoint ($tablet){
+    @include breakpoint ($tablet){
         aside{
       background:sandybrown;
     }  

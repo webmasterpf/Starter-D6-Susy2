@@ -35,10 +35,10 @@ aside.content_top .annonce-container .annonce
       padding: 0;
   }
   
-  @include susy-breakpoint ($tablet){
+  @include breakpoint ($tablet){
      max-width: container($tabletcol);
   }
-  @include susy-breakpoint ($desktop){
+  @include breakpoint ($desktop){
       max-width: container($desktopcol);
   }
   

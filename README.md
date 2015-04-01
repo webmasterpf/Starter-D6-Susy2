@@ -92,3 +92,15 @@ Compass Recipes : mixin css3
  @include susy-breakpoint ($desktop){}
  @include susy-breakpoint ($tablet){}
 </pre>
+
+Diaporama homepage surimpression
+------------------------------------
+Changer le code HTML dans Views 
+<div id="transparency"></div>
+<div id="contenu-diapo">
+<h2>[teaser]</h2>
+</div>
+par 
+<div id="transparency">
+<h2>[teaser]</h2>
+</div>

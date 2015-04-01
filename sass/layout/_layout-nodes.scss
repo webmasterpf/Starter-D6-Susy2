@@ -20,16 +20,16 @@ body .conteneur{
        @include span($mobilecol);
        
         @include clearfix;
-        @include susy-breakpoint ($tablet){
+        @include breakpoint ($tablet){
             @include span(2 of $tabletcol);
             background: #00CC99;
         }
-        @include susy-breakpoint ($desktop){
+        @include breakpoint ($desktop){
            @include span(3 of $desktopcol);
             background: darkorange;
         }
         //Pour orientation paysage
-         @include susy-breakpoint ($tabletlandscape){
+         @include breakpoint ($tabletlandscape){
            @include span(3 of $tabletcol-landcsape);
             background: violet;
         }
@@ -39,16 +39,16 @@ body .conteneur{
         
         background: khaki;
         @include clearfix;
-        @include susy-breakpoint ($tablet){
+        @include breakpoint ($tablet){
            @include span(4 of $tabletcol);
             background: tomato;
         }
-        @include susy-breakpoint ($desktop){
+        @include breakpoint ($desktop){
           @include span(6 of $desktopcol);
           background: hotpink;
         }
         //Pour orientation paysage
-         @include susy-breakpoint ($tabletlandscape){
+         @include breakpoint ($tabletlandscape){
            @include span(4 of $tabletcol-landcsape);
             background: royalblue;
         }
@@ -59,16 +59,16 @@ body .conteneur{
        
         background: #00c9fe;
         @include clearfix;
-        @include susy-breakpoint ($tablet){
+        @include breakpoint ($tablet){
             @include span(last 2 of $tabletcol);
             background: purple;
         }
-        @include susy-breakpoint ($desktop){
+        @include breakpoint ($desktop){
            @include span(last 3 of $desktopcol);
            background: teal;
         }
         //Pour orientation paysage
-         @include susy-breakpoint ($tabletlandscape){
+         @include breakpoint ($tabletlandscape){
            @include span(last 3 of $tabletcol-landcsape);
             background: violet;
         }
@@ -81,11 +81,11 @@ body .conteneur{
        @include span($mobilecol);
         
         background: khaki;
-        @include susy-breakpoint ($tablet){
+        @include breakpoint ($tablet){
             @include span(3 of $tabletcol);
             background: tomato;
         }
-        @include susy-breakpoint ($desktop){
+        @include breakpoint ($desktop){
            @include span(4 of $desktopcol);
             background: indianred;
         }
@@ -94,11 +94,11 @@ body .conteneur{
        @include span($mobilecol);
         
         background: khaki;
-        @include susy-breakpoint ($tablet){
+        @include breakpoint ($tablet){
             @include span(2 omega of $tabletcol);
             background: tomato;
         }
-        @include susy-breakpoint ($desktop){
+        @include breakpoint ($desktop){
            @include span(4 omega of $desktopcol);
             background: indianred;
         }
@@ -107,26 +107,26 @@ body .conteneur{
 /*//////////////// 2 COLONNES ASYMETRIQUES \\\\\\\\\\\\\\\\*/
 body .conteneur{
     .col1_layout_4_8{
-        @include susy-breakpoint ($tablet){
-            @include span(3 of $tabletcol);
+        @include breakpoint ($tablet){
+            @include span(first 3 of $tabletcol);
             background: #00CC99;
         }
-        @include susy-breakpoint ($desktop){
-            @include span(4 of $desktopcol);
+        @include breakpoint ($desktop){
+            @include span(first 4 of $desktopcol);
             background: darkorange;
         }
     }
     .col2_layout_4_8{
-        @include span($mobilecol);
+        
         
         background: khaki;
-        @include susy-breakpoint ($tablet){
-            @include span(5 omega of $tabletcol);
+        @include breakpoint ($tablet){
+            @include span(last 5 of $tabletcol);
             background: tomato;
         }
-        @include susy-breakpoint ($desktop){
-           @include span(8 omega of $desktopcol);
-            background: indianred;
+        @include breakpoint ($desktop){
+           @include span(last 8 of $desktopcol);
+            background: #D0D1D2;
         }
 
     }
@@ -162,11 +162,11 @@ body .conteneur{
        @include span($mobilecol);
         
         background: khaki;
-        @include susy-breakpoint ($tablet){
+        @include breakpoint ($tablet){
             @include span(2 of $tabletcol);
             background: tomato;
         }
-        @include susy-breakpoint ($desktop){
+        @include breakpoint ($desktop){
            @include span(3 of $desktopcol);
             background: indianred;
         }
@@ -175,11 +175,11 @@ body .conteneur{
        @include span($mobilecol);
         
         background: khaki;
-        @include susy-breakpoint ($tablet){
+        @include breakpoint ($tablet){
             @include span(2 omega of $tabletcol);
             background: tomato;
         }
-        @include susy-breakpoint ($desktop){
+        @include breakpoint ($desktop){
            @include span(3 omega of $desktopcol);
             background: indianred;
         }

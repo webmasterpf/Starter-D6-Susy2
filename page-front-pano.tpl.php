@@ -2,7 +2,7 @@
 global $theme_path;
 include ($theme_path.'/includes/inc_header.php');
 ?>
-<div class="content-global">
+
 <!-- ______________________ LAYOUT HOMEPAGE HORIZONTAL _______________________ -->
 <!--  ______________________ CONTENU _______________________ -->
 
@@ -33,7 +33,7 @@ include ($theme_path.'/includes/inc_header.php');
  <!--______________________ FIN LAYOUT PAGE _______________________ -->
 	
 	
-	 </div> <!-- /mainPage -->
+	<!-- /mainPage -->
         <?php
 global $theme_path;
 include ($theme_path.'/includes/inc_footer.php');

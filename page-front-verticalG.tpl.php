@@ -16,8 +16,8 @@ include ($theme_path.'/includes/inc_header.php');
  
    <!-- ______________________ ZONE DIAPO _______________________ -->
 			
-            <?php if ($DiapoHP): ?>
-       <div class="HPDiapoVerticalGauche"><?php print $DiapoHP; ?></div>
+            <?php if ($DiapoGaucheHP): ?>
+       <div class="HPDiapoVerticalGauche"><?php print $DiapoGaucheHP; ?></div>
               <?php endif; ?>
         	 
 <!-- ______________________ PARTIE DROITE _______________________ -->

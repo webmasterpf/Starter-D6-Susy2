@@ -2,21 +2,21 @@
 global $theme_path;
 include ($theme_path.'/includes/inc_header.php');
 ?>
-<!-- ______________________ LAYOUT HOMEPAGE VERTICAL D_______________________ -->
- <!-- ______________________ CONTENU _______________________ -->
 
-	<div id="mainPage">
+<!--     ______________________ LAYOUT HOMEPAGE VERTICAL D_______________________ -->
 
+
+<!--  ______________________ CONTENU _______________________ -->
 
           <?php if ($content_top): ?>
-            <div id="content-top">
+            <div class="content-top">
               <?php print $content_top; ?>
-            </div> <!-- /#content-top -->
+            </div>   <!--  /content-top -->
           <?php endif; ?>
-<!--     ______________________ LAYOUT HOMEPAGE VERTICAL D_______________________ 
+
  
 
-             ______________________ PARTIE GAUCHE _______________________ 
+     <!--        ______________________ PARTIE GAUCHE _______________________ -->
 
 	<div class="HPGauche">
 
@@ -32,16 +32,16 @@ include ($theme_path.'/includes/inc_header.php');
      <div class="HPGauche3"><?php print $PartieGauche3; ?></div>
         <?php endif; ?>
 
-   </div> /Partie Gauche 
+   </div> 
 
-    ______________________ ZONE DIAPO DROITE_______________________ 
+    <!--______________________ ZONE DIAPO DROITE_______________________ -->
 
-               <?php if ($DiapoHP): ?>
-       <div class="HPDiapoVerticalDroite"><?php print $DiapoHP; ?></div>
+               <?php if ($DiapoDroiteHP): ?>
+       <div class="HPDiapoVerticalDroite"><?php print $DiapoDroiteHP; ?></div>
               <?php endif; ?>
 
-	<br clear="all"/>
-    ______________________ FIN LAYOUT PAGE _______________________ -->
+	
+<!--    ______________________ FIN LAYOUT PAGE _______________________ -->
 
 
 	<!-- ______________________ CONTENU BAS _______________________ -->
@@ -53,11 +53,7 @@ include ($theme_path.'/includes/inc_header.php');
 
 
     </div><!-- /#content-bottom -->
-
-
-
-	 </div> <!-- /mainPage -->
-    <?php
+        <?php
 global $theme_path;
 include ($theme_path.'/includes/inc_footer.php');
 ?>
