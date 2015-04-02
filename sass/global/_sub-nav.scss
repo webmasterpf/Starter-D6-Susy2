@@ -13,6 +13,7 @@ aside.navStatic{
         .horizontal-nav { display:block; }
         ul.horizontal-nav {        
             @include horizontal-list-container;//Compass Mixin
+            @include break;
             padding-top: 1em;
             li {
                @include horizontal-list-item;//Compass Mixin

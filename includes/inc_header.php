@@ -25,9 +25,15 @@ include ($theme_path.'/js/google_font.php');
   </head>
 
  <body class="<?php print $body_classes; ?>">
+ <!-- ______________________ PAGE TOP BANDEAU _______________________ -->
+<?php if (!empty($bandeau1)): ?>
+<div class="bandeau-pagetop">
+          <?php print $bandeau1; ?>
+         </div>
+<?php endif; ?>
 <!-- ______________________ CONTENEUR _______________________ -->
      <section class="conteneur">
-
+     
     <!-- ______________________ HEADER _______________________ -->
     <header id="header">
 

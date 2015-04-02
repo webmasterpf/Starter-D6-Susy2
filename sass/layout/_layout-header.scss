@@ -7,7 +7,7 @@
  body .conteneur #header {
        //@include clearfix; 
      .headHaut {
-       @include clearfix; 
+      // @include clearfix; 
          .logoHead {
                     img{margin: 0 auto;display: block;}
          }
@@ -22,15 +22,14 @@
       
      
      @include susy-breakpoint($desktop) {/*    //Dimensions pour les pc*/
-         //overflow: visible;
+         
          .headHaut {
              .logoHead { 
                 @include span(4 of $desktopcol);
              }
              .menuImg {
                  
-                 //@include span(last 12 of $desktopcol);
-                 
+                                 
              }
          }
          .headBas {
@@ -83,7 +82,7 @@
               .menuHead{}
     }                
 }
-@include susy-breakpoint($desktop) {/*    //Dimensions pour les pc*/
+@include breakpoint($desktop) {/*    //Dimensions pour les pc*/
     #header {
         .headHaut {
             .logoHead { }
@@ -151,10 +150,8 @@
   font-size: small;
   text-align: center;
   
-  @include susy-breakpoint($mobile){
-      
-  }
-  @include susy-breakpoint($desktop){
+  
+  @include breakpoint($desktop){
       text-align: left;
       padding: em(3px) 0 0 1em;
   }
@@ -164,6 +161,59 @@
     text-transform: uppercase;
   }
 }
+/*--------------------------------
+---- BANDEAU HAUT HOMEPAGE -------
+---------------------------------*/
+.bandeau-pagetop {
+    display: none;
+    @include breakpoint ($desktop){
+        display: block;
+        ul{
+            background: $banc-casse;
+            //@include span (full);
+            @include squish (0.7,0.6);
+            li{
+                @include span (1 of 7);
+                list-style : none;
 
+                &:last-child{
+                    @include last;
+                }
+                a{
+                    text-decoration: none;font-size:small;
+                    &:hover{color: #FBFBFB;
+                            transition: background 2s ease,color 1000ms ease;-webkit-transition: background 2s ease,color 1000ms ease;}
+                }
+            }
+        }
+
+    }
+
+
+
+
+}
+
+
+.bandeau-pagetop a.site_er{color: #E2001A;}
+.bandeau-pagetop a:hover.site_er{background: #E2001A;}
+
+.bandeau-pagetop a.site_cg{color: #F29400;}
+.bandeau-pagetop a:hover.site_cg{background: #F29400;}
+
+.bandeau-pagetop a.site_mg{color: #E10279;}
+.bandeau-pagetop a:hover.site_mg{background: #E10279;}
+
+.bandeau-pagetop a.site_bl{color: #00AAD2;}
+.bandeau-pagetop a:hover.site_bl{background: #00AAD2;}
+
+.bandeau-pagetop a.site_lr{color: #970F7D;}
+.bandeau-pagetop a:hover.site_lr{background: #970F7D;}
+
+.bandeau-pagetop a.site_ca{color: #9B9C9E;}
+.bandeau-pagetop a:hover.site_ca{background: #9B9C9E;}
+
+.bandeau-pagetop a.site_ce{color: #C8D215;}
+.bandeau-pagetop a:hover.site_ce{background:#C8D215;}
 /*FIN CSS HEADER*/
 /*****************/

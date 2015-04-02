@@ -56,6 +56,8 @@ regions[navStatic] = Navigation statique - Bloc
 regions[site_slogan] = Slogan du site - Bloc
 regions[search_box] = Zone recherche - Bloc
 
+;Bandeau haut de page accueil (si besoin)
+regions[bandeau1] = Bandeau haut de page
 
 ;Diaporama HP selon layout choisi (décommenter pour choisir)
 regions[DiapoPanoHP] = Diaporama Panoramique Homepage - Bloc

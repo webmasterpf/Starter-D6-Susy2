@@ -46,7 +46,7 @@ include ($theme_path.'/includes/inc_header.php');
 
 	<!-- ______________________ CONTENU BAS _______________________ -->
     <?php if ($content_bottom_home): ?>
-    <div id="content-bottom-home">
+    <div class="content-bottom-home">
       <?php print $content_bottom_home; ?>
         <?php //print $feed_icons; ?>
          <?php endif; ?>
