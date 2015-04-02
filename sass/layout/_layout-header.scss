@@ -5,9 +5,9 @@
 // Layout du header et de ses parties haute et basse (logique mobile first)
  //Imbrication à 100% (full nested)
  body .conteneur #header {
-       //@include clearfix; 
+       
      .headHaut {
-      // @include clearfix; 
+      
          .logoHead {
                     img{margin: 0 auto;display: block;}
          }
@@ -16,29 +16,30 @@
      .headBas {
         @include clearfix; 
          .site-slogan{}
-         .headSearch{}
+         .headSearch{
+          @include squish(0.3); //Ajoute un margin avant et aprés l'element pour le centrer
+         }
         .menuHead{}  
      }                
       
      
-     @include susy-breakpoint($desktop) {/*    //Dimensions pour les pc*/
+     @include breakpoint($desktop) {/*    //Dimensions pour les pc*/
          
          .headHaut {
+             @include span(full);
              .logoHead { 
-                @include span(4 of $desktopcol);
+                @include span(first 4 of $desktopcol);
              }
              .menuImg {
-                 
+                @include span(last 8 of $desktopcol); 
                                  
              }
          }
          .headBas {
-            
-             .site-slogan{@include span( 7 of $desktopcol );}
-             .headSearch{@include span( 5 of $desktopcol last);}
+            @include span(full);
+             .site-slogan{@include span(first 7 of $desktopcol );}
+             .headSearch{@include span(last 5 of $desktopcol );}
              .menuHead{
-            // @include full;
-              //   @include break;
              aside.menuDyn{
                  
                 ul#superfish-1{}
@@ -47,13 +48,13 @@
          
          }
      }
-     @include susy-breakpoint($tablet) {/*     //Dimensions pour les tablettes*/
+     @include breakpoint($tablet) {/*     //Dimensions pour les tablettes*/
          .headHaut {
              .logoHead {}
              .menuImg {}
          }
          .headBas {
-             .site-slogan{}
+             .site-slogan{@include span(first 4 of $tabletcol);}
              .headSearch{@include span( 4 of $tabletcol last);}
              
          }
@@ -126,6 +127,9 @@
     .form-item > label{color: #DDD;font-family: $AristaFont;font-size: medium;}
     input[type=image]{
         vertical-align: middle;
+    }
+    @include breakpoint($desktop){
+        padding: 0;
     }
 }
 
