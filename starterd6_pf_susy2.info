@@ -19,8 +19,8 @@ scripts[] = js/selectnav.min.js
 
 stylesheets[all][] = css/application.css
 
-;Pour utiliser Buttons compilé (librairie de bouttons CSS3)
-stylesheets[all][] = css/vendor/buttons.css
+;Pour utiliser Buttons Zocial compilé (librairie de bouttons CSS3)
+stylesheets[all][] = css/vendor/buttons/buttons.css
 
 ;Pour utiliser Buttons (librairie de bouttons CSS3)
 ;stylesheets[all][] = 3rdparty/buttons/css/buttons.css

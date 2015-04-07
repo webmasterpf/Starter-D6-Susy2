@@ -28,7 +28,7 @@ breakpoint-2.5.0
 @import "susy";// utiliser susyone si syntaxe ancienne(Susy v1),sinon susy pour utiliser v2
 //@import 'modular-scale';
 @import "breakpoint"; // Pour utiliser les breakpoint de compass
-
+@import "sassy-buttons";
 
 // Import des réglages susy pour la grille
 @import "global/variables";

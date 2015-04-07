@@ -84,19 +84,7 @@ body .conteneur {
     .HPDiapoVerticalDroite{background-color: fuchsia;}
     }
 }
-/********************/
-/*ZONES PAGE ACCUEIL*/
 
-.content-bottom-home {
-    table{width: auto;}
-    a {
-        //@include zocial;
-    }
-    ul{
-         @include horizontal-list;
-        li{}
-    }
-}
 
 /****************/
 .HPGauche1,.HPGauche2,.HPGauche3 {

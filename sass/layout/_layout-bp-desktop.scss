@@ -85,4 +85,35 @@ body .conteneur{
         @include clearfix;
         width: auto;
     }
+    
+    ul{
+        @include push(0.5); //Ajoute un margin avant l'element
+        li{
+            
+        }
+    }
+}
+/*********************************
+----------------------------------
+---- RESEAUX SOCIAUX Zocial ------
+---------------------------------*/
+
+
+.zocial{
+    //@include zocial;
+}
+.social-button{@include sassy-button-gradient("glass", #e86a43);}
+
+/********************/
+/*ZONES PAGE ACCUEIL*/
+
+.content-bottom-home {
+    table{width: auto;}
+    a {
+        //@include zocial;
+    }
+    ul{
+         @include horizontal-list;
+        li{}
+    }
 }
