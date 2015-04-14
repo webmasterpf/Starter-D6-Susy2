@@ -6,24 +6,38 @@
 <div class="node <?php print $classes; ?>" id="node-<?php print $node->nid; ?>">
     <div class="node-inner">
         <!--______________COLONNE 1________________ -->
-        <?php /* choix du layout selon nombre de colonne
-         * .col1_layout_200_590_200{} .col1_layout_330_all{} .col1_layout_18_56_25{}
-         * .col2_layout_200_590_200{} .col2_layout_330_all{} .col2_layout_18_56_25{}
-         * .col3_layout_200_590_200{} .col3_layout_330_all{} .col3_layout_18_56_25{}
-         */?>
-        <div id="colonne-1" class="col1_layout_305_650">
-            <?php if ($title): /*copier le titre dans la colonne desirée*/?>
-            <h1 class="titre_page"><?php print $title; ?></h1>
-            <?php endif; ?>
-        
-            <?php 
-$theme_path = drupal_get_path('theme', 'cyrano_pf');
-include($theme_path .'/includes/inc_region_col_G1.php');
-?>
+       <div id="colonne-1" class="col1_layout_4_8 fiche-formation">
+             <?php if ($decoTitre): ?>
+                <div id="decoTitreImg"><?php print $decoTitre; ?></div>
+              <?php endif; ?>
+              <?php if ($title): ?>
+                <h1 class="titre-fiche-formation"><?php print $title; ?></h1>
+              <?php endif; ?>
+          <?php if ($node->field_complement_info_formation[0]['view']): ?>
+                    <div class="complement_titre_fiche">
+                        <?php (print $node->field_complement_info_formation[0]['view']); /* Info complementaire sur formation */ ?>
+                    </div>
+                <?php endif; ?>
+                
+   <?php if ($node->field_intro_fiche_formation[0]['view']): ?>
+                    <div class="complement_titre_fiche">
+                        <?php (print $node->field_intro_fiche_formation[0]['view']); /* Info complementaire sur formation */ ?>
+                    </div>
+                <?php endif; ?>
+                
+   <?php if ($node->field_savoir_plus_fiche_formatio[0]['view']): ?>
+                    <div class="complement_titre_fiche">
+                        <?php (print $node->field_savoir_plus_fiche_formatio[0]['view']); /* Info complementaire sur formation */ ?>
+                    </div>
+                <?php endif; ?>                
+       <?php
+              global $theme_path;
+              include ($theme_path.'/includes/inc_region_col_1.php');
+              ?>
         </div> <!-- col-1 -->
         <!--______________COLONNE 2________________ -->
          <!-- <pre> <?php //print_r($node); ?> </pre>-->   <!-- listage des variables du $content -->
-        <div id="colonne-2" class="col2_layout_305_650">
+        <div id="colonne-2" class="col2_layout_4_8 fiche-formation">
 
             <?php print $picture; ?>
 
@@ -34,7 +48,10 @@ include($theme_path .'/includes/inc_region_col_G1.php');
             <div class="content">
                 <?php   print $node->content['body']['#value'];/*déplacer le contenu dans la colonne désirée*/ ?>
             </div>
-
+   <?php
+              global $theme_path;
+              include ($theme_path.'/includes/inc_region_col_2.php');
+              ?>
      </div> <!-- col-2 -->
 
        

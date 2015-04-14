@@ -81,6 +81,16 @@ h6, .h6 {
      line-height: em(30px);
      
 }
+@mixin decotitre-formation ($margin : 0.1em, $paddingTop : 0.1em){
+     font-size : x-large;
+     margin: $margin;
+     line-height: 1.1em;
+     text-align: right;
+     padding: $paddingTop 0 0 0;
+     background: image-url("/images/deco_fiche_formation.gif") no-repeat top left;//Compass syntax
+     
+}
+
 /*------------ PARAGRAPHES ---------------*/
 //Vertical Rythm via compass
 .conteneur{

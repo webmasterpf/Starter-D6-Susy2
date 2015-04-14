@@ -126,7 +126,7 @@ body .conteneur{
         }
         @include breakpoint ($desktop){
            @include span(last 8 of $desktopcol);
-            background: #D0D1D2;
+            background: thistle;
         }
 
     }

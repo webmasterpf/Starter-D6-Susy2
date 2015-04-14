@@ -710,30 +710,30 @@ h6, .h6 {
 
 /*---------------- TITRES -----------------------*/
 /*------------ PARAGRAPHES ---------------*/
-/* line 87, ../sass/global/_typos.scss */
+/* line 97, ../sass/global/_typos.scss */
 .conteneur p {
   margin-top: 1.5em;
 }
-/* line 88, ../sass/global/_typos.scss */
+/* line 98, ../sass/global/_typos.scss */
 .conteneur #header {
   font-size: 0.75em;
   line-height: 2em;
 }
-/* line 92, ../sass/global/_typos.scss */
+/* line 102, ../sass/global/_typos.scss */
 .conteneur .content-inner p, .conteneur .content-inner td {
   padding: 0.3em;
 }
-/* line 97, ../sass/global/_typos.scss */
+/* line 107, ../sass/global/_typos.scss */
 .conteneur #footer {
   font-size: 0.625em;
   line-height: 2.4em;
 }
-/* line 98, ../sass/global/_typos.scss */
+/* line 108, ../sass/global/_typos.scss */
 .conteneur #footer p {
   margin-bottom: 1.5em;
 }
 
-/* line 102, ../sass/global/_typos.scss */
+/* line 112, ../sass/global/_typos.scss */
 .HPBasGauche p, .HPBasDroit p {
   font-size: 0.75em;
   line-height: 2em;
@@ -1223,7 +1223,7 @@ body .conteneur .col2_layout_4_8 {
     float: left;
     margin-left: 33.88158%;
     margin-right: -100%;
-    background: #D0D1D2;
+    background: thistle;
   }
 }
 
@@ -2483,6 +2483,78 @@ table#doc-joints tbody, table#doc-joints tr {
 .slideshare, .video {
   width: 31.25em;
   margin: 0 auto;
+}
+
+/*-------------------------------------|
+|       CONTENU CUSTOM NODE.TPL        |
+|       CONTENU FICHE FORMATION        |
+|--------------------------------------*/
+/* line 15, ../sass/content-type/_fiche-formation-pf.scss */
+.fiche-formation h1.titre-fiche-formation {
+  font-size: x-large;
+  margin: 0.1em;
+  line-height: 1.1em;
+  text-align: right;
+  padding: 0.9em 0 0 0;
+  background: url('../images/deco_fiche_formation.gif?1429012765') no-repeat top left;
+  color: #DE603A;
+}
+/* line 20, ../sass/content-type/_fiche-formation-pf.scss */
+.fiche-formation h2 {
+  font-size: 1.2em;
+  color: #333333;
+  font-weight: bold;
+  text-align: left;
+  padding: 0.3em;
+  line-height: 1.1em;
+}
+/* line 28, ../sass/content-type/_fiche-formation-pf.scss */
+.fiche-formation h3 {
+  color: #931B7D;
+  font-size: 0.9em;
+  margin: 0.3125em;
+}
+/* line 33, ../sass/content-type/_fiche-formation-pf.scss */
+.fiche-formation h4 {
+  color: #01ABCF;
+  font-size: 0.625em;
+}
+/* line 37, ../sass/content-type/_fiche-formation-pf.scss */
+.fiche-formation p {
+  padding: 0.3125em;
+}
+/* line 40, ../sass/content-type/_fiche-formation-pf.scss */
+.fiche-formation img {
+  padding: 0;
+}
+/* line 41, ../sass/content-type/_fiche-formation-pf.scss */
+.fiche-formation a {
+  color: #D63E2A;
+  font-weight: inherit;
+  text-decoration: none;
+}
+/* line 43, ../sass/content-type/_fiche-formation-pf.scss */
+.fiche-formation a:hover {
+  text-decoration: underline;
+}
+/* line 45, ../sass/content-type/_fiche-formation-pf.scss */
+.fiche-formation span.field-content-savoir-plus {
+  color: #02A7D5;
+  font-size: 0.875em;
+  font-weight: bold;
+}
+/* line 50, ../sass/content-type/_fiche-formation-pf.scss */
+.fiche-formation .complement_titre_fiche h3 {
+  font-size: 0.875em;
+  color: #E1017B;
+  text-align: right;
+}
+
+@media (min-width: 700px) {
+  /* line 57, ../sass/content-type/_fiche-formation-pf.scss */
+  div#colonne-2.fiche-formation {
+    border-left: 0.0625em solid #CFD0D2;
+  }
 }
 
 /*-------------------------------------|

@@ -17,6 +17,7 @@
               global $theme_path;
                 include($theme_path . '/includes/inc_docs_actu.php');
             endif;
+            //il ne s'agit pas d'une vue mais de code PHP !!
             ?>
        
        <?php
