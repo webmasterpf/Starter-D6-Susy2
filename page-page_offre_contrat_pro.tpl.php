@@ -1,4 +1,7 @@
-<?php $theme_path = drupal_get_path('theme', 'cyrano_pf'); include ($theme_path.'/includes/inc_header.php'); ?>
+<?php
+global $theme_path;
+include ($theme_path.'/includes/inc_header.php');
+?>
  <!-- ______________________ LAYOUT PAGE LISTE CONTRAT PRO BTS _______________________ -->
   <!-- ______________________ CONTENU _______________________ -->
   
@@ -11,6 +14,7 @@
 
               <?php print $content_top; ?>
             </div> <!-- /#content-top -->
+               <?php endif; ?>
 	  
       
        <!-- ______________________ COLONNE GAUCHE _______________________ -->
@@ -91,4 +95,4 @@
 	 </div> <!-- /contentPage -->
 	  <br clear="all"/>
 	  <?php $theme_path = drupal_get_path('theme', 'cyrano_pf'); include ($theme_path.'/includes/inc_footer.php'); ?>
-         <?php endif; ?>
+      

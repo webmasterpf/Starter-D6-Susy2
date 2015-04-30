@@ -75,6 +75,67 @@ body .conteneur{
 
     }
 }
+body .conteneur{
+    .col1_layout_2_6_4{
+       @include span($mobilecol);
+       @include clearfix;
+       
+       @include breakpoint ($tablet){
+            @include span(2 of $tabletcol);
+            background: #00CC99;
+        }
+       
+       @include breakpoint ($desktop){
+           @include span( 2 of $desktopcol);
+            background: darkorange;
+        }
+        //Pour orientation paysage
+         @include breakpoint ($tabletlandscape){
+           @include span(3 of $tabletcol-landcsape);
+            background: violet;
+        }
+    }
+    .col2_layout_2_6_4{
+       @include span($mobilecol);
+        
+        background: khaki;
+        @include clearfix;
+        @include breakpoint ($tablet){
+           @include span(4 of $tabletcol);
+            background: tomato;
+        }
+        @include breakpoint ($desktop){
+          @include span(6 of $desktopcol);
+          background: hotpink;
+        }
+        //Pour orientation paysage
+         @include breakpoint ($tabletlandscape){
+           @include span(4 of $tabletcol-landcsape);
+            background: royalblue;
+        }
+
+    }
+    .col3_layout_2_6_4{//pas de of pour le span car le contexte est définit par le breakpoint
+        @include span($mobilecol);
+       
+        background: #00c9fe;
+        @include clearfix;
+        @include breakpoint ($tablet){
+            @include span( 2 of $tabletcol);
+            background: purple;
+        }
+        @include breakpoint ($desktop){
+           @include span(last 4);
+           background: teal;
+        }
+        //Pour orientation paysage
+         @include breakpoint ($tabletlandscape){
+           @include span(last 3 of $tabletcol-landcsape);
+            background: violet;
+        }
+
+    }
+}
 //Pour un 3 colonnes egales : page pole
 body .conteneur{
     .layout_3col_all4{

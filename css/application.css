@@ -1126,7 +1126,120 @@ body .conteneur .col3_layout_3_8_3 {
   }
 }
 
-/* line 80, ../sass/layout/_layout-nodes.scss */
+/* line 79, ../sass/layout/_layout-nodes.scss */
+body .conteneur .col1_layout_2_6_4 {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+@media (min-width: 700px) {
+  /* line 79, ../sass/layout/_layout-nodes.scss */
+  body .conteneur .col1_layout_2_6_4 {
+    width: 23.13433%;
+    float: left;
+    margin-right: 2.48756%;
+    background: #00CC99;
+  }
+}
+@media (min-width: 950px) {
+  /* line 79, ../sass/layout/_layout-nodes.scss */
+  body .conteneur .col1_layout_2_6_4 {
+    width: 15.29605%;
+    float: left;
+    margin-right: 1.64474%;
+    background: darkorange;
+  }
+}
+@media (min-height: 767px) and (max-width: 1024px) and (orientation: landscape) {
+  /* line 79, ../sass/layout/_layout-nodes.scss */
+  body .conteneur .col1_layout_2_6_4 {
+    width: 28.61386%;
+    float: left;
+    margin-right: 1.9802%;
+    background: violet;
+  }
+}
+/* line 98, ../sass/layout/_layout-nodes.scss */
+body .conteneur .col2_layout_2_6_4 {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  background: khaki;
+  overflow: hidden;
+  *zoom: 1;
+}
+@media (min-width: 700px) {
+  /* line 98, ../sass/layout/_layout-nodes.scss */
+  body .conteneur .col2_layout_2_6_4 {
+    width: 48.75622%;
+    float: left;
+    margin-right: 2.48756%;
+    background: tomato;
+  }
+}
+@media (min-width: 950px) {
+  /* line 98, ../sass/layout/_layout-nodes.scss */
+  body .conteneur .col2_layout_2_6_4 {
+    width: 49.17763%;
+    float: left;
+    margin-right: 1.64474%;
+    background: hotpink;
+  }
+}
+@media (min-height: 767px) and (max-width: 1024px) and (orientation: landscape) {
+  /* line 98, ../sass/layout/_layout-nodes.scss */
+  body .conteneur .col2_layout_2_6_4 {
+    width: 38.81188%;
+    float: left;
+    margin-right: 1.9802%;
+    background: royalblue;
+  }
+}
+/* line 118, ../sass/layout/_layout-nodes.scss */
+body .conteneur .col3_layout_2_6_4 {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  background: #00c9fe;
+  overflow: hidden;
+  *zoom: 1;
+}
+@media (min-width: 700px) {
+  /* line 118, ../sass/layout/_layout-nodes.scss */
+  body .conteneur .col3_layout_2_6_4 {
+    width: 23.13433%;
+    float: left;
+    margin-right: 2.48756%;
+    background: purple;
+  }
+}
+@media (min-width: 950px) {
+  /* line 118, ../sass/layout/_layout-nodes.scss */
+  body .conteneur .col3_layout_2_6_4 {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: -100%;
+    background: teal;
+  }
+}
+@media (min-height: 767px) and (max-width: 1024px) and (orientation: landscape) {
+  /* line 118, ../sass/layout/_layout-nodes.scss */
+  body .conteneur .col3_layout_2_6_4 {
+    width: 28.61386%;
+    float: left;
+    margin-left: 71.38614%;
+    margin-right: -100%;
+    background: violet;
+  }
+}
+
+/* line 141, ../sass/layout/_layout-nodes.scss */
 body .conteneur .layout_3col_all4 {
   width: 100%;
   float: left;
@@ -1135,7 +1248,7 @@ body .conteneur .layout_3col_all4 {
   background: khaki;
 }
 @media (min-width: 700px) {
-  /* line 80, ../sass/layout/_layout-nodes.scss */
+  /* line 141, ../sass/layout/_layout-nodes.scss */
   body .conteneur .layout_3col_all4 {
     width: 35.94527%;
     float: left;
@@ -1144,7 +1257,7 @@ body .conteneur .layout_3col_all4 {
   }
 }
 @media (min-width: 950px) {
-  /* line 80, ../sass/layout/_layout-nodes.scss */
+  /* line 141, ../sass/layout/_layout-nodes.scss */
   body .conteneur .layout_3col_all4 {
     width: 32.23684%;
     float: left;
@@ -1152,7 +1265,7 @@ body .conteneur .layout_3col_all4 {
     background: indianred;
   }
 }
-/* line 93, ../sass/layout/_layout-nodes.scss */
+/* line 154, ../sass/layout/_layout-nodes.scss */
 body .conteneur .layout_3col_all4last {
   width: 100%;
   float: left;
@@ -1161,7 +1274,7 @@ body .conteneur .layout_3col_all4last {
   background: khaki;
 }
 @media (min-width: 700px) {
-  /* line 93, ../sass/layout/_layout-nodes.scss */
+  /* line 154, ../sass/layout/_layout-nodes.scss */
   body .conteneur .layout_3col_all4last {
     width: 23.13433%;
     float: left;
@@ -1171,7 +1284,7 @@ body .conteneur .layout_3col_all4last {
   }
 }
 @media (min-width: 950px) {
-  /* line 93, ../sass/layout/_layout-nodes.scss */
+  /* line 154, ../sass/layout/_layout-nodes.scss */
   body .conteneur .layout_3col_all4last {
     width: 32.23684%;
     float: left;
@@ -1183,7 +1296,7 @@ body .conteneur .layout_3col_all4last {
 
 /*//////////////// 2 COLONNES ASYMETRIQUES \\\\\\\\*/
 @media (min-width: 700px) {
-  /* line 109, ../sass/layout/_layout-nodes.scss */
+  /* line 170, ../sass/layout/_layout-nodes.scss */
   body .conteneur .col1_layout_4_8 {
     width: 35.94527%;
     float: left;
@@ -1193,7 +1306,7 @@ body .conteneur .layout_3col_all4last {
   }
 }
 @media (min-width: 950px) {
-  /* line 109, ../sass/layout/_layout-nodes.scss */
+  /* line 170, ../sass/layout/_layout-nodes.scss */
   body .conteneur .col1_layout_4_8 {
     width: 32.23684%;
     float: left;
@@ -1202,12 +1315,12 @@ body .conteneur .layout_3col_all4last {
     background: darkorange;
   }
 }
-/* line 119, ../sass/layout/_layout-nodes.scss */
+/* line 180, ../sass/layout/_layout-nodes.scss */
 body .conteneur .col2_layout_4_8 {
   background: khaki;
 }
 @media (min-width: 700px) {
-  /* line 119, ../sass/layout/_layout-nodes.scss */
+  /* line 180, ../sass/layout/_layout-nodes.scss */
   body .conteneur .col2_layout_4_8 {
     width: 61.56716%;
     float: left;
@@ -1217,7 +1330,7 @@ body .conteneur .col2_layout_4_8 {
   }
 }
 @media (min-width: 950px) {
-  /* line 119, ../sass/layout/_layout-nodes.scss */
+  /* line 180, ../sass/layout/_layout-nodes.scss */
   body .conteneur .col2_layout_4_8 {
     width: 66.11842%;
     float: left;
@@ -1228,7 +1341,7 @@ body .conteneur .col2_layout_4_8 {
 }
 
 /*//////////////// 4 COLONNES \\\\\\\\*/
-/* line 161, ../sass/layout/_layout-nodes.scss */
+/* line 222, ../sass/layout/_layout-nodes.scss */
 body .conteneur .layout_4col_all3 {
   width: 100%;
   float: left;
@@ -1237,7 +1350,7 @@ body .conteneur .layout_4col_all3 {
   background: khaki;
 }
 @media (min-width: 700px) {
-  /* line 161, ../sass/layout/_layout-nodes.scss */
+  /* line 222, ../sass/layout/_layout-nodes.scss */
   body .conteneur .layout_4col_all3 {
     width: 23.13433%;
     float: left;
@@ -1246,7 +1359,7 @@ body .conteneur .layout_4col_all3 {
   }
 }
 @media (min-width: 950px) {
-  /* line 161, ../sass/layout/_layout-nodes.scss */
+  /* line 222, ../sass/layout/_layout-nodes.scss */
   body .conteneur .layout_4col_all3 {
     width: 23.76645%;
     float: left;
@@ -1254,7 +1367,7 @@ body .conteneur .layout_4col_all3 {
     background: indianred;
   }
 }
-/* line 174, ../sass/layout/_layout-nodes.scss */
+/* line 235, ../sass/layout/_layout-nodes.scss */
 body .conteneur .layout_4col_all3last {
   width: 100%;
   float: left;
@@ -1263,7 +1376,7 @@ body .conteneur .layout_4col_all3last {
   background: khaki;
 }
 @media (min-width: 700px) {
-  /* line 174, ../sass/layout/_layout-nodes.scss */
+  /* line 235, ../sass/layout/_layout-nodes.scss */
   body .conteneur .layout_4col_all3last {
     width: 23.13433%;
     float: left;
@@ -1273,7 +1386,7 @@ body .conteneur .layout_4col_all3last {
   }
 }
 @media (min-width: 950px) {
-  /* line 174, ../sass/layout/_layout-nodes.scss */
+  /* line 235, ../sass/layout/_layout-nodes.scss */
   body .conteneur .layout_4col_all3last {
     width: 23.76645%;
     float: left;
@@ -1731,17 +1844,22 @@ Layout pour les desktop.Breakpoint définit par variable dans _variables.scss
     background-clip: content-box, border-box;
     background-position: left top;
   }
-  /* line 35, ../sass/layout/_layout-bp-desktop.scss */
+  /* line 27, ../sass/layout/_layout-bp-desktop.scss */
+  body .conteneur .middle-content {
+    overflow: hidden;
+    *zoom: 1;
+  }
+  /* line 36, ../sass/layout/_layout-bp-desktop.scss */
   body .conteneur .content-bottom-home {
     clear: both;
   }
-  /* line 37, ../sass/layout/_layout-bp-desktop.scss */
+  /* line 38, ../sass/layout/_layout-bp-desktop.scss */
   body .conteneur .content-bottom-home:before {
     content: " ";
     display: block;
     clear: both;
   }
-  /* line 47, ../sass/layout/_layout-bp-desktop.scss */
+  /* line 48, ../sass/layout/_layout-bp-desktop.scss */
   body .conteneur #footer {
     clear: both;
     -moz-background-size: auto;
@@ -1749,7 +1867,7 @@ Layout pour les desktop.Breakpoint définit par variable dans _variables.scss
     -webkit-background-size: auto;
     background-size: auto;
   }
-  /* line 50, ../sass/layout/_layout-bp-desktop.scss */
+  /* line 51, ../sass/layout/_layout-bp-desktop.scss */
   body .conteneur #footer:before {
     content: " ";
     display: block;
@@ -1761,7 +1879,7 @@ Layout pour les desktop.Breakpoint définit par variable dans _variables.scss
 ----------------------------------
 ---- RESEAUX SOCIAUX Service links
 ---------------------------------*/
-/* line 64, ../sass/layout/_layout-bp-desktop.scss */
+/* line 65, ../sass/layout/_layout-bp-desktop.scss */
 .service-links {
   background: none repeat scroll 0 0 #ECECED;
   display: block;
@@ -1775,23 +1893,23 @@ Layout pour les desktop.Breakpoint définit par variable dans _variables.scss
   border-radius: 0.3125em;
   behavior: url(/sites/all/libraries/PIE/PIE.htc);
 }
-/* line 75, ../sass/layout/_layout-bp-desktop.scss */
+/* line 76, ../sass/layout/_layout-bp-desktop.scss */
 .service-links a {
   margin: 0 0.3125em;
   color: #DE603A;
 }
-/* line 78, ../sass/layout/_layout-bp-desktop.scss */
+/* line 79, ../sass/layout/_layout-bp-desktop.scss */
 .service-links a:hover {
   text-decoration: none;
 }
-/* line 83, ../sass/layout/_layout-bp-desktop.scss */
+/* line 84, ../sass/layout/_layout-bp-desktop.scss */
 .service-links iframe {
   height: 1.25em;
   overflow: hidden;
   *zoom: 1;
   width: auto;
 }
-/* line 89, ../sass/layout/_layout-bp-desktop.scss */
+/* line 90, ../sass/layout/_layout-bp-desktop.scss */
 .service-links ul {
   margin-left: 13.13776%;
 }
@@ -1800,7 +1918,7 @@ Layout pour les desktop.Breakpoint définit par variable dans _variables.scss
 ----------------------------------
 ---- RESEAUX SOCIAUX Zocial ------
 ---------------------------------*/
-/* line 105, ../sass/layout/_layout-bp-desktop.scss */
+/* line 106, ../sass/layout/_layout-bp-desktop.scss */
 .social-button {
   *zoom: 1;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFE86A43', endColorstr='#FFB03A15');
@@ -1854,11 +1972,11 @@ Layout pour les desktop.Breakpoint définit par variable dans _variables.scss
 
 /********************/
 /*ZONES PAGE ACCUEIL*/
-/* line 111, ../sass/layout/_layout-bp-desktop.scss */
+/* line 112, ../sass/layout/_layout-bp-desktop.scss */
 .content-bottom-home table {
   width: auto;
 }
-/* line 115, ../sass/layout/_layout-bp-desktop.scss */
+/* line 116, ../sass/layout/_layout-bp-desktop.scss */
 .content-bottom-home ul {
   margin: 0;
   padding: 0;
@@ -2555,6 +2673,230 @@ table#doc-joints tbody, table#doc-joints tr {
   div#colonne-2.fiche-formation {
     border-left: 0.0625em solid #CFD0D2;
   }
+}
+
+/*-------------------------------------|
+|       CONTENU CUSTOM NODE.TPL        |
+|       Poste bts alternance           |
+|--------------------------------------*/
+/* line 10, ../sass/content-type/_contenu-poste-bts-alternance.scss */
+#colonne-2.detail-offre-ctpro {
+  border-left: 0.0625em solid #00AAD2;
+  border-right: 0.0625em solid #93117E;
+}
+
+/* line 17, ../sass/content-type/_contenu-poste-bts-alternance.scss */
+.titre-offre-ctpro {
+  font-size: x-large;
+  margin: 0.1em;
+  line-height: 1.875em;
+  color: #DE603A;
+}
+
+/* line 21, ../sass/content-type/_contenu-poste-bts-alternance.scss */
+.table-poste-bts {
+  background: none;
+  border-left: 0.0625em solid #606171;
+  border-right: 0.0625em solid #606171;
+  margin: 0 auto;
+  text-align: center;
+  width: 50%;
+  padding: 0.3125em 0 0.625em 0;
+}
+/* line 29, ../sass/content-type/_contenu-poste-bts-alternance.scss */
+.table-poste-bts tbody {
+  border: 0;
+}
+
+/* line 31, ../sass/content-type/_contenu-poste-bts-alternance.scss */
+.table-poste-bts tr.line1 {
+  color: #950F7E;
+  background: white;
+}
+
+/* line 35, ../sass/content-type/_contenu-poste-bts-alternance.scss */
+.table-poste-bts tr.line2 {
+  background: #EFEFEF;
+  color: #E1017B;
+}
+
+/* line 39, ../sass/content-type/_contenu-poste-bts-alternance.scss */
+.table-poste-bts td.etat {
+  font-weight: bold;
+}
+
+/* line 42, ../sass/content-type/_contenu-poste-bts-alternance.scss */
+.table-poste-bts a {
+  color: #E7512F;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* line 43, ../sass/content-type/_contenu-poste-bts-alternance.scss */
+.table-poste-bts a:hover {
+  text-decoration: underline;
+}
+
+/*Vue liste des offres - style par taxonomie*/
+/* line 45, ../sass/content-type/_contenu-poste-bts-alternance.scss */
+.liste-offres-bts-pro ul {
+  list-style: none;
+}
+
+/* line 48, ../sass/content-type/_contenu-poste-bts-alternance.scss */
+.liste-offres-bts-pro ul li a {
+  text-decoration: none;
+  color: #606171;
+}
+
+/* line 52, ../sass/content-type/_contenu-poste-bts-alternance.scss */
+.liste-offres-bts-pro a:hover {
+  color: #E85231;
+}
+
+/* line 55, ../sass/content-type/_contenu-poste-bts-alternance.scss */
+.offre-bts-titre {
+  /*titre dans la liste*/
+  display: block;
+  float: left;
+  font-size: 0.875em;
+  margin: 0 0.625em 0 0;
+  text-transform: uppercase;
+}
+
+/* line 62, ../sass/content-type/_contenu-poste-bts-alternance.scss */
+.offre-bts-date {
+  margin: 0;
+  padding: 0.1875em 0 0;
+}
+
+/* line 66, ../sass/content-type/_contenu-poste-bts-alternance.scss */
+.offre-bts-teaser {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 70, ../sass/content-type/_contenu-poste-bts-alternance.scss */
+.ref-offre {
+  float: left;
+  font-weight: bold;
+  padding: 0.1875em 3.4375em 0 0;
+  margin: 0;
+}
+
+/* line 76, ../sass/content-type/_contenu-poste-bts-alternance.scss */
+.etat-76 {
+  /*a pourvoir*/
+  padding: 0.3125em;
+  margin: 0 0 0.3125em;
+  border-left: 3px solid #AEC81F;
+}
+
+/* line 81, ../sass/content-type/_contenu-poste-bts-alternance.scss */
+.etat-77 {
+  /*en cours*/
+  padding: 0.3125em;
+  margin: 0 0 0.3125em;
+  border-left: 3px solid #F09500;
+}
+
+/* line 86, ../sass/content-type/_contenu-poste-bts-alternance.scss */
+.etat-78 {
+  /*pourvu*/
+  padding: 0.3125em;
+  margin: 0 0 0.3125em;
+  border-left: 3px solid #E0001A;
+}
+
+/* line 91, ../sass/content-type/_contenu-poste-bts-alternance.scss */
+#postule {
+  float: right;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 96, ../sass/content-type/_contenu-poste-bts-alternance.scss */
+#postule a {
+  color: #00AAD5;
+  text-transform: uppercase;
+}
+
+/*Table autres offres à pourvoir*/
+/* line 101, ../sass/content-type/_contenu-poste-bts-alternance.scss */
+#block-views-postes_bts_alternance-block_1 h3 {
+  font-size: 14px;
+  color: #D63E2A;
+  text-align: center;
+  margin: 5px;
+}
+
+/* line 102, ../sass/content-type/_contenu-poste-bts-alternance.scss */
+.table-autre-offres {
+  width: 95%;
+  margin: 0 auto;
+}
+
+/* line 103, ../sass/content-type/_contenu-poste-bts-alternance.scss */
+.table-autre-offres tbody {
+  background: #EFEFEF;
+}
+
+/* line 106, ../sass/content-type/_contenu-poste-bts-alternance.scss */
+.table-autre-offres a {
+  text-decoration: none;
+  float: left;
+  color: #94127F;
+  padding: 3px;
+}
+
+/* line 107, ../sass/content-type/_contenu-poste-bts-alternance.scss */
+.table-autre-offres a:hover {
+  text-decoration: underline;
+}
+
+/* line 108, ../sass/content-type/_contenu-poste-bts-alternance.scss */
+.table-autre-offres h4 {
+  font-size: 12px;
+}
+
+/* line 109, ../sass/content-type/_contenu-poste-bts-alternance.scss */
+.table-autre-offres .ref-offre-autre {
+  float: right;
+}
+
+/*style des boutons radios*/
+/* line 111, ../sass/content-type/_contenu-poste-bts-alternance.scss */
+.bef-checkboxes,
+.bef-select-as-radios .form-radios {
+  /*
+   * Setting the height and overflow creates a scrollable <div> for the radio/checkbox elements.
+   * The border is just for looks -- adjust or remove as needed.
+   */
+  height: auto;
+  overflow: auto;
+  border: 0px solid #999;
+}
+
+/* Line up multi-line options nicely */
+/* line 123, ../sass/content-type/_contenu-poste-bts-alternance.scss */
+.bef-group-items .form-item,
+.bef-select-as-radios .form-radios .form-item {
+  text-indent: -24px;
+  margin-left: 1.5em;
+  float: left;
+}
+
+/*style lien en savoir plus*/
+/* line 130, ../sass/content-type/_contenu-poste-bts-alternance.scss */
+li.node_read_more a {
+  color: red;
+  text-decoration: none;
+  text-align: left;
+}
+
+/* line 135, ../sass/content-type/_contenu-poste-bts-alternance.scss */
+li.node_read_more a:hover {
+  text-decoration: underline;
 }
 
 /*-------------------------------------|

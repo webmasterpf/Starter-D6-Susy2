@@ -25,7 +25,8 @@ body .conteneur{
 
         }
         .middle-content{
-
+           
+            @include clearfix;
 
         }
         .node-inner{  

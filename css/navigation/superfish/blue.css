@@ -11,6 +11,7 @@ Active trail sur élément de la rubrique = OK
   padding: 0;
   background: #EFEFEF;
   width: 100%;
+  height: auto;
 }
 .sf-menu.sf-style-blue.sf-navbar {
   width: 100%;
@@ -22,7 +23,7 @@ Active trail sur élément de la rubrique = OK
 .sf-menu.sf-style-blue a{
  border: none;
   width: 7.5em;/*largeur des a*/
-  height: 2.4em;/*hauteur des a*/
+  height: 3.4em;/*hauteur des a*/
   text-align: center;
   text-transform:uppercase;
   font-weight: bold;
