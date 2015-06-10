@@ -25,12 +25,19 @@ include ($theme_path.'/js/google_font.php');
   </head>
 
  <body class="<?php print $body_classes; ?>">
- <!-- ______________________ PAGE TOP BANDEAU _______________________ -->
+ 
+<!-- ______________________ PAGE TOP BANDEAU _______________________ -->
 <?php if (!empty($bandeau1)): ?>
-<div class="bandeau-pagetop">
-          <?php print $bandeau1; ?>
-         </div>
-<?php endif; ?>
+<div id="volet_clos" class="bandeau-pagetop">
+    
+    <div id="volet">
+        <?php print $bandeau1; ?>
+    
+        <a href="#volet" class="ouvrir">Ouvrir</a>
+        <a href="#volet_clos" class="fermer">Fermer</a>
+    </div>
+</div>
+    <?php endif; ?>
 <!-- ______________________ CONTENEUR _______________________ -->
      <section class="conteneur">
      

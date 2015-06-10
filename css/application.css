@@ -1573,119 +1573,6 @@ body .conteneur #header .headBas .headSearch {
   text-transform: uppercase;
 }
 
-/*--------------------------------
----- BANDEAU HAUT HOMEPAGE -------
----------------------------------*/
-/* line 171, ../sass/layout/_layout-header.scss */
-.bandeau-pagetop {
-  display: none;
-}
-@media (min-width: 950px) {
-  /* line 171, ../sass/layout/_layout-header.scss */
-  .bandeau-pagetop {
-    display: block;
-  }
-  /* line 175, ../sass/layout/_layout-header.scss */
-  .bandeau-pagetop ul {
-    background: #FBFBFB;
-    margin-left: 18.39286%;
-    margin-right: 15.76531%;
-  }
-  /* line 179, ../sass/layout/_layout-header.scss */
-  .bandeau-pagetop ul li {
-    width: 11.84023%;
-    float: left;
-    margin-right: 2.85307%;
-    list-style: none;
-  }
-  /* line 183, ../sass/layout/_layout-header.scss */
-  .bandeau-pagetop ul li:last-child {
-    float: right;
-    margin-right: 0;
-  }
-  /* line 186, ../sass/layout/_layout-header.scss */
-  .bandeau-pagetop ul li a {
-    text-decoration: none;
-    font-size: small;
-  }
-  /* line 188, ../sass/layout/_layout-header.scss */
-  .bandeau-pagetop ul li a:hover {
-    color: #FBFBFB;
-    transition: background 2s ease,color 1000ms ease;
-    -webkit-transition: background 2s ease,color 1000ms ease;
-  }
-}
-
-/* line 202, ../sass/layout/_layout-header.scss */
-.bandeau-pagetop a.site_er {
-  color: #E2001A;
-}
-
-/* line 203, ../sass/layout/_layout-header.scss */
-.bandeau-pagetop a:hover.site_er {
-  background: #E2001A;
-}
-
-/* line 205, ../sass/layout/_layout-header.scss */
-.bandeau-pagetop a.site_cg {
-  color: #F29400;
-}
-
-/* line 206, ../sass/layout/_layout-header.scss */
-.bandeau-pagetop a:hover.site_cg {
-  background: #F29400;
-}
-
-/* line 208, ../sass/layout/_layout-header.scss */
-.bandeau-pagetop a.site_mg {
-  color: #E10279;
-}
-
-/* line 209, ../sass/layout/_layout-header.scss */
-.bandeau-pagetop a:hover.site_mg {
-  background: #E10279;
-}
-
-/* line 211, ../sass/layout/_layout-header.scss */
-.bandeau-pagetop a.site_bl {
-  color: #00AAD2;
-}
-
-/* line 212, ../sass/layout/_layout-header.scss */
-.bandeau-pagetop a:hover.site_bl {
-  background: #00AAD2;
-}
-
-/* line 214, ../sass/layout/_layout-header.scss */
-.bandeau-pagetop a.site_lr {
-  color: #970F7D;
-}
-
-/* line 215, ../sass/layout/_layout-header.scss */
-.bandeau-pagetop a:hover.site_lr {
-  background: #970F7D;
-}
-
-/* line 217, ../sass/layout/_layout-header.scss */
-.bandeau-pagetop a.site_ca {
-  color: #9B9C9E;
-}
-
-/* line 218, ../sass/layout/_layout-header.scss */
-.bandeau-pagetop a:hover.site_ca {
-  background: #9B9C9E;
-}
-
-/* line 220, ../sass/layout/_layout-header.scss */
-.bandeau-pagetop a.site_ce {
-  color: #C8D215;
-}
-
-/* line 221, ../sass/layout/_layout-header.scss */
-.bandeau-pagetop a:hover.site_ce {
-  background: #C8D215;
-}
-
 /*FIN CSS HEADER*/
 /*****************/
 /*-------------------------------------|
@@ -1789,6 +1676,187 @@ aside.content_top .annonce-container .annonce p, aside.content_top .annonce-cont
 
 /*DEFILANT CLASSIQUE*/
 /*DEFILANT CONTENU PONCTUEL*/
+/*
+Style - layout pour le bandeau des autres sites de l'ASSO
+*/
+/*--------------------------------
+---- BANDEAU HAUT HOMEPAGE -------
+---------------------------------*/
+/* line 8, ../sass/layout/_layout-bandeau.scss */
+.bandeau-pagetop {
+  display: none;
+}
+@media (min-width: 950px) {
+  /* line 8, ../sass/layout/_layout-bandeau.scss */
+  .bandeau-pagetop {
+    display: block;
+  }
+  /* line 12, ../sass/layout/_layout-bandeau.scss */
+  .bandeau-pagetop ul {
+    background: #FBFBFB;
+    margin-left: 18.39286%;
+    margin-right: 15.76531%;
+  }
+  /* line 16, ../sass/layout/_layout-bandeau.scss */
+  .bandeau-pagetop ul li {
+    width: 11.84023%;
+    float: left;
+    margin-right: 2.85307%;
+    list-style: none;
+  }
+  /* line 20, ../sass/layout/_layout-bandeau.scss */
+  .bandeau-pagetop ul li:last-child {
+    float: right;
+    margin-right: 0;
+  }
+  /* line 23, ../sass/layout/_layout-bandeau.scss */
+  .bandeau-pagetop ul li a {
+    text-decoration: none;
+    font-size: small;
+  }
+  /* line 25, ../sass/layout/_layout-bandeau.scss */
+  .bandeau-pagetop ul li a:hover {
+    color: #FBFBFB;
+    transition: background 2s ease,color 1000ms ease;
+    -webkit-transition: background 2s ease,color 1000ms ease;
+  }
+}
+
+/*Style de chaque boutons*/
+/* line 40, ../sass/layout/_layout-bandeau.scss */
+.bandeau-pagetop a.site_er {
+  color: #E2001A;
+}
+/* line 41, ../sass/layout/_layout-bandeau.scss */
+.bandeau-pagetop a:hover.site_er {
+  background: #E2001A;
+}
+/* line 43, ../sass/layout/_layout-bandeau.scss */
+.bandeau-pagetop a.site_cg {
+  color: #F29400;
+}
+/* line 44, ../sass/layout/_layout-bandeau.scss */
+.bandeau-pagetop a:hover.site_cg {
+  background: #F29400;
+}
+/* line 46, ../sass/layout/_layout-bandeau.scss */
+.bandeau-pagetop a.site_bl {
+  color: #00AAD2;
+}
+/* line 47, ../sass/layout/_layout-bandeau.scss */
+.bandeau-pagetop a:hover.site_bl {
+  background: #00AAD2;
+}
+/* line 49, ../sass/layout/_layout-bandeau.scss */
+.bandeau-pagetop a.site_mg {
+  color: #E10279;
+}
+/* line 50, ../sass/layout/_layout-bandeau.scss */
+.bandeau-pagetop a:hover.site_mg {
+  background: #E10279;
+}
+/* line 52, ../sass/layout/_layout-bandeau.scss */
+.bandeau-pagetop a.site_lr {
+  color: #970F7D;
+}
+/* line 53, ../sass/layout/_layout-bandeau.scss */
+.bandeau-pagetop a:hover.site_lr {
+  background: #970F7D;
+}
+/* line 55, ../sass/layout/_layout-bandeau.scss */
+.bandeau-pagetop a.site_ca {
+  color: #9B9C9E;
+}
+/* line 56, ../sass/layout/_layout-bandeau.scss */
+.bandeau-pagetop a:hover.site_ca {
+  background: #9B9C9E;
+}
+/* line 58, ../sass/layout/_layout-bandeau.scss */
+.bandeau-pagetop a.site_ce {
+  color: #C8D215;
+}
+/* line 59, ../sass/layout/_layout-bandeau.scss */
+.bandeau-pagetop a:hover.site_ce {
+  background: #C8D215;
+}
+
+/*Slider top en CSS - code dans le inc_header*/
+/* line 63, ../sass/layout/_layout-bandeau.scss */
+#volet {
+  width: 100%;
+  padding: 0.625em;
+  height: 1.05em;
+  border: 5px solid #fff;
+  -moz-box-shadow: 8px 8px 12px #aaa;
+  -webkit-box-shadow: 8px 8px 12px #aaa;
+  box-shadow: 8px 8px 12px #555;
+}
+
+/* line 71, ../sass/layout/_layout-bandeau.scss */
+#volet {
+  position: relative;
+  left: 0;
+  /*Position du volet fermé - au départ*/
+  top: -5em;
+}
+
+/* line 76, ../sass/layout/_layout-bandeau.scss */
+#volet a.ouvrir,
+#volet a.fermer {
+  position: absolute;
+  left: 45%;
+  top: 4em;
+  /* quelques styles CSS3 */
+  -ms-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+  border-radius: 0 0 8px 8px;
+  padding: 10px 25px;
+  background: #555;
+  color: #fff;
+  text-decoration: none;
+  /*Ombrage sur bouton*/
+  -moz-box-shadow: 0 5.5em 20em 5em #FFF, 0 12px 9px -5px black;
+  -webkit-box-shadow: 0 5.5em 20em 5em #FFF, 0 12px 9px -5px black;
+  box-shadow: 0 5.5em 20em 5em #FFF, 0 12px 9px -5px black;
+}
+
+/* line 99, ../sass/layout/_layout-bandeau.scss */
+#volet {
+  -webkit-transition: all .5s ease-in;
+  transition: all .5s ease-in;
+}
+
+/* line 103, ../sass/layout/_layout-bandeau.scss */
+#volet:target {
+  left: 0;
+  top: 0.1em;
+}
+
+/* line 108, ../sass/layout/_layout-bandeau.scss */
+#volet a.fermer {
+  display: none;
+}
+
+/* line 111, ../sass/layout/_layout-bandeau.scss */
+#volet_clos:target #volet {
+  left: 0;
+  /*Retour position de depart*/
+}
+
+/* line 114, ../sass/layout/_layout-bandeau.scss */
+#volet:target a.ouvrir {
+  display: none;
+}
+
+/* line 117, ../sass/layout/_layout-bandeau.scss */
+#volet:target a.fermer {
+  display: block;
+  top: 2.6em;
+  /*Position btn volet ouvert*/
+}
+
 /*
 2015/03 - Layout TABLET
 Layout pour les tablettes.Breakpoint définit par variable dans _variables.scss
