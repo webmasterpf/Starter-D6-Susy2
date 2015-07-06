@@ -1,6 +1,8 @@
 /*¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤
+
 ----- TYPOS PROVENCE FORMATION -----
 ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤*/
+
 
 // Rythme vertical pour la taille de typo selon compass
 $base-font-size:16px;
@@ -26,24 +28,30 @@ $TrebuchetFont : Trebuchet MS, Verdana, Helvetica, sans-serif;
 /*====================================|
 ==             CSS H                ==|
 =====================================*/
-  
+h1, .h1,h2, .h2 ,h3, .h3,h4, .h4,h5, .h5,h6, .h6{
+    padding:0.3em;margin: 0;color:#000;
+}
+
 h1, .h1 {
-	margin: 0;
-	padding: 0;
-	color:#000;
+	
+
+
+
 	font-size: em(20px);
 }
   
 h2, .h2 {
-	margin: 0;
-	padding: 0;
-	color:#000;
+	
+
+
+
 	font-size: em(18px);
 }
 h2.title{
-	margin: 5px;
-	padding: 0;
-	color:#000;
+	
+
+
+
 	font-size: em(18px);
 
  a{
@@ -51,27 +59,34 @@ h2.title{
 }
 }
 h3, .h3{
-	margin: 0;
-	padding: 0;
-	color:#000;
+	
+	
+
+
+
 	font-size: em(16px);
 }
 h4, .h4{
-	margin: 0;
-	padding: 0;
-	color:#000;
+	
+	
+
+
+
 	font-size: em(14px);
 }
 h5, .h5 {
-	margin: 0;
-	padding: 0;
-	color:#000;
+	
+	
+
+
+
 	font-size: em(12px);
 }
 h6, .h6 {
-	margin: 0;
-	padding: 0;
-	color:#000;
+	
+
+
+
 	font-size: em(10px);
 }
 /*---------------- TITRES -----------------------*/
@@ -92,15 +107,20 @@ h6, .h6 {
 }
 
 /*------------ PARAGRAPHES ---------------*/
-//Vertical Rythm via compass
+//Vertical Rythm via compass pour tout le site
 .conteneur{
     p{@include leader();}
     #header{@include adjust-font-size-to(12px);}
     .content-global{}
     #left-content{}
     .content-inner{
-        p,td{
+        p,td, ul{
+
             padding: 0.3em;
+            font-size: small;
+        }
+        ul{
+            list-style: inside;
         }
     }
     #right-content{}
