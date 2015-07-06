@@ -44,10 +44,10 @@
     -webkit-box-shadow: 2px 2px 5px #aaa;
     box-shadow: 2px 2px 5px #555;
     }
-@mixin ombrage-effet-incurve($PositionHalo:5.5em,$LargeurHalo:20em,$HauteurHalo:5em){
-        -moz-box-shadow: 0 $PositionHalo $LargeurHalo $HauteurHalo #FFF, 0 12px 9px -5px rgba(0, 0, 0, 1);
-        -webkit-box-shadow: 0 $PositionHalo $LargeurHalo $HauteurHalo  #FFF, 0 12px 9px -5px rgba(0, 0, 0, 1);
-        box-shadow: 0 $PositionHalo $LargeurHalo $HauteurHalo #FFF, 0 12px 9px -5px rgba(0, 0, 0, 1);
+@mixin ombrage-effet-incurve($PositionHalo:-1em,$LargeurHalo:10em,$HauteurHalo:2em){
+        -moz-box-shadow: 0 $PositionHalo $LargeurHalo $HauteurHalo #FFF, 0 0.8em 0.7em -0.2em rgba(0, 0, 0, 1);
+        -webkit-box-shadow: 0 $PositionHalo $LargeurHalo $HauteurHalo  #FFF, 0 0.8em 0.7em -0.2em rgba(0, 0, 0, 1);
+        box-shadow: 0 $PositionHalo $LargeurHalo $HauteurHalo #FFF, 0 0.8em 0.7em -0.2em rgba(0, 0, 0, 1);
     }    
 @mixin table-tr-ombrage-bas {
         -moz-box-shadow: 1px 2px 2px #aaa;
@@ -93,6 +93,41 @@ filter : alpha(opacity=$opacite); /* IE < 8 */
     -webkit-border-radius: $angle;
     border-radius: $angle;
 }
+@mixin clignote($duree:1s,$startopacity:1.0,$midopacity:0.0,$finalopacity:1.0){
+     -webkit-animation-name: blinker;
+        -webkit-animation-duration: $duree;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+
+        -moz-animation-name: blinker;
+        -moz-animation-duration: $duree;
+        -moz-animation-timing-function: linear;
+        -moz-animation-iteration-count: infinite;
+
+        animation-name: blinker;
+        animation-duration: $duree;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite; 
+    
+    @-moz-keyframes blinker {  
+        0% { opacity: $startopacity; }
+        50% { opacity: $midopacity; }
+        100% { opacity: $finalopacity; }
+    }
+
+    @-webkit-keyframes blinker {  
+        0% { opacity: $startopacity; }
+        50% { opacity: $midopacity; }
+        100% { opacity: $finalopacity; }
+    }
+
+    @keyframes blinker {  
+        0% { opacity: $startopacity; }
+        50% { opacity: $midopacity; }
+        100% { opacity: $finalopacity; }
+}
+}
+
 /*//////////////// BORDER RIGHT \\\\\\\\\\\\\\\\*/
 @mixin border-R-orangePF{border-right: em(1px) solid #DA5714;}
 @mixin border-R-anthracite{border-left: em(1px) solid #606171;}
@@ -106,6 +141,7 @@ filter : alpha(opacity=$opacite); /* IE < 8 */
 @mixin border-vert-violet { border-left: em(1px) solid #ADC91F; border-right: em(1px) solid #93117E;}
 @mixin border-anthracite-anthracite { border-left: em(1px) solid #606171; border-right: em(1px) solid #606171;}
 @mixin border-anthracite-orangePF{border-left: em(1px) solid #606071;border-right: em(1px) solid #DA5714;}
+@mixin border-orangePF-orangePF{border-left: em(1px) solid #da5714;border-right: em(1px) solid #da5714;}
 
 /*//////////////// BORDER LEFT \\\\\\\\\\\\\\\\*/
 @mixin border-L-bleu{border-left: em(1px) solid #02A7D5;}
