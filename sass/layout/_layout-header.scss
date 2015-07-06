@@ -5,7 +5,12 @@
 // Layout du header et de ses parties haute et basse (logique mobile first)
  //Imbrication à 100% (full nested)
  body .conteneur #header {
-       
+     z-index : 30;
+     &:after{
+                content: " ";
+                display: block;
+                clear: both;}  
+
      .headHaut {
       
          .logoHead {
@@ -24,7 +29,8 @@
       
      
      @include breakpoint($desktop) {/*    //Dimensions pour les pc*/
-         
+          //@include clearfix;
+
          .headHaut {
              @include span(full);
              .logoHead { 
@@ -69,33 +75,33 @@
  }
 
 
- //Pour le dev, code visuel sur les blocs selon le breakpoint
-// à commenter ou supprimer pour la production
- 
-#header {
-    .headHaut {
-        .logoHead { }
-        .menuImg {  }
-    }
-    .headBas {background: red;
-              .site-slogan{}
-              .headSearch{}
-              .menuHead{}
-    }                
-}
-@include breakpoint($desktop) {/*    //Dimensions pour les pc*/
-    #header {
-        .headHaut {
-            .logoHead { }
-            .menuImg { background: #FFCCFF; }
-        }
-        .headBas {background: #00CC99;
-                  .site-slogan{}
-                  .headSearch{}
-                  .menuHead{}
-        }                
-    }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*---- HEADER HAUT ----*/
  
 
@@ -112,9 +118,9 @@
 /*---- HEADER BAS ----*/
 
 .headBas {
- //background: $rose-fushia;//Modifier la couleur du fond de la partie basse selon couleur du lycée
-  //  margin: em(5px) 0 0 0;
-  background: #cfd0d2 image-url('bg_menu_rp.gif') repeat-x top left;
+ background: $gris-anthracite;//Modifier la couleur du fond de la partie basse selon couleur du lycée
+
+
 }
 
 
@@ -165,5 +171,6 @@
     text-transform: uppercase;
   }
 }
+
 /*FIN CSS HEADER*/
 /*****************/
