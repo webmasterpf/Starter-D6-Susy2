@@ -4,10 +4,13 @@ function phptemplate_preprocess(&$vars, $hook)
 {
   switch($hook)
   {
-      case 'page' :
+        case 'page' :
       if (arg(0) == 'node')
       {
         $vars['template_files'][]  = 'page-' . $vars['node']->type;
+        $vars['template_files'][] = "page-" . $vars['node']->type . "-" . $vars['node']->nid;
+        
+        //var_dump($vars);
       }
       break;
 
@@ -33,9 +36,13 @@ function starterd6_pf_rwd_preprocess_node(&$vars, $hook) {
  $vars['pole_bloc_G'] = theme('blocks', 'pole_bloc_G');
  $vars['pole_bloc_C'] = theme('blocks', 'pole_bloc_C');
  $vars['pole_bloc_D'] = theme('blocks', 'pole_bloc_D');
- $vars['col_G1'] = theme('blocks', 'col_G1');
- $vars['col_G2'] = theme('blocks', 'col_G2');
- $vars['col_G3'] = theme('blocks', 'col_G3');
+ $vars['node_col_1'] = theme('blocks', 'node_col_1');
+ $vars['node_col_2'] = theme('blocks', 'node_col_2');
+ $vars['node_col_3'] = theme('blocks', 'node_col_3');
+ //Regions custom pour theme PF suite generalisation node.tpl
+ $vars['centralBloc'] = theme('blocks', 'centralBloc');
+ $vars['centre_partenaire'] = theme('blocks', 'centre_partenaire');
+ $vars['formulaire'] = theme('blocks', 'formulaire');
  //
 //Partie template node.tpl
 $node = $vars['node'];
