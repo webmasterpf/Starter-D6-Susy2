@@ -10,7 +10,6 @@
                 content: " ";
                 display: block;
                 clear: both;}  
-
      .headHaut {
       
          .logoHead {
@@ -30,7 +29,6 @@
      
      @include breakpoint($desktop) {/*    //Dimensions pour les pc*/
           //@include clearfix;
-
          .headHaut {
              @include span(full);
              .logoHead { 
@@ -73,35 +71,6 @@
      }
    
  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*---- HEADER HAUT ----*/
  
 
@@ -119,8 +88,6 @@
 
 .headBas {
  background: $gris-anthracite;//Modifier la couleur du fond de la partie basse selon couleur du lycée
-
-
 }
 
 
