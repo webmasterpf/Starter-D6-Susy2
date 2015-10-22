@@ -1,5 +1,5 @@
 /* Changing Susy default global settings */
-//*Réglage de la grille de SusyOne - approche mobile-first
+//*Réglage de la grille de Susy2 - approche mobile-first
 $total-columns: 4;             // nombre de colonnes de la grille de base pour mobile
 $column-width: 4.15em;            // largeur de chaque colonnes (px,em,%)
 $gutter-width: 1em;            // taille de la gouttière entre colonnes (px,em,%)
@@ -19,7 +19,7 @@ $susy: (
   math: if($container-style == magic, fluid, $container-style),
   
   //Debug
-  debug :(
+  debug: (
   image: show,
   color: rgba(#66f, .25),
   output: overlay,
@@ -75,12 +75,13 @@ $jaune : #FAEB0C;
 $gris-clair: #ECECED;
 $gris-clair-moyen : #9898a6;
 $gris-anthracite : #606070;
+$gris-clair-typo:#808080;
 $noir: #000000;
 $blanc-casse: #FBFBFB;
 
 // Ici paramétrer les couleurs pour l'annonce défilante
-$color-defilant:#606070;
-$color-defilant-a:#E3001C;
+$color-defilant:$rose-fushia;
+$color-defilant-a:$violet;
 
 // Defaults settings for Zocial Sass plugin
 $zocial-font-size: 1.8em;

@@ -13,6 +13,7 @@ html {
 
 body {	
     font-family: $TrebuchetFont;
+    color: $gris-clair-typo;
 
 }
 
@@ -56,6 +57,7 @@ body .conteneur{
         }
         .content-top{
             //pour breakpoint voir _layout-bp-desktop.scss
+            img{@include adaptable-img;}
             .ariane{}
         }
         .middle-content{
@@ -77,6 +79,7 @@ body .conteneur{
             #left-content{}
             #right-content{}
             #footer{
+                display: block;//Avec flexbox sur mobile
             //pas besoin de mixin car bloc prend toute la largeur
             @include background-size;
             //pour breakpoint voir _layout-bp-desktop.scss

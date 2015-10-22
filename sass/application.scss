@@ -40,12 +40,13 @@ breakpoint-2.5.0
 @import "global/typos";
 @import "global/style";
 @import "global/sub-nav";
-
+@import "global/flex";
 
 // Import des partiels du layout du thème Drupal
 
 @import "layout/layout";
 @import "layout/layout-nodes";
+@import "layout/layout-nodes-flexbox";
 @import "layout/layout-header";
 @import "layout/layout-footer";
 @import "layout/layout-defilant";
@@ -62,42 +63,36 @@ breakpoint-2.5.0
 @import "ui/style-backoffice";
 //@import "ui/volet_coulissant_css";
 
-//Import Homepage - choisir quel layout utiliser
-
-//@import "content-type/frontpage-agtest";
-//@import "content-type/frontpage-pano";
-//@import "content-type/frontpage-verticalDroit";
-//@import "content-type/frontpage-verticalGauche";
-@import "content-type/frontpage-institutionnel";
+//Import Homepage - choisir quel layout et style utiliser
+@import "layout/layout-vertical-hp-gauche";
+@import "content-type-style/frontpage-verticalGauche";
 
 
 
-// Import des partiels pour les node.tpl
-//@import "content-type/node-TYPE";
-@import "content-type/views";
 
-@import "content-type/page-lycee";
-//@import "content-type/contenu-vdl";
-//@import "content-type/page-pole";
+// Import des partiels pour le style des node.tpl
+//@import "content-type-style/node-TYPE";
+@import "content-type-style/views";
 
-//Content type site PF
-@import "content-type/contenu-actu-presse-asso";
-@import "content-type/fiche-formation-pf";
-@import "content-type/contenu-poste-bts-alternance";
-/*@import "content-type/page-association";
-@import "content-type/page-lycee";
-@import "content-type/page-formations";
-@import "content-type/page-bourses";
-@import "content-type/page-bts";
-@import "content-type/fiche-bts";
-@import "content-type/page-partenaires";
-@import "content-type/page-actualites";
-@import "content-type/page-contact";
-@import "content-type/page-recrutement";*/
+@import "content-type-style/page-lycee";
+//@import "content-type-style/contenu-vdl";
+@import "content-type-style/page-pole";
+@import "content-type-style/page-vdl-liste";
+@import "content-type-style/node-vdl-global";
+@import "content-type-style/page-actualites";
+@import "content-type-style/contenu-actualite";
+@import "content-type-style/contenu-vdl";
+@import "content-type-style/contenu-cdi";
+@import "content-type-style/webform-contact";
+@import "content-type-style/fiche-formation";
+
+//Content type site 
+
+//@import "content-type-style/fiche-formation-pf";
 
 //developpement
-//@import "content-type/page-agtest";
+
 //@import "layout/layout-debug-colour";
 
 //Galeries slideshow views
-@import "galeries/_views_slideshow";
+@import "galeries/views_slideshow";
