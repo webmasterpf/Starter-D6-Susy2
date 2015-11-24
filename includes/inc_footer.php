@@ -4,7 +4,7 @@
           <?php print $footer_message; ?>
           <?php print $footer_block; ?>
      <div id="bloc_stats">
-         <p>V&eacute;rifier les codes pour les stats</p>
+        
       <?php
 global $theme_path;
 include ($theme_path.'/js/code_stats.php');
@@ -15,10 +15,13 @@ include ($theme_path.'/js/code_stats.php');
        
     </section> 
     <!-- ______________________ /CONTENEUR _______________________ -->
-           <?php
-global $theme_path;
-include ($theme_path.'/includes/inc_responsivenav.php');
-?>    
+           <?php 
+           global $theme_path;
+          
+          //include ($theme_path.'/includes/inc_drupal_debug.php');
+           ?>
+                                 
+    
 	<?php print $closure ?>
    
   </body>

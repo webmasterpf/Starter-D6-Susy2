@@ -31,7 +31,7 @@ $term = preg_replace('<code>\s+</code>', '<em>', trim($term));
   return ($NomTermeValide);
 }
 
-function starterd6_pf_rwd_preprocess_node(&$vars, $hook) {
+function d6_ce_susy2_preprocess_node(&$vars, $hook) {
 //Partie regions dans node.tpl- ajoute les regions utiles au node.tpl
  $vars['pole_bloc_G'] = theme('blocks', 'pole_bloc_G');
  $vars['pole_bloc_C'] = theme('blocks', 'pole_bloc_C');
@@ -48,29 +48,67 @@ function starterd6_pf_rwd_preprocess_node(&$vars, $hook) {
 $node = $vars['node'];
 $lesTypes=array('page_fiche_formation', 'page_pole','contenu_actualites');
 //ajouter les vids possibles pour chaque quelquesoit le type
-$lesVid=array('1','5');// vid 1 pour pole formation, vid 5 pour type actualite
+$lesVid= array('1','6');// vid 1 pour pole formation, vid 6 pour type actualite (DEV/PROD)
 // on regarde si le type est dans le tableau
-if ( in_array($node->type,$lesTypes) ) {
+if ( in_array($node->type, $lesTypes) ) {
+     //drupal_set_message('Type du node si type ok (entrée de la condition) : '.$node->type,'status');
+       if ( empty($node->taxonomy)  ) {
+    // drupal_set_message('<b>Pas de terme de taxonomie trouvé !</b> ','status');      
+       } 
        if ( ! empty($node->taxonomy)  ) {
+      //     drupal_set_message('Term name dans boucle si non vide: '.$term->name,'status');
 // Récupération du 1er element du tableau
            $term = array_shift($node->taxonomy);
     // verifie si l'un des termes appartiennent bien à l'un des vid définis dans le tableau
-           if ( in_array($term->vid,$lesVid) ) {
+           if ( in_array($term->vid, $lesVid) ) {
          
               $tplfile = 'node-'.$node->type.'-'. $term->vid.'-'.$term->tid ;
               $vars['template_files'][] = $tplfile ;
-          //drupal_set_message('Term name : '.$term->name,'status');
-           drupal_set_message('Template file : '.$tplfile.'.tpl.php','status');
+         // drupal_set_message('Term name : '.$term->name,'status');
+         //  drupal_set_message('Template file : '.$tplfile.'.tpl.php','status');
           }
     
           
       }
- //drupal_set_message('Type du node hors : '.$node->type,'status');
-// drupal_set_message('Term name hors : '.$term->name,'status');
+// drupal_set_message('Type du node hors boucle: '.$node->type,'status');
+ //drupal_set_message('Term name hors boucle: '.$term->name,'status');
     }
 }
 ?>
+<?php
+function d6_ce_susy2_preprocess_page(&$vars){
+    //http://www.zites.net/en/load-external-javascript-files-drupal-6/
+    // JS externe avec le module advagg qui permet d'utiliser 'external'
+//   drupal_add_js('http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js', 'external');
+//   drupal_add_js('https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js', 'external');
+//   drupal_add_js('http://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.min.js', 'external');
+//   
+// permet usage de vieilles versions de jQuery
+        //drupal_add_js(drupal_get_path('theme', 'd6_ce_susy2') . '/js/jquery-migrate-1.2.1.min.js', 'theme');
+//chargement des plugins qui utilisent la version de jQuery par défaut du site
+//   drupal_add_js(drupal_get_path('theme', 'd6_ce_susy2') . '/js/responsive-nav.js','theme');
+//   drupal_add_js(drupal_get_path('theme', 'd6_ce_susy2') . '/js/tinynav.min.js','theme');
+    //   drupal_add_js(drupal_get_path('theme', 'd6_ce_susy2') . '/js/jquery.navobile.min.js','theme');
+    //   drupal_add_js(drupal_get_path('theme', 'd6_ce_susy2') . '/js/jquery.jpanelmenu.min.js','theme');
+    drupal_add_js(drupal_get_path('theme', 'd6_ce_susy2') . '/js/selectnav.min.js', 'theme');
+    drupal_add_js(drupal_get_path('theme', 'd6_ce_susy2') . '/js/jquery.sticky.js', 'theme');
+  //  drupal_add_js(drupal_get_path('theme', 'd6_ce_susy2') . '/js/jquery.sidebar.min.js', 'theme');
 
+//chargement des scripts qui utilisent la version de jQuery par défaut du site
+    drupal_add_js(drupal_get_path('theme', 'd6_ce_susy2') . '/js/js_jquery_defaut.js', 'theme');
+// mise en place du noConflict pour utiliser plusieurs versions de jQuery   
+    drupal_add_js(drupal_get_path('theme', 'd6_ce_susy2') . '/js/jquery_init.js', 'theme');
+//chargement des plugins qui utilisent une version de jQuery plus récente
+    drupal_add_js(drupal_get_path('theme', 'd6_ce_susy2') . '/js/jquery.flexslider.js', 'theme');
+    drupal_add_js(drupal_get_path('theme', 'd6_ce_susy2') . '/js/jquery.bxslider.min.js', 'theme');
+    drupal_add_js(drupal_get_path('theme', 'd6_ce_susy2') . '/3rdparty/buttons/js/buttons.js', 'theme');
+    drupal_add_js(drupal_get_path('theme', 'd6_ce_susy2') . '/js/js_jquery_new.js', 'theme');
+    //  mise à disposition des 2 versions de jQuery
+    drupal_add_js(drupal_get_path('theme', 'd6_ce_susy2') . '/js/jquery_exit.js', 'theme');
+
+    //die('les JS sont chargés');
+}
+?>
 <?php
 // fonction pour avoir la possibilité de faire un template pour page recherche
 function phptemplate_preprocess_page(&$vars) {
@@ -93,14 +131,14 @@ function debug_print($var) {
 }
 
 //Webform "You have already submitted this form." message off - http://drupal.org/node/1096226
-function starterd6_pf_rwd_webform_view_messages($node, $teaser, $page, $submission_count, $limit_exceeded, $allowed_roles, $closed, $cached) {
+function d6_ce_susy2_webform_view_messages($node, $teaser, $page, $submission_count, $limit_exceeded, $allowed_roles, $closed, $cached) {
   return theme_webform_view_messages($node, $teaser, $page, 0, $limit_exceeded, $allowed_roles, $closed, $cached);
 }
 ?>
 <?php
 // permet d'ouvrir en blank les fichiers uploadés via filefield
 //NE PAS OUBLIER DE CHANGER NOM DU THEME !!!
-function starterd6_pf_rwd_filefield_file($file) {
+function d6_ce_susy2_filefield_file($file) {
   // Views may call this function with a NULL value, return an empty string.
   if (empty($file['fid'])) {
     return '';
@@ -152,7 +190,7 @@ function phptemplate_aggregator_block_item($item, $feed = 0) {
   return $output;
 }
 /**Enleve le lien en savoir plus - NE PAS OUBLIER DE CHANGER LE NOM DU THEME !!!___*/
-function starterd6_pf_rwd_more_link ($url, $title) {
+function d6_ce_susy2_more_link ($url, $title) {
   if (stristr( $url, 'aggregator')) {
     return "";
   }

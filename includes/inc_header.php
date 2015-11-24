@@ -7,19 +7,22 @@
         <!-- Meta RWD -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
  <!-- stats-SEO -->
-    <meta name="google-site-verification" content="" />
-    <meta name="y_key" content=""/>
-    <meta name="msvalidate.01" content="" />
+    <meta name="google-site-verification" content="msBEDS9QaIIEpzPS6_Wi-HOzKWr1Kw0dageOmF-4rbs" />
+    <meta name="y_key" content="e0a3005490e0c1fc"/>
+    <meta name="msvalidate.01" content="E2114447554473259DE0996EF11B87E0" />
+      <?php /* Code pour scan par https://detectify.com */ ?>
+    <meta name="detectify-verification" content="8497102470e46552eeca2eb8a07b7910" />
+    <meta name="Generator" content="Drupal 6 (http://drupal.org)" />
     <?php print $head; ?>
     <?php print $styles; ?>
-    <?php print $scripts; ?>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-        
-    <?php
- global $theme_path; include ($theme_path . '/includes/inc_jquery_plugin.php');
- ?>
+    <?php // IMPORTANT : charger les librairies externes avant les scripts !! ?>
+   <?php print $scripts; ?>
+ 
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+ 
+
   </head>
 
  <body class="<?php print $body_classes; ?>">
@@ -47,11 +50,13 @@
                 <?php endif; ?>
             </div>
 
-            <div class="menuImg">
-                <?php if (!empty($navStatic)): ?>
+
+            <?php if (!empty($navStatic)): ?>
+                <div class="menuImg">
                     <?php print $navStatic; ?>
-                <?php endif; ?>
-            </div>
+                </div>            
+            <?php endif; ?>
+            
 
         </div><!-- /headHaut -->
         <div class="headBas">
