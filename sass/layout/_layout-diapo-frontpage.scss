@@ -1,10 +1,7 @@
 
-// Regroupe le style pour le contenu des node.tpl custom
-// créer des fichiers _node-TYPE.scss et les importer dans application.scss
-
 /*-------------------------------------|
-|       CONTENU CUSTOM NODE.TPL        |
-|     FRONTPAGE  VERTICAL GAUCHE       |
+|     DIAPO FRONTPAGE                |
+|      PANO / VERTICAL                  |
 |--------------------------------------*/
 
   //@include breakpoint ($mobile){}
@@ -100,7 +97,8 @@ body .conteneur
 
 //Layout du diaporama dynamique (Views slideshow)
 //Code imbriqué à 100%
-aside.DiapoHP{
+body .conteneur{
+    aside.DiapoPanoHP{
    
      max-width: container();
         #transparency{
@@ -124,4 +122,5 @@ aside.DiapoHP{
         img{}
     }
  
+}
 }
