@@ -79,8 +79,8 @@ regions[centre_partenaire] = Zone centrale page partenaire
 ;regions[DiapoDroiteHP] = Diaporama Droite Homepage - Bloc
 
 ;Diaporama panoramique
-;regions[HPBasGauche] = Zone Bas Gauche HP - Bloc
-;regions[HPBasDroit] = Zone Bas Droit HP - Bloc
+;regions[HPBasG] = Zone Bas Gauche HP - Bloc
+;regions[HPBasD] = Zone Bas Droit HP - Bloc
 
 ;Diaporama vertical Gauche
 ;regions[PartieDroite1] = Zone Droite 1 HP - Bloc
