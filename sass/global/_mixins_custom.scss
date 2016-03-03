@@ -154,16 +154,16 @@ filter : alpha(opacity=$opacite); /* IE < 8 */
 }
 
 /*//////////////// BORDER RIGHT \\\\\\\\\\\\\\\\*/
-@mixin border-R-bleu{border-left: em(1px) solid $bleu-turquoise;}
-@mixin border-R-grisclair{border-left: em(1px) solid $gris-clair;}
-@mixin border-R-vert{border-left: em(1px) solid $vert;}
-@mixin border-R-violet{border-left: em(1px) solid $violet;}
-@mixin border-R-anthracite{border-left: em(1px) solid $gris-anthracite;}
-@mixin border-R-rose { border-left: em(1px) solid $rose-fushia;}
-@mixin border-R-jaune { border-left: em(1px) solid $jaune;}
-@mixin border-R-rouge { border-left: em(1px) solid $rouge;}
-@mixin border-R-orangePF { border-left: em(1px) solid $orange-fonce;}
-@mixin border-R-orange { border-left: em(1px) solid $orange;}
+@mixin border-R-bleu{border-right: em(1px) solid $bleu-turquoise;}
+@mixin border-R-grisclair{border-right: em(1px) solid $gris-clair;}
+@mixin border-R-vert{border-right: em(1px) solid $vert;}
+@mixin border-R-violet{border-right: em(1px) solid $violet;}
+@mixin border-R-anthracite{border-right: em(1px) solid $gris-anthracite;}
+@mixin border-R-rose { border-right: em(1px) solid $rose-fushia;}
+@mixin border-R-jaune { border-right: em(1px) solid $jaune;}
+@mixin border-R-rouge { border-right: em(1px) solid $rouge;}
+@mixin border-R-orangePF { border-right: em(1px) solid $orange-fonce;}
+@mixin border-R-orange { border-right: em(1px) solid $orange;}
 
 /*//////////////// BORDER COLONNE 2 \\\\\\\\\\\\\\\\*/
 @mixin border-rouge-bleu{ border-left: em(1px) solid $rouge; border-right: em(1px) solid $bleu-turquoise;}
