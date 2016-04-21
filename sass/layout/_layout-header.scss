@@ -13,6 +13,7 @@
      .headHaut {
       
          .logoHead {
+             padding:4em 0 1em 0;
                     img{margin: 0 auto;display: block;}
          }
          .menuImg {
@@ -35,6 +36,7 @@
              @include span(full);
              .logoHead { 
                 @include span(first 4 of $desktopcol);
+                padding: 0;
              }
              .menuImg {
                 @include span(last 8 of $desktopcol); 
@@ -89,7 +91,7 @@
 /*---- HEADER BAS ----*/
 
 .headBas {
- background: $vert;//Modifier la couleur du fond de la partie basse selon couleur du lycée
+ background: $bleu-turquoise;//Modifier la couleur du fond de la partie basse selon couleur du lycée
 }
 
 

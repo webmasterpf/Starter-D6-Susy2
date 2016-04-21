@@ -8,102 +8,15 @@
   //@include breakpoint ($desktop){}
   //@include breakpoint ($tablet){}
 
-/*
-Conserver la partie de code utile, supprimer l'inutile selon le type de diapo vertical ou pano
-*/  
-//Code imbriqué à 100%
-body .conteneur
-{
-    //Pas de @include container($total-columns); car deja mis dans layout !!!
-    background:transparent image-url("bg_content_etoile.gif") no-repeat left bottom;
-    .conteneur-flex{
-        
-        //Flexbox initialisation du conteneur
-        @include flexbox;
-       @include flex-flow(column wrap);//besoin d'envelopper le contenu
-        //Values: none | <flex-grow> <flex-shrink> || <flex-basis>
-        // Default: See individual properties (1 1 0).
-             @include flex(1 0 span($mobilecol));
-
-    .HPDiapoVerticalGauche{
-      padding: 0.3em;
-    //Flexbox ordre des blocs
-          
-             @include order(2);    
-             
-        img{@include adaptable-img;}
-     aside.ImgFixeHPG{
-            img{border: 0.1em solid $violet;padding: 0.1em;}     
-                }
-    }
-   
-                
-    .HPDroite{
-        //Flexbox ordre des blocs 
-             @include order(1);
-             padding:0 0 4em 0;
-        img{@include adaptable-img;}
-        
-    }
-    .HPDroite1{}
-    .HPDroite2{}
-    .HPDroite3{}
-    }
-    @include breakpoint($tablet) {/*     //Dimensions pour les tablettes*/
-        //Taille du conteneur du groupe
-        @include container($tabletcol);
-        .HPDiapoVerticalGauche{@include span(4);}
-        .HPDroite{@include span(last 4);}
-        .HPDroite1{}
-        .HPDroite2{}
-        .HPDroite3{}
-
-    }
-    @include breakpoint($desktop) {/*    //Dimensions pour les pc*/
-        //Taille du conteneur du groupe    
-      @include container($desktopcol);
-.conteneur-flex{
-       //Affichage des blocs en ligne
-        @include flex-flow(row nowrap);
-           
-        .HPDiapoVerticalGauche{
-             //@include span(6 of $desktopcol first);
-             @include flex(1 0 span(6 of $desktopcol first));
-             @include order(1);
-            
-        }
-        .HPDroite{
-            //@include span(6 of $desktopcol);
-            @include flex(1 0 span(6 of $desktopcol last));
-            @include order(2);
-            padding: 0;
-            
-        }
-        .HPDroite1{
-            
-        }
-        .HPDroite2{
-            
-
-        }
-        .HPDroite3{
-
-        }
-    }
-     }
-
-}
-
-
 
 /*---DIAPORAMA HOMEPAGE TEXTE DYNAMIQUE  PANORAMIQUE----*/
 
 //Layout du diaporama dynamique (Views slideshow)
 //Code imbriqué à 100%
-body .conteneur{
+body .conteneur .HPDiapo{
     aside.DiapoPanoHP{
    
-     max-width: container();
+     //max-width: container();
         #transparency{
            display: none;
            
@@ -118,12 +31,58 @@ body .conteneur{
 
     }
     @include breakpoint($desktop) { 
-       
+      // @include span(12 of $desktopcol);
        
         #transparency{display: block;}
         #contenu-diapo{display: block;}
-        img{}
+      img{@include adaptable-img;}
     }
  
 }
+}
+
+// Style du diaporama dynamique avec Overlay // Pas affiché sur Mobile
+body .conteneur .HPDiapo .field-content{
+    
+}
+
+body .conteneur .HPDiapo{
+    display: none;
+    @include breakpoint ($desktop){
+        display: block;
+        #transparency{
+            
+            height:em(60px);
+            bottom:em(73px); 
+            left:em(12px);
+            width: 98%;
+            position:relative;
+            z-index:15;
+            @include rgba-background($bleu-turquoise,0.6);/*Couleur et opacité du fond*/
+        }
+        #contenu-diapo {
+
+            position: relative;
+            bottom:8.375em;
+            left: em(10px);
+            color: white;
+            z-index: 20;
+
+
+            h2,p {
+                color: white;
+                padding: em(5px);
+                font-family: $AristaFont;
+                line-height: 1.3em;
+            }
+            a {
+
+                text-decoration: none;
+            }
+              p{
+      margin-top: 0.2em;
+      font-size: medium;
+  }
+        }
+    }
 }

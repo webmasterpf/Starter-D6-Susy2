@@ -2,18 +2,28 @@
 // créer des fichiers _node-TYPE.scss et les importer dans application.scss
 
 /*-------------------------------------|
-|       CONTENU CUSTOM NODE.TPL        |
 |           DEFILANT VIEW              |
 |--------------------------------------*/
 
-  //@include susy-breakpoint ($mobile){}
-  //@include susy-breakpoint ($desktop){}
-  //@include susy-breakpoint ($tablet){}
+  //@include breakpoint ($mobile){}
+  //@include breakpoint ($desktop){}
+  //@include breakpoint ($tablet){}
 
 .annonce-container{}
 /*-- DEFILANT ACCUEIL --*/
-
-aside.content_top .annonce-container .annonce
+aside.content_top{
+    text-align: center;
+}
+#views_slideshow_cycle_main_liste_annonce_accueil-block_1{
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.views_slideshow_cycle_teaser_section{
+     margin: 0 auto;
+}
+aside.annonce-container .annonce,
+aside .annonce-container .annonce
 {
 // max-width: container();
  
@@ -26,6 +36,7 @@ aside.content_top .annonce-container .annonce
     color: $color-defilant-a;
     text-decoration: none;
     font-weight: bold;
+    text-transform:capitalize;
     &:hover {
       text-decoration: underline;
     }
@@ -33,6 +44,9 @@ aside.content_top .annonce-container .annonce
   p, h2, h2 a{
       margin: 0;
       padding: 0;
+  }
+  p{
+      font-size: small;
   }
   img{
       @include adaptable-img;

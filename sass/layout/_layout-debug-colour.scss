@@ -157,16 +157,32 @@ body .conteneur {
         .HPDroite3{}
     }
 }
+//Pour le dev, code visuel sur les blocs selon le breakpoint : HP Diapo Panoramique
+// à commenter ou supprimer pour la production
+body .conteneur {
+        
+    .HPDiapo{background:gold;}
+    .HPBasGauche{background: #C8D215;}
+    .HPBasDroit{background: salmon;}
+   
+    @include breakpoint($desktop) {/*    //Dimensions pour les pc*/
+        
+    .HPDiapo{background:$rose-fushia;}
+    .HPBasGauche{background:gold;}
+    .HPBasDroit{background:bisque;}
+    }
+   
+    @include breakpoint($tablet) {/*     //Dimensions pour les tablettes*/
+        .HPDiapo{background: $vert;}
+        .HPBasGauche{background: gold;}
+        .HPBasDroit{background: red;}
+    }
+}
 /*//////////////////////\\\\\\\\\\\\\\\\\\\\\\
 ********** COULEUR LAYOUT NODE.TPL OVERRIDE **********
 \\\\\\\\\\\\\\\\\\\\\\\//////////////////////*/
 
-/*//////////////// 1 COLONNE \\\\\\\\\\\\\\\\*/
-body .conteneur{
-    .col1_12{
-       
-    }
-}
+
 
 /*//////////////// 3 COLONNES \\\\\\\\\\\\\\\\*/
 body .conteneur{
@@ -450,7 +466,7 @@ body .conteneur{
 /*//////////////// 4 COLONNES \\\\\\\\\\\\\\\\*/
 body .conteneur{
     .layout_4col_all3{
-       @include span($mobilecol);
+       
         
         background: khaki;
         @include breakpoint ($tablet){
