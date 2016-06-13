@@ -27,6 +27,13 @@ $base-line-height: 24px;
 $AristaFont : "Arista", Trebuchet MS, sans-serif;
 $TrebuchetFont : Trebuchet MS, Verdana, Helvetica, sans-serif;
 
+/*_____  GOOGLE FONTS _____*/
+$FontArvo : 'Arvo',Trebuchet MS, Verdana, sans-serif;
+$FontArimo : 'Arimo',Trebuchet MS, Verdana, sans-serif;
+$FontSortsMillGoudy : 'Sorts Mill Goudy',Trebuchet MS, Verdana, sans-serif;
+$FontRaleway : 'Raleway',Trebuchet MS, Verdana, sans-serif;
+
+
 /*====================================|
 ==             CSS H                ==|
 =====================================*/
@@ -53,8 +60,6 @@ h2.title{
 }
 }
 h3, .h3{
-	
-	
 	font-size: em(16px);
 }
 h4, .h4{
@@ -63,17 +68,9 @@ h4, .h4{
 }
 h5, .h5 {
 	
-	
-
-
-
 	font-size: em(12px);
 }
 h6, .h6 {
-	
-
-
-
 	font-size: em(10px);
 }
 /*---------------- TITRES -----------------------*/
@@ -116,10 +113,12 @@ h6, .h6 {
     }
     #right-content{}
     #footer{@include adjust-font-size-to(10px);
-        p{
-            @include trailer();
-         font-size: small;
-        padding: 0.3em;}
+            p{
+                @include trailer();
+                font-size: x-small;
+                padding: 0.3em;
+                line-height: 1.4em;
+            }
     }
 }
 .HPBasGauche, .HPBasDroit {
