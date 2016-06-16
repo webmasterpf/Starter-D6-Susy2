@@ -32,48 +32,35 @@ $term = preg_replace('<code>\s+</code>', '<em>', trim($term));
 }
 
 function cyranod6_lr_susy2_preprocess_node(&$vars, $hook) {
-//Partie regions dans node.tpl- ajoute les regions utiles au node.tpl
- $vars['pole_bloc_G'] = theme('blocks', 'pole_bloc_G');
- $vars['pole_bloc_C'] = theme('blocks', 'pole_bloc_C');
- $vars['pole_bloc_D'] = theme('blocks', 'pole_bloc_D');
+//Partie regions génériques dans node.tpl- ajoute les regions utiles au node.tpl
+ $vars['pole_col1'] = theme('blocks', 'pole_col1');
+ $vars['pole_col2'] = theme('blocks', 'pole_col2');
+ $vars['pole_col3'] = theme('blocks', 'pole_col3');
+ $vars['pole_col4'] = theme('blocks', 'pole_col4');
  $vars['node_col_1'] = theme('blocks', 'node_col_1');
  $vars['node_col_2'] = theme('blocks', 'node_col_2');
  $vars['node_col_3'] = theme('blocks', 'node_col_3');
- //Regions custom pour theme PF suite generalisation node.tpl
- $vars['centralBloc'] = theme('blocks', 'centralBloc');
- $vars['centre_partenaire'] = theme('blocks', 'centre_partenaire');
- $vars['formulaire'] = theme('blocks', 'formulaire');
+ $vars['node_col_4'] = theme('blocks', 'node_col_4');
+ $vars['node_col_5'] = theme('blocks', 'node_col_5');
+ $vars['actuAssociation'] = theme('blocks', 'actuAssociation');
+ //Regions custom pour theme suite generalisation node.tpl
+// $vars['pole_bloc_G'] = theme('blocks', 'pole_bloc_G');
+// $vars['pole_bloc_C'] = theme('blocks', 'pole_bloc_C');
+// $vars['pole_bloc_D'] = theme('blocks', 'pole_bloc_D');
  //
- //Pour afficher une seule taxonomie non cliquable - http://drupal.org/node/823918
-  $node = $vars['node'];
-  $vars['template_file'] = 'node-'. $node->nid;
-  $wanted_vid = '5';//Choisir ici le vid diplome,3 sur le DEV, 5 sur le PROD
-  foreach($node->taxonomy as $term) {
-    if ( $wanted_vid == $term->vid ) {
-      $vars['my_taxo_ficheform'] .= $term->name;
-      // drupal_set_message('VID trouve : '.$term->vid.'Terme fiche formation :'.$my_taxo_ficheform,'status');
-      //You would need to format this the way you want it displayed, or pass it to a theme function
-      //Changer le nom de la variable si l'on ne se sert pas toujours du meme vid
-    }
-  }
-   //Pour afficher une seule taxonomie non cliquable - http://drupal.org/node/823918
-  $node = $vars['node'];
-  $vars['template_file'] = 'node-'. $node->nid;
-  $wanted_vid = '6';//Choisir ici le vid actualites 5 en DEV 6 en PROD,
-  foreach($node->taxonomy as $term) {
-    if ( $wanted_vid == $term->vid ) {
-      $vars['my_taxo_actualites'] .= $term->name;
-      // drupal_set_message('VID trouve : '.$term->vid.'Terme fiche formation :'.$my_taxo_ficheform,'status');
-      //You would need to format this the way you want it displayed, or pass it to a theme function
-      //Changer le nom de la variable si l'on ne se sert pas toujours du meme vid
-    }
-  }
-  
 //Partie template node.tpl
 $node = $vars['node'];
 $lesTypes=array('page_fiche_formation', 'page_pole','contenu_actualites');
 //ajouter les vids possibles pour chaque quelquesoit le type
-$lesVid= array('1','6');// vid 1 pour pole formation, vid 6 pour type actualite (DEV/PROD)
+$lesTypes=array('fiche_formation', 'page_pole','contenu_actualites');
+//ajouter les vids possibles pour chaque quelquesoit le type
+/* vid 1 pour pole formation
+ * vid 2 pour évènement
+ * vid 3 pour
+ * vid 5 pour type actualite
+ * vid 6 type de formation
+ *
+*/
 // on regarde si le type est dans le tableau
 if ( in_array($node->type, $lesTypes) ) {
      //drupal_set_message('Type du node si type ok (entrée de la condition) : '.$node->type,'status');
@@ -98,6 +85,8 @@ if ( in_array($node->type, $lesTypes) ) {
 // drupal_set_message('Type du node hors boucle: '.$node->type,'status');
  //drupal_set_message('Term name hors boucle: '.$term->name,'status');
     }
+    //template suggestion pour les nodes
+     $vars['template_files'][] = 'node-'. $vars['node']->nid; 
 }
 ?>
 <?php
@@ -130,8 +119,11 @@ function cyranod6_lr_susy2_preprocess_page(&$vars){
     drupal_add_js(drupal_get_path('theme', 'cyranod6_lr_susy2') . '/js/js_jquery_new.js', 'theme');
     //  mise à disposition des 2 versions de jQuery
     drupal_add_js(drupal_get_path('theme', 'cyranod6_lr_susy2') . '/js/jquery_exit.js', 'theme');
+   
 
     //die('les JS sont chargés');
+    // We need to rebuild the scripts variable with the new script included.
+    $vars['scripts'] = drupal_get_js();
 }
 ?>
 <?php
