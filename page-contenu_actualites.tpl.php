@@ -1,4 +1,4 @@
- <!-- ______________________ LAYOUT PAGE POLE  OVERRIDE PAR NODE.TPL CUSTOM _______________________ -->
+<!-- LAYOUT PAGE CONTENU ACTUALITES ITEM OVERRIDE PAR NODE.TPL CUSTOM -->
 <?php
 global $theme_path;
 include ($theme_path.'/includes/inc_header.php');

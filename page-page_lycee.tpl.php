@@ -1,15 +1,12 @@
+ <!-- ______________________ LAYOUT PAGE MODELE OVERRIDE PAR NODE.TPL CUSTOM _______________________ -->
 <?php
 global $theme_path;
 include ($theme_path.'/includes/inc_header.php');
-?>
- <!-- ______________________ LAYOUT PAGE MODELE OVERRIDE PAR NODE.TPL CUSTOM _______________________ -->
-  <!-- ______________________ CONTENU _______________________ -->
-
-      <div class="content-global">
+?>  
 
        <!-- ______________________ CONTENT INNER GLOBAL _______________________ -->
 
-        <div class="content-inner" class="page-MODELE">
+        <div class="content-inner">
               <!-- ______________________ CONTENT TOP _______________________ -->
       <?php if ($breadcrumb ||$content_top): ?>
             <div id="content-top">
@@ -44,7 +41,7 @@ include ($theme_path.'/includes/inc_header.php');
             </div> <!-- /#content-header -->
           <?php endif; ?>
 		  <!-- ______________________ CONTENU CENTRAL _______________________ -->
-             <article class="middle-content page-MODELE">
+             <article class="middle-content">
 
             <?php print $content; ?>
               <?php print $feed_icons; ?>
@@ -66,8 +63,8 @@ include ($theme_path.'/includes/inc_header.php');
               <?php print $content_bottom; ?>
             </div><!-- /#content-bottom -->
           <?php endif; ?>
-	 </div> <!-- /content-global -->
+	
 <?php
 global $theme_path;
 include ($theme_path.'/includes/inc_footer.php');
-?>     
+?>          

@@ -1,4 +1,4 @@
- <!-- ______________________ LAYOUT PAGE POLE  OVERRIDE PAR NODE.TPL CUSTOM _______________________ -->
+ <!-- ______________________ LAYOUT contenu_intervenant OVERRIDE PAR NODE.TPL CUSTOM _______________________ -->
 <?php
 global $theme_path;
 include ($theme_path.'/includes/inc_header.php');
@@ -67,4 +67,4 @@ include ($theme_path.'/includes/inc_header.php');
 <?php
 global $theme_path;
 include ($theme_path.'/includes/inc_footer.php');
-?>     
+?>    

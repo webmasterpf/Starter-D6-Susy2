@@ -43,27 +43,7 @@ body .conteneur {
     .HPBasDroit{@include span(last $tabletcol/2 of $tabletcol);}
 
 }
-//Pour le dev, code visuel sur les blocs selon le breakpoint
-// à commenter ou supprimer pour la production
-body .conteneur {
-        
-    .HPDiapo{}
-    .HPBasGauche{background: #C8D215;}
-    .HPBasDroit{background: salmon;}
-   
-    @include breakpoint($desktop) {/*    //Dimensions pour les pc*/
-        
-    .HPDiapo{}
-    .HPBasGauche{background:gold;}
-    .HPBasDroit{background:bisque;}
-    }
-   
-    @include breakpoint($tablet) {/*     //Dimensions pour les tablettes*/
-        .HPDiapo{}
-        .HPBasGauche{background: #C8D215;}
-        .HPBasDroit{background: red;}
-    }
-}
+
 /********************/
 /*ZONES PAGE ACCUEIL*/
 
@@ -78,22 +58,6 @@ body .conteneur {
     }
 }
 
-/****************/
-.HPBasGauche, .HPBasDroit {
-
-    background: none;
-    color: black;
-    ul li {
-        list-style: square;
-    }
-    a {
-        text-decoration: none;
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-
-}
 /*---DIAPORAMA HOMEPAGE TEXTE DYNAMIQUE  PANORAMIQUE----*/
 
 //Layout du diaporama dynamique (Views slideshow)
@@ -123,33 +87,99 @@ aside.DiapoPanoHP{
     }
 
 }
-// Style du diaporama dynamique
-.HPDiapo .field-content{
-    
+
+/*********************************
+---- STYLE HOMEPAGE ACTUS -----------
+*********************************/
+
+.HPBasGauche,.HPBasDroit{
+    ul li{
+        list-style: square;
+    }
+    a{
+        text-decoration:none;
+        &:hover{
+            text-decoration:underline;
+        }
+    }
+    h3,h3.block-title{
+        text-align: center;
+        color: $orange;
+        margin: 1em 0 0 0;
+    }
+    iframe{
+        @include breakpoint ($desktop){
+            margin: 1em 0 0 2em;
+        }
+        
+    }
 }
-#transparency{
 
-height:em(65px);
-bottom:4.7em; 
-left:em(12px);
-position:relative;
-z-index:15;
-width: 98%;
-@include rgba-background($violet,0.6);/*Couleur et opacité du fond*/
 
-h2 {
-    color: white;
-    padding: em(5px);
-    font-family: $AristaFont;
-    font-size: larger;
-     bottom:0.75em;
-     
-  }
-  a {
-    
-    text-decoration: none;
-  }
-  p{
-      margin-top: 0.2em;
-  }
+#table-actus-hp,#table-actus-hp2{
+    width: 91%;
+    margin: 0 auto;
+    border: 0;
+    thead th{
+        border-bottom: em(3px) solid $orange;
+    }
+    tbody{}
+    tr{
+        margin: em(3px);
+    }
+    td{
+        background: white;
+        border: 0;
+        margin: em(2px) 0;
+        padding: em(5px);
+        display: block;
+        border-bottom: em(1px) solid $violet;
+        &:hover{
+            background: $orange;
+        }
+    }
+    p{}
+    a{
+        color: $violet;
+        text-decoration: none;
+        font-weight: bold;
+        font-size:small;
+        &:hover{
+            text-decoration: underline;
+            color: white;
+        }
+    }
+    span.date-display-single{
+        text-align: right;
+        float: right;
+        font-style: italic;
+    }
+}
+/*
+HOMEPAGE SLIDESHOW DERNIERES VDL (Views3) =======================
+*/
+#block-views-HP_slideshow-block_1{
+    padding: 0 1.5em;
+    #views_slideshow_cycle_main_HP_slideshow-block_1 {
+        .views-field-title {
+            a{
+                color:$violet;font-size: em(14px);text-decoration: none;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        img{
+            padding: em(2px);
+            border: em(3px) solid $orange;
+            @include adaptable-img;
+        }
+    }
+}
+/*
+LIKEBOX FACEBOOK ====
+*/
+.fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style] {
+width: 100% !important;
 }
