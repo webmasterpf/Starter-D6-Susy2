@@ -41,6 +41,7 @@ breakpoint-2.5.0
 @import "global/style";
 @import "global/sub-nav";
 @import "global/flex";
+@import "global/_stacktable.scss";
 
 // Import des partiels du layout du thème Drupal
 
@@ -65,8 +66,8 @@ breakpoint-2.5.0
 
 //Import Homepage - choisir quel layout et style utiliser
 @import "layout/layout-diapo-frontpage";
-@import "content-type-style/frontpage-verticalGauche";
-
+@import "content-type-style/_frontpage-verticalGauche.scss";
+@import "layout/_layout-vertical-hp-gauche.scss";
 
 
 
@@ -85,6 +86,8 @@ breakpoint-2.5.0
 @import "content-type-style/contenu-cdi";
 @import "content-type-style/webform-contact";
 @import "content-type-style/fiche-formation";
+@import "content-type-style/_webform.scss";
+@import "content-type-style/_calendrier.scss";
 
 //Content type site 
 
@@ -98,3 +101,9 @@ breakpoint-2.5.0
 @import "galeries/views_slideshow";
 @import "galeries/_bxslider-cyrano.scss";
 @import "galeries/_flexslider-cyrano.scss";
+//@import "galeries/_views_masonry.scss";
+//@import "galeries/_views_mur_image_susy.scss";
+//@import "galeries/_views_wookmark.scss";
+//@import "galeries/_views_salvattore.scss";
+@import "galeries/_views_mur_image_fullcss.scss";
+@import "galeries/_slick.scss";

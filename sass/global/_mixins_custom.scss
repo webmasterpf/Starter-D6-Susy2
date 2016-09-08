@@ -6,7 +6,12 @@
 @mixin PIE {
     behavior: url(/sites/all/libraries/PIE/PIE.htc);
 }
-
+/*-------- LAYOUT CSS3 --------------*/
+@mixin colonnes($nb-col:3){
+     -webkit-column-count:$nb-col;
+     -moz-column-count:$nb-col;
+          column-count:$nb-col;
+}
 /*------- GESTION DU TEXTE -------------*/
 @mixin cesure-txt{
     -webkit-hyphens: auto;
@@ -14,6 +19,8 @@
     -ms-hyphens: auto;
     -o-hyphens: auto;
     hyphens: auto;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
 }
 
 /*-------- IMAGES ADAPTABLES -----------*/
@@ -186,6 +193,8 @@ filter : alpha(opacity=$opacite); /* IE < 8 */
 @mixin border-orangePF-orangePF{border-left: em(1px) solid $orange-fonce;border-right: em(1px) solid $orange-fonce;}
 @mixin border-orange-violet{border-left: em(1px) solid $orange;border-right: em(1px) solid $violet;}
 @mixin border-violet-orange{border-left: em(1px) solid $violet;border-right: em(1px) solid $orange;}
+@mixin border-violet-fuschia{border-left: em(1px) solid $violet;border-right: em(1px) solid $rose-fushia;}
+@mixin border-fuschia-violet{border-left: em(1px) solid $rose-fushia;border-right: em(1px) solid $violet;}
 
 /*//////////////// BORDER LEFT \\\\\\\\\\\\\\\\*/
 @mixin border-L-bleu{border-left: em(1px) solid $bleu-turquoise;}

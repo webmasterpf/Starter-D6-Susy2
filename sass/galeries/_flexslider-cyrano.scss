@@ -9,11 +9,17 @@ Indiquer les classes ou les IDs des enveloppes des galeries
 
 //indiquer la classe qui gère flexslider
 #colonne-2 .galerie-vdl{
-    .flexslider{
+    display:inline-block;
+    .flexslider, .flexslider-classic{
         background : transparent;
         border: 0;
         .flex-control-nav{
-            bottom: -1.1em;//position de la navigation
+            // bottom: -1.1em;//position de la navigation
+            bottom: -50.1em;
+            position: inherit;
+            display: block;
+            //left: 4em;
+            width: 35%;
         }
         .flex-control-paging {
             li a{
@@ -21,16 +27,16 @@ Indiquer les classes ou les IDs des enveloppes des galeries
                 background: $violet;//couleur defaut
                 @include ombrage(0.1em,0.1em,0.1em);
                 &:hover{
-                    background: $orange;
+                    background: $vert;
                 }
             }
             li a.flex-active  {
-                background: $orange;//couleur image active
+                background: $vert;//couleur image active
             }
         }
 
     }        
-    .flexslider{
+    .flexslider, .flexslider-classic{
         ul.flex-direction-nav{
             list-style: none;
         }
@@ -70,13 +76,20 @@ Indiquer les classes ou les IDs des enveloppes des galeries
         }
     }
     //Pour le style des galeries quelques soit le type de nav
-    .flexslider , .flexslider-thumbs{
-        width: 90%;
+    
+    .flexslider , .flexslider-thumbs, .flexslider-classic{
+        width: 85%;
         display:inherit;
         margin: 0 auto;
         padding:1em;    
+        ul.slides{
+            padding: 0;
+            margin:0;
+            width: 1500%;//pas ajouté par js, mais nécessaire pour afficher correctement la galerie
+        }
         li, ul.slides li{
             padding: 0;
+            margin:0;
         }
         .slides img{
             padding: 0em;
@@ -116,11 +129,38 @@ Indiquer les classes ou les IDs des enveloppes des galeries
         }
     }
 }
+//Override pour Version Classic
+#colonne-2 .galerie-vdl{
+    .flexslider-classic{
+        ul.slides{
+            padding: 0;
+            margin:0;
+            width: auto;//pas de taille pour la version classic
+        }
+        *.flex-caption{
+            max-width: 65%;
+            width: auto;
+        }
+    }
+}
 
 /*######-------- ||| POSITION NAV ||| --------######*/
-.vdl-galerie-image{
-    .flexslider{
-  
-        .flex-control-nav{
-          //  bottom: -3.1em;//position de la navigation
-        }}}
+//Flexslider Thumbnails - retrait des fleches directionnelles via le JS
+#colonne-2 .galerie-vdl{
+    #carousel{
+        height: 9em;
+    overflow: hidden;
+    }
+    div#slider{
+
+        .flexslider:hover .flex-direction-nav .flex-prev {
+            opacity: 0.7;
+            left: 0;
+        }
+
+        .flexslider:hover .flex-direction-nav .flex-next {
+            opacity: 0.7;
+            right: 0;
+        }
+    }
+}
