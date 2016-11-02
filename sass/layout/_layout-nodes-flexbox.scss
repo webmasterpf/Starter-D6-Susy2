@@ -23,7 +23,13 @@ body .conteneur .conteneur-flexchild{
 /*//////////////// 1 COLONNE \\\\\\\\\\\\\\\\*/
 body .conteneur {
     .col1_layoutflex_12{
-        max-width: container();
+        //max-width: container();
+         @include span(12 of $desktopcol);
+         &:before,&:after{
+        content: " ";
+        display: block;
+        clear: both;
+    } 
     }
 }
 
@@ -205,6 +211,64 @@ body .conteneur {
 
     }
 }
+body .conteneur {
+  
+    .col1_layoutflex_2_5_5{
+       @include flex(1 0 span($mobilecol));
+       
+        @include breakpoint ($tablet){
+            @include flex(1 0 span(2 of $tabletcol));
+             
+            
+        }
+        @include breakpoint ($desktop){
+           @include clearfix; //empeche affichage  page sous IE
+           @include flex(1 0 span(first 2 of $desktopcol));
+            
+        }
+        //Pour orientation paysage
+         @include breakpoint ($tabletlandscape){
+           @include flex(1 0 span(2 of $tabletcol-landcsape));
+            
+        }
+    }
+    .col2_layoutflex_2_5_5{
+       @include flex(1 0 span($mobilecol));
+   
+        @include breakpoint ($tablet){
+           @include flex(1 0 span(4 of $tabletcol));
+        
+        }
+        @include breakpoint ($desktop){
+@include clearfix; //empeche affichage  page sous IE
+@include flex(1 0 span(5 of $desktopcol first));    
+
+        }
+        //Pour orientation paysage
+         @include breakpoint ($tabletlandscape){
+           @include flex(1 0 span(5 of $tabletcol-landcsape));
+        
+        }
+
+    }
+    .col3_layoutflex_2_5_5{
+        @include flex(1 0 span($mobilecol));
+       @include clearfix; //empeche affichage  page sous IE
+        @include breakpoint ($tablet){
+             @include isolate(.3%);
+        }
+        @include breakpoint ($desktop){
+           @include flex(1 0 span(last 5 of $desktopcol));
+           @include last;
+        }
+        //Pour orientation paysage
+         @include breakpoint ($tabletlandscape){
+             @include flex(1 0 span(last 5 of $tabletcol-landcsape));
+            @include isolate(.3%);
+        }
+
+    }
+}
 //Pour un 3 colonnes egales : page pole
 body .conteneur {
     .conteneur-flex {
@@ -236,11 +300,11 @@ body .conteneur {
 body .conteneur {
     .col1_layoutflex_4_8{
         @include breakpoint ($tablet){
-            @include flex(first 3 of $tabletcol);
+            @include flex(1 0 span(first 3 of $desktopcol));
 
         }
         @include breakpoint ($desktop){
-            @include flex(first 4 of $desktopcol);
+            @include flex(1 0 span(first 4 of $desktopcol));
 
         }
     }
@@ -249,11 +313,11 @@ body .conteneur {
         
 
         @include breakpoint ($tablet){
-            @include flex(last 5 of $tabletcol);
+           @include flex(1 0 span(last 5 of $desktopcol));
 
         }
         @include breakpoint ($desktop){
-           @include flex(last 8 of $desktopcol);
+           @include flex(1 0 span(last 8 of $desktopcol));
 
         }
 
@@ -261,22 +325,22 @@ body .conteneur {
   
     .col1_layoutflex_3_9{
          @include breakpoint ($tablet){
-            @include flex(first 2 of $tabletcol);
+            @include flex(1 0 span(first 2 of $desktopcol));
            
         }
         @include breakpoint ($desktop){
-            @include flex(first 3 of $desktopcol);
+            @include flex(1 0 span(first 3 of $desktopcol));
            
         }
     }
     .col2_layoutflex_3_9{
          
         @include breakpoint ($tablet){
-            @include flex(last 6 of $tabletcol);
+           @include flex(1 0 span(last 6 of $desktopcol));
          
         }
         @include breakpoint ($desktop){
-           @include flex(last 9 of $desktopcol);
+           @include flex(1 0 span(last 9 of $desktopcol));
          
         }
     }
@@ -284,22 +348,50 @@ body .conteneur {
   .col1_layoutflex_2_10{}
   .col2_layoutflex_2_10{}
   
-  .col1_layoutflex_5_7{}
-  .col2_layoutflex_5_7{}
+  .col1_layoutflex_5_7{
+       @include breakpoint ($tablet){
+            @include flex(1 0 span(first 3 of $desktopcol));
+           
+        }
+        @include breakpoint ($desktop){
+            @include flex(1 0 span(first 5 of $desktopcol));
+           
+        }
+  }
+  .col2_layoutflex_5_7{
+        @include breakpoint ($tablet){
+           @include flex(1 0 span(last 6 of $desktopcol));
+         
+        }
+        @include breakpoint ($desktop){
+           @include flex(1 0 span(last 7 of $desktopcol ));
+         //@include isolate(-20%);//pour régler le margin-left , marche pas
+        }
+  }
   
-  .col1_layoutflex_6_6{}
-  .col2_layoutflex_6_6{}
+  .col1_layoutflex_6_6{
+      @include breakpoint ($tablet){}
+      @include breakpoint ($desktop){
+          @include flex(1 0 span(first 6 of $desktopcol));
+      }
+  }
+  .col2_layoutflex_6_6{
+      @include breakpoint ($tablet){}
+      @include breakpoint ($desktop){
+          @include flex(1 0 span(last 6 of $desktopcol));
+      }
+  }
   
   .col1_layoutflex_7_5{
       @include breakpoint ($tablet){}
       @include breakpoint ($desktop){
-           @include flex(first 7 of $desktopcol);
+           @include flex(1 0 span(first 7 of $desktopcol));
       }
   }
   .col2_layoutflex_7_5{
       @include breakpoint ($tablet){}
       @include breakpoint ($desktop){
-          @include flex(last 5 of $desktopcol);
+         @include flex(1 0 span(last 5 of $desktopcol));
       }
   }
   

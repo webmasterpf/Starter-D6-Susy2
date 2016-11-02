@@ -82,6 +82,22 @@
    captions: true;
 });
 
+//Pour Galerie Chocolat.js
+    jQuery(document).ready(function(){
+        console.log('Appel du script Chocolat.js');
+    $('.chocolat-parent').Chocolat();
+});
+
+//Pour Galerie BaguetteBox.js
+    jQuery(document).ready(function () {
+        console.log('Appel du script BaguetteBox.js');
+        baguetteBox.run('.galerieBaguetteBox', {
+            // Custom options
+        });
+
+    });
+
+
   //Pour stacktable (tableaux RWD)
     jQuery(window).load(function (){
         console.log('Chargement des paramètres de Stacktable.js');
@@ -175,7 +191,7 @@ jQuery(window).on('load', function()
 $('table tr:odd').addClass('odd');
 $('table tr:even') .addClass('even');
 //Ajout d'attributs pour mur image JS
-$('#liste-vdl ul').attr("id", "wookmark-id");
+$('#liste-vdl ul.wookmark').attr("id", "wookmark-id");
 $('#liste-vdl div.view-content').attr("id","grid");
 $('#liste-vdl div.view-content').attr("data-columns","");
 
@@ -207,4 +223,12 @@ $('#liste-vdl span.titre-vdl > a').css('text-transform','lowercase');
         $(".masonry-brick").removeAttr("style");//pas d'effet
         
     });
+
+// Pour MixItUp plugin: voir le fichier ajout.classes.mixitup.js
+// Calling the MixItUp plugin for this View.
+//    jQuery(window).load(function () {
+//        console.log('Chargement de Mixitup');
+//        $('.mixitup').mixItUp();
+//    });
+
 })(jQuery);

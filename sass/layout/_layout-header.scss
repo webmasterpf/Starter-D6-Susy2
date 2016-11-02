@@ -39,11 +39,11 @@
          .headHaut {
              @include span(full);
              .logoHead { 
-                @include span(first 4 of $desktopcol);
+                @include span(first 2 of $desktopcol);
                 padding: 0;
              }
              .menuImg {
-                @include span(last 8 of $desktopcol); 
+                @include span(last 10 of $desktopcol); 
                                  
              }
          }
@@ -95,9 +95,8 @@
 /*---- HEADER BAS ----*/
 
 .headBas {
- background: $violet;//Modifier la couleur du fond de la partie basse selon couleur du lycée
+ background: $gris-clair-moyen;//Modifier la couleur du fond de la partie basse selon couleur du lycée
 }
-
 
 .headSearch {
     
